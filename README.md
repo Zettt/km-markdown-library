@@ -1,4 +1,4 @@
 km-markdown-library
 ===================
 
-Markdown library for Keyboard Maestro.
+With these macros you can write Markdown with any text editor using the help of Keyboard Maestro.
