@@ -31,6 +31,10 @@ Macro takes selected text and makes it a \*, \*, \* or 1, 2, 3 list. (*List \*, 
 
 Inserts a footnote at the end of the text. A window pops up, you can look up information, the macro jumps back to the foreground editor once you have provided all the information.
 
+# Image #
+
+Insert an image. This one is based on the *Link New* macro, but uses a less complicated way to insert image markup.
+
 # Indent/Outdent Text #
 
 Based on [Brett Terpstra's OS X Services](http://brettterpstra.com/project/markdown-service-tools/ "Brett Terpstra's OS X Services"), these two macros indent and outdent text using the clipboard. (The clipboard entries created will be deleted afterwards, thus leaving everything in its "clean" state.)
