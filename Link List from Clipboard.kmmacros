@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>125</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>36</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>#!/usr/bin/env ruby -rjcode -Ku
+
+$KCODE = 'u'
+UNICODE_COMPETENT = ((RUBY_VERSION)[0..2].to_f &gt; 1.8)
+
+unless UNICODE_COMPETENT # lower than 1.9
+  class String
+     def utf8_length
+        i = 0
+        i = self.scan(/(.)/).length
+        i
+     end
+  end
+else # 1.9 and above
+  class String
+     alias_method :utf8_length, :length
+  end
+end
+
+def clipboard_to_references(input)
+  links = input.scan /(?:\[([^\]]+)\]\: )?(https?:\/\/[^ \n"]+)/m
+
+  if links.empty? &amp;&amp; input.empty?
+  	exit
+  else
+    norepeat = []
+    output = []
+    links.each {|url| 
+    	if url[0].nil?
+    	  if url[1] =~ (/http:\/\/itunes.apple.com\/(.+?)\/app\/(.+?)\/id\d+/)
+    	    name = $2
+    	  elsif url[1] =~ /(itunes|phobos).apple.com/
+    	    name = "itunes"
+    	  else
+    		  domain = url[1].match(/https?:\/\/([^\/]+)/)
+    		  parts = domain[1].split('.')
+    		  name = case parts.length
+    			  when 1: parts[0]
+    			  when 2: parts[0]
+    			  else parts[1]
+    		  end
+    		end
+    	else
+    		name = url[0]
+    	end
+
+    	while norepeat.include? name
+    		if name =~ / ?[0-9]$/
+    			name.next!
+    		else 
+    			name = name + " 2"
+    		end
+    	end
+    	output &lt;&lt; {'title' =&gt; name, 'link' =&gt; url[1] }
+    	norepeat.push name
+    }
+    output = output.sort {|a,b| a['title'] &lt;=&gt; b['title']}
+    counter = 0
+    output.each { |x| 
+    	counter += 1
+    	puts "[#{x['title']}]: #{x['link']}"
+    }
+  end
+end
+
+pboard = %x{__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste}.strip
+clipboard_to_references(pboard)
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>Past</key>
+						<integer>0</integer>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Link List from Clipboard</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>37</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6144</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>StatusMenu</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>CACEDEAD-88E0-47AD-90B0-E2B30DA41FD3</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Markdown</string>
+		<key>UID</key>
+		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+	</dict>
+</array>
+</plist>
