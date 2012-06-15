@@ -27,6 +27,18 @@ Creates a header out of selected text. Select text, execute macro, enter number 
 Thanks to JuicyCocktail for providing a working unordered list macro ([km-markdown-listify](https://github.com/rbugajewski/km-markdown-listify)).   
 Macro takes selected text and makes it a \*, \*, \* or 1, 2, 3 list. (*List \*, \*, \** and *List 1, 2, 3*)
 
+# Link Macros #
+
+## Link New ##
+
+## Link Inlines to References ##
+
+Takes selected text and replaces inline links with an "end of text" reference list. (Thanks, Brett.)
+
+## Link List from Clipboard ##
+
+Uses links that are on the clipboard and inserts a reference list of these links. (Thanks, Brett.)
+
 # Footnote #
 
 Inserts a footnote at the end of the text. A window pops up, you can look up information, the macro jumps back to the foreground editor once you have provided all the information.
