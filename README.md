@@ -8,7 +8,8 @@ This Keyboard Maestro Markdown Library aims your Markdown writing efforts.
 I make *heavy* usage of Keyboard Maestro 5 variables and user prompt actions. Whenever necessary you get a dialog where you can insert information, such as URLs, text for links, etc. Then when you click OK the text gets inserted into your document and you can continue writing.  
 In fact, when user action is required, e.g. in the "[Link New][]" action, you can leave your editor window, open/close/switch to other apps or tabs and look up the information. These macros work with (almost[^disclaimer]) every editor. The frontmost app is saved to a variable when executed, once all information is inserted, this variable is used to switch back to this app, therefore bringing forward your editor's window.
 
-Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros.
+Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros.  
+Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave a lot of inspiration for this project.
 
 # Formatting #
 
