@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>\t</string>
+						<key>Variable</key>
+						<string>MMDIndentCharacter</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>7</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Seconds</key>
+						<real>0.5</real>
+						<key>Time</key>
+						<string>0.5</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%CurrentClipboard%</string>
+						<key>Variable</key>
+						<string>MMDOrderedList</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>Past</key>
+						<integer>0</integer>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>#!/usr/bin/php
+
+&lt;?php
+
+// Change this to your preferred indentation style. Use '\t' for tabs.
+
+$indentation = $_ENV["KMVAR_MMDIndentCharacter"];
+$list = $_ENV["KMVAR_MMDOrderedList"];
+
+function parse_simple_list($list, $indentation)
+{
+  $result = array();
+  $path = array();
+
+  foreach (explode("\n", $list) as $line)
+  {
+    $depth = 0;
+    while (substr($line, 0, strlen($indentation)) === $indentation)
+    {
+      $depth += 1;
+      $line = substr($line, strlen($indentation));
+    }
+
+    while ($depth &lt; sizeof($path))
+    {
+      array_pop($path);
+    }
+
+    $path[$depth] = $line;
+
+    $parent =&amp; $result;
+    foreach ($path as $depth =&gt; $key)
+    {
+      if (!isset($parent[$key]))
+      {
+        $parent[$line] = array();
+        break;
+      }
+
+      $parent =&amp; $parent[$key];
+    }
+  }
+
+  return $result;
+}
+
+function traverse_array($array, $depth, $indentation)
+{
+  $prefix = (!$depth)? '': str_repeat("$indentation", $depth);
+  $counter = 0;
+  foreach($array as $key=&gt;$value)
+  {
+    echo $prefix.++$counter.". ".$key."\n";
+    if(is_array($value) &amp;&amp; count($value))
+    {
+      traverse_array($value, $depth + 1, $indentation);
+    }
+  }
+}
+
+$parsed_list = parse_simple_list($list, $indentation);
+traverse_array($parsed_list, 0, $indentation);
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>Past</key>
+						<integer>0</integer>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMDIndentCharacter</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>List 1, 2, 3</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>StatusMenu</string>
+					</dict>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>28</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6144</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>45B83C8D-3BE2-42BC-B995-FA21F8CF354E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Markdown</string>
+		<key>UID</key>
+		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+	</dict>
+</array>
+</plist>
