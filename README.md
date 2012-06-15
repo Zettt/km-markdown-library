@@ -22,6 +22,11 @@ Selected text will be copied to the clipboard and pasted back "wrapped" with the
 
 Creates a header out of selected text. Select text, execute macro, enter number of \# you want to have inserted.
 
+# Ordered/Unordered List #
+
+Thanks to JuicyCocktail for providing a working unordered list macro ([km-markdown-listify](https://github.com/rbugajewski/km-markdown-listify)).   
+Macro takes selected text and makes it a \*, \*, \* or 1, 2, 3 list. (*List \*, \*, \** and *List 1, 2, 3*)
+
 # Indent/Outdent Text #
 
 Based on [Brett Terpstra's OS X Services](http://brettterpstra.com/project/markdown-service-tools/ "Brett Terpstra's OS X Services"), these two macros indent and outdent text using the clipboard. (The clipboard entries created will be deleted afterwards, thus leaving everything in its "clean" state.)
