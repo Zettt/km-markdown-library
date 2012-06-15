@@ -51,13 +51,13 @@ Takes selected text and replaces inline links with an "end of text" reference li
 
 Uses links that are on the clipboard and inserts a reference list of these links. (Thanks, Brett.)
 
-# Footnote #
-
-Inserts a footnote at the end of the text. A window pops up, you can look up information, the macro jumps back to the foreground editor once you have provided all the information.
-
 # Image #
 
 Insert an image. This one is based on the *Link New* macro, but uses a less complicated way to insert image markup.
+
+# Footnote #
+
+Inserts a footnote at the end of the text. A window pops up, you can look up information, the macro jumps back to the foreground editor once you have provided all the information.
 
 # Indent/Outdent Text #
 
@@ -70,6 +70,5 @@ Also based on Brett's work is this macro that essentially tries to clean up tabl
 # Other macros included #
 
 * Force Line Breaks
-
 
 [^disclaimer_almost]: Almost means, editors like MacVim or emacs will probably not work, since these editors don't "disable" the "Cut" entry in the Edit menu when no text is selected, which these macros use to determine whether text is selected, i.e. "cut-able".
