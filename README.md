@@ -25,3 +25,8 @@ Based on [Brett Terpstra's OS X Services](http://brettterpstra.com/project/markd
 # Cleanup table #
 
 Also based on Brett's work is this macro that essentially tries to clean up tables.
+
+# Other macros included #
+
+* Force Line Breaks
+* 
