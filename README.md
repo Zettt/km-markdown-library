@@ -3,6 +3,13 @@ km-markdown-library
 
 With these macros you can write Markdown with any text editor using the help of Keyboard Maestro.
 
+This Keyboard Maestro Markdown Library aims your Markdown writing efforts.   
+
+I make *heavy* usage of Keyboard Maestro 5 variables and user prompt actions. Whenever necessary you get a dialog where you can insert information, such as URLs, text for links, etc. Then when you click OK the text gets inserted into your document and you can continue writing.  
+In fact, when user action is required, e.g. in the ["Link New"][Link New] action, you can leave your editor window, open/close/switch to other apps or tabs and look up the information. These macros work with (almost[^disclaimer_almost]) every editor. The frontmost app is saved to a variable when executed, once all information is inserted, this variable is used to switch back to this app, therefore bringing forward your editor's window.
+
+Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros.
+
 # Formatting #
 
 Use the macro "Make Bold" and "Make Italic" to format text. Text will be wrapped in single-\* or double-\*.
@@ -64,3 +71,5 @@ Also based on Brett's work is this macro that essentially tries to clean up tabl
 
 * Force Line Breaks
 
+
+[^disclaimer_almost]: Almost means, editors like MacVim or emacs will probably not work, since these editors don't "disable" the "Cut" entry in the Edit menu when no text is selected, which these macros use to determine whether text is selected, i.e. "cut-able".
