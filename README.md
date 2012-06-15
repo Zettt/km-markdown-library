@@ -18,3 +18,6 @@ Selected text will be copied to the clipboard and pasted back "wrapped" with the
 
 	> Using backticks, e.g. `echo $HOME`, will cause …. ([Source](http://example.com))
 
+# Indent/Outdent Text #
+
+Based on [Brett Terpstra's OS X Services](http://brettterpstra.com/project/markdown-service-tools/ "Brett Terpstra's OS X Services"), these two macros indent and outdent text using the clipboard. (The clipboard entries created will be deleted afterwards, thus leaving everything in its "clean" state.)
