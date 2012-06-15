@@ -96,7 +96,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Quote</string>
+				<string>Make Quote</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
