@@ -31,6 +31,11 @@ Macro takes selected text and makes it a \*, \*, \* or 1, 2, 3 list. (*List \*, 
 
 ## Link New ##
 
+This is the most complicated macro in the library.  
+On execution it asks several things such as a URL, the link text (which will be visible in the text), and whether the link should be inserted inline or as reference at the end.  
+If the checkbox is disabled (it's enabled by default) a second user prompt asks for the Markdown reference tag you want to use.  
+This macro also tries to find out whether you had text selected or not and acts upon it. (Read more in the introduction above)
+
 ## Link Inlines to References ##
 
 Takes selected text and replaces inline links with an "end of text" reference list. (Thanks, Brett.)
