@@ -11,6 +11,10 @@ In fact, when user action is required, e.g. in the "[Link New][]" action, you ca
 Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros.  
 Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave a lot of inspiration for this project.
 
+# Screencast #
+
+http://youtu.be/IzZefvu7nTI
+
 # Formatting #
 
 Use the macro "Make Bold" and "Make Italic" to format text. Text will be wrapped in single-\* or double-\*.
