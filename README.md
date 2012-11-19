@@ -75,5 +75,6 @@ Also based on Brett's work is this macro that essentially tries to clean up tabl
 # Other macros included #
 
 * Force Line Breaks
+* formd by Seth Brown. Requires a [separate installation](https://github.com/drbunsen/formd) of the excellent formd script! formd allows you switch from inline links to reference links and back as you like.
 
 [^disclaimer]: Almost means, editors like MacVim or emacs will probably not work, since these editors don't "disable" the "Cut" entry in the Edit menu when no text is selected, which these macros use to determine whether text is selected, i.e. "cut-able".
