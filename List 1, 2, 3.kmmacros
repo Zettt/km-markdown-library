@@ -78,7 +78,7 @@
 					</dict>
 					<dict>
 						<key>DisplayKind</key>
-						<string>Window</string>
+						<string>Pasting</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
