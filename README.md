@@ -15,6 +15,11 @@ Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave 
 
 http://youtu.be/IzZefvu7nTI
 
+# Download (for the non tech-savvy) #
+
+You can either download this entire repository clicking ZIP above, or the entire archive at a given version number by Tags on the right.  
+A pure download version containing no Git files is [also available](https://www.box.com/s/0j21c071kh0bqrpco2x8 "km-markdown-library-v1.3.zip").
+
 # Formatting #
 
 Use the macro "Make Bold" and "Make Italic" to format text. Text will be wrapped in single-\* or double-\*.
