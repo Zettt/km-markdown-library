@@ -77,4 +77,8 @@ Also based on Brett's work is this macro that essentially tries to clean up tabl
 * Force Line Breaks
 * formd by Seth Brown. Requires a [separate installation](https://github.com/drbunsen/formd) of the excellent formd script! formd allows you switch from inline links to reference links and back as you like.
 
+# Changes in v1.3 #
+
+* Making text italic and bold with Maestro now supports “TextMate-like expansion”. Type ⌥⌘I to start typing italic text. Write text and press ⇥ to insert the finishing \*. This also works for the wrapping macros (, [, “, etc.
+
 [^disclaimer]: Almost means, editors like MacVim or emacs will probably not work, since these editors don't "disable" the "Cut" entry in the Edit menu when no text is selected, which these macros use to determine whether text is selected, i.e. "cut-able".
