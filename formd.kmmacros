@@ -17,6 +17,20 @@
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>You can place Seth Brown's [formd][1] wherever you want as long as you provide the correct in Execute Shell Script below.
+
+[1]: http://www.drbunsen.org/formd-a-markdown-formatting-tool.html</string>
+						<key>Title</key>
+						<string>Note: requires external formd tool</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
 						<key>KeyCode</key>
 						<integer>8</integer>
 						<key>MacroActionType</key>
@@ -30,7 +44,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -44,7 +58,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -58,7 +72,7 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
 						<key>UseText</key>
 						<true/>
 						<key>Variable</key>
@@ -68,7 +82,7 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -80,7 +94,7 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>Past</key>
