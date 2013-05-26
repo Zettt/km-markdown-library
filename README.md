@@ -18,7 +18,7 @@ http://youtu.be/IzZefvu7nTI
 # Download (for the non tech-savvy) #
 
 You can either download this entire repository clicking ZIP above, or the entire archive at a given version number by Tags on the right.  
-A pure download version containing no Git files is [also available](https://www.box.com/s/0j21c071kh0bqrpco2x8 "km-markdown-library-v1.3.zip").
+A pure download version containing no Git files is [also available](https://www.box.com/s/vd1ofs4jabpq8lrt6nta "km-markdown-library-v1.3.1.zip"). (v 1.3.1)
 
 # Formatting #
 
