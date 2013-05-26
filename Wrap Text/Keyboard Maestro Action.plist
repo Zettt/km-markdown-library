@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Name</key>
+	<string>Wrap Text</string>
+	<key>Script</key>
+	<string>Action.scpt</string>
+	<key>Icon</key>
+	<string>KM_Wrapper_Plugin_Icon.png</string>
+	<key>Title</key>
+	<string>An action to wrap text.</string>
+	<key>Results</key>
+	<string>Pasting</string>
+	<key>Parameters</key>
+	<array>
+		<dict>
+			<key>Label</key>
+			<string>WrapStart</string>
+			<key>Type</key>
+			<string>String</string>
+			<key>Default</key>
+			<string>*</string>
+		</dict>
+		<dict>
+			<key>Label</key>
+			<string>Text</string>
+			<key>Type</key>
+			<string>TokenText</string>
+		</dict>
+		<dict>
+			<key>Label</key>
+			<string>WrapEnd</string>
+			<key>Type</key>
+			<string>String</string>
+			<key>Default</key>
+			<string>*</string>
+		</dict>
+	</array>
+</dict>
+</plist>
