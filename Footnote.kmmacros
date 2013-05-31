@@ -138,33 +138,7 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
-						<string>Insert footnote tag</string>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<true/>
-						<key>Text</key>
-						<string>[^%Variable%MMDFootnoteTag%]</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string></string>
-						<key>Title</key>
-						<string>Get to end of document, insert footnote tag, let user write</string>
+						<string>Cut and save text from cursor to end of document for later cursor placement</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -173,6 +147,20 @@
 						<false/>
 						<key>KeyCode</key>
 						<integer>125</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>768</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>7</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
@@ -185,14 +173,24 @@
 						<true/>
 						<key>IsDisclosed</key>
 						<false/>
-						<key>KeyCode</key>
-						<integer>36</integer>
 						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%CurrentClipboard%</string>
+						<key>Variable</key>
+						<string>temp</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
 						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Paste footnote tag, end of document, and footnote</string>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -206,7 +204,21 @@
 						<key>Paste</key>
 						<true/>
 						<key>Text</key>
-						<string>[^%Variable%MMDFootnoteTag%]: %Variable%MMDFootnoteText%</string>
+						<string>[^%Variable%MMDFootnoteTag%]%|%%Variable%temp%
+
+[^%Variable%MMDFootnoteTag%]: %Variable%MMDFootnoteText%</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>temp</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -239,8 +251,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -251,14 +261,14 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>391646083.63627201</real>
 				<key>Name</key>
 				<string>Footnote</string>
 				<key>Triggers</key>
@@ -272,8 +282,6 @@
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -281,7 +289,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>477D0164-90AA-4279-AE28-6810CE5CFB3C</string>
+				<string>F8670191-ED1B-48E0-8C40-24247EF11A42</string>
 			</dict>
 		</array>
 		<key>Name</key>
