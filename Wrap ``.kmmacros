@@ -82,8 +82,6 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>DeletePastClipboard</string>
-								<key>Past</key>
-								<integer>0</integer>
 								<key>PastExpression</key>
 								<string>0</string>
 							</dict>
@@ -117,26 +115,39 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>Pause</string>
-								<key>Seconds</key>
-								<real>0.20000000000000001</real>
 								<key>Time</key>
 								<string>0.2</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 							</dict>
 							<dict>
-								<key>Action</key>
-								<string>ByPasting</string>
+								<key>DisplayKind</key>
+								<string>Pasting</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
+								<string>PlugIn</string>
+								<key>PlugInFolderName</key>
+								<string>Wrap Text</string>
+								<key>PlugInParameters</key>
+								<dict>
+									<key>Animal</key>
+									<string>Wombat</string>
+									<key>Text</key>
+									<string>%CurrentClipboard%</string>
+									<key>WrapEnd</key>
+									<string>`</string>
+									<key>WrapStart</key>
+									<string>`</string>
+									<key>Wrapper</key>
+									<string>**</string>
+								</dict>
+								<key>TimeOutAbortsMacro</key>
 								<true/>
-								<key>Text</key>
-								<string>`%CurrentClipboard%`</string>
+								<key>TrimResultsNew</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -145,8 +156,6 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>DeletePastClipboard</string>
-								<key>Past</key>
-								<integer>0</integer>
 								<key>PastExpression</key>
 								<string>0</string>
 							</dict>
@@ -157,8 +166,6 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>DeletePastClipboard</string>
-								<key>Past</key>
-								<integer>0</integer>
 								<key>PastExpression</key>
 								<string>0</string>
 							</dict>
@@ -167,8 +174,12 @@
 						<true/>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=`=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>391258768.57586098</real>
 				<key>Name</key>
 				<string>Wrap ``</string>
 				<key>Triggers</key>
@@ -182,8 +193,6 @@
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
