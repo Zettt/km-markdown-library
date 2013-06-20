@@ -98,6 +98,9 @@
 								<key>Text</key>
 								<string>#!/bin/sh
 
+# setenv LANG en_US.UTF-8
+export LANG=en_US.UTF-8
+
 UUID=`uuidgen`
 UUIDDoc="/tmp/$UUID.txt"
 
@@ -133,7 +136,7 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>392566739.912458</real>
+				<real>393163300.41219902</real>
 				<key>Name</key>
 				<string>Preview Selection with Marked</string>
 				<key>Triggers</key>
