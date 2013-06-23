@@ -81,8 +81,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.5</real>
 						<key>Time</key>
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
@@ -106,9 +104,40 @@
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Strip out any #'s that are in the selected text</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>IgnoreCaseRegEx</string>
+						<key>Captures</key>
+						<array>
+							<string></string>
+							<string></string>
+							<string>MMDHeaderText</string>
+							<string></string>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SearchVariable</string>
+						<key>Search</key>
+						<string>(#+\s?)(\b.*\b)(\s?#+)</string>
+						<key>Variable</key>
+						<string>MMDHeaderText</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -151,7 +180,7 @@
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
-						<string>How many #'s?</string>
+						<string>Header level?</string>
 						<key>Variables</key>
 						<array>
 							<dict>
@@ -234,6 +263,8 @@
 								<string>SetVariableToCalculation</string>
 								<key>Text</key>
 								<string>MMDHeaderLevel-1</string>
+								<key>UseFormat</key>
+								<false/>
 								<key>Variable</key>
 								<string>MMDHeaderLevel</string>
 							</dict>
@@ -346,8 +377,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -358,14 +387,16 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=#1=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>393717859.93471599</real>
 				<key>Name</key>
 				<string>Header</string>
 				<key>Triggers</key>
@@ -379,8 +410,6 @@
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -388,7 +417,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>7F53C70E-303D-4DD1-BE67-F5A324CF918D</string>
+				<string>2B070D15-FD76-4B3D-A6B2-BD9EEC01BC36</string>
 			</dict>
 		</array>
 		<key>Name</key>
