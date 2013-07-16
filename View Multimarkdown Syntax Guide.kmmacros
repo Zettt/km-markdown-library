@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>OpenURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>URL</key>
+						<string>https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>394737524.056027</real>
+				<key>Name</key>
+				<string>98)View Multimarkdown Syntax Guide</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>StatusMenu</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>EEDBAA04-1E9C-4CBD-8B74-233C59E2903E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Markdown</string>
+		<key>UID</key>
+		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+	</dict>
+</array>
+</plist>
