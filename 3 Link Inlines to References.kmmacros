@@ -4,9 +4,15 @@
 <array>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<true/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>37</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -33,8 +39,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.5</real>
 						<key>Time</key>
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
@@ -129,11 +133,11 @@ puts bottom + "\n\n#{o.join("\n")}\n"</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -142,29 +146,27 @@ puts bottom + "\n\n#{o.join("\n")}\n"</string>
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>392065696.76187801</real>
 				<key>Name</key>
-				<string>Link Inlines to References</string>
+				<string>3: Link Inlines to References</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>37</integer>
+						<integer>20</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
+						<integer>0</integer>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -175,10 +177,12 @@ puts bottom + "\n\n#{o.join("\n")}\n"</string>
 				<string>F16EA0D1-D2E2-4DA6-A833-88B6DAD519B3</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>6144</integer>
 		<key>Name</key>
-		<string>Markdown</string>
+		<string>Markdown Link</string>
 		<key>UID</key>
-		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+		<string>C6199C1B-FC8A-44FF-9407-3FBFE9F72CF0</string>
 	</dict>
 </array>
 </plist>

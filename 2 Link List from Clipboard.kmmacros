@@ -4,9 +4,15 @@
 <array>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<true/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>37</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -123,11 +129,11 @@ clipboard_to_references(pboard)
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -136,29 +142,27 @@ clipboard_to_references(pboard)
 						<true/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>392065687.95007002</real>
 				<key>Name</key>
-				<string>Link List from Clipboard</string>
+				<string>2: Link List from Clipboard</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>37</integer>
+						<integer>19</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
+						<integer>0</integer>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -169,10 +173,12 @@ clipboard_to_references(pboard)
 				<string>CACEDEAD-88E0-47AD-90B0-E2B30DA41FD3</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>6144</integer>
 		<key>Name</key>
-		<string>Markdown</string>
+		<string>Markdown Link</string>
 		<key>UID</key>
-		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+		<string>C6199C1B-FC8A-44FF-9407-3FBFE9F72CF0</string>
 	</dict>
 </array>
 </plist>
