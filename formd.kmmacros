@@ -73,10 +73,10 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<true/>
 						<key>TrimResults</key>
 						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -97,16 +97,16 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>1</integer>
 						<key>PastExpression</key>
 						<string>1</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>395684555.84757602</real>
 				<key>Name</key>
-				<string>formd</string>
+				<string>54)formd</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
