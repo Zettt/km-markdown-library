@@ -53,8 +53,12 @@
 						<false/>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:64,128,0,255=🙏=86=0=0=1=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>392570290.283988</real>
 				<key>Name</key>
 				<string>Helper - Tab Out Of</string>
 				<key>Triggers</key>
