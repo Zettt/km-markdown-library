@@ -33,8 +33,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.5</real>
 						<key>Time</key>
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
@@ -421,11 +419,11 @@ sub setWidth {
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -434,8 +432,6 @@ sub setWidth {
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -446,16 +442,16 @@ sub setWidth {
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>393719682.03978199</real>
 				<key>Name</key>
-				<string>Cleanup Table</string>
+				<string>51)Cleanup Table</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
