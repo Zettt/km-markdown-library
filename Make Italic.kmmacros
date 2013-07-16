@@ -142,7 +142,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -303,7 +303,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>394736244.81032002</real>
+				<real>395058539.96249998</real>
 				<key>Name</key>
 				<string>01)Make Italic</string>
 				<key>Triggers</key>
