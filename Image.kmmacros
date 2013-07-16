@@ -147,18 +147,66 @@
 						<string>Insert image</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMDImageTitle</string>
+									<key>VariableConditionType</key>
+									<string>IsEmpty</string>
+									<key>VariableValue</key>
+									<string>value</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>ByPasting</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>Paste</key>
+								<true/>
+								<key>Text</key>
+								<string>![%Variable%MMDImageAlt%](%Variable%MMDImageURL% "%Variable%MMDImageTitle%")</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
 						<true/>
-						<key>Text</key>
-						<string>![%Variable%MMDImageAlt%](%Variable%MMDImageURL% "%Variable%MMDImageTitle%")</string>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>ByPasting</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>Paste</key>
+								<true/>
+								<key>Text</key>
+								<string>![%Variable%MMDImageAlt%](%Variable%MMDImageURL%)</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -215,16 +263,16 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>395684592.36094302</real>
 				<key>Name</key>
-				<string>Image</string>
+				<string>31)Image</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
