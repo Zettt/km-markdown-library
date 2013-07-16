@@ -33,8 +33,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.20000000000000001</real>
 						<key>Time</key>
 						<string>0.2</string>
 						<key>TimeOutAbortsMacro</key>
@@ -94,11 +92,11 @@ input.split("\n").each {|line|
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -107,8 +105,6 @@ input.split("\n").each {|line|
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -119,16 +115,18 @@ input.split("\n").each {|line|
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=←=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>395684494.02298403</real>
 				<key>Name</key>
-				<string>Text Outdent</string>
+				<string>23)Outdent Text</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -140,8 +138,6 @@ input.split("\n").each {|line|
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6656</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
