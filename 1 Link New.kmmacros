@@ -4,9 +4,15 @@
 <array>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<true/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>37</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -86,7 +92,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>PromptForUserInput</string>
 								<key>Prompt</key>
@@ -167,8 +173,6 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>Pause</string>
-								<key>Seconds</key>
-								<real>0.5</real>
 								<key>Time</key>
 								<string>0.5</string>
 								<key>TimeOutAbortsMacro</key>
@@ -193,8 +197,6 @@
 								<false/>
 								<key>MacroActionType</key>
 								<string>DeletePastClipboard</string>
-								<key>Past</key>
-								<integer>0</integer>
 								<key>PastExpression</key>
 								<string>0</string>
 							</dict>
@@ -230,13 +232,19 @@
 								<array>
 									<dict>
 										<key>Default</key>
-										<string></string>
+										<string>%Variable%MMDLinkText%</string>
+										<key>Variable</key>
+										<string>MMDLinkText</string>
+									</dict>
+									<dict>
+										<key>Default</key>
+										<string>%PastClipboard%0%</string>
 										<key>Variable</key>
 										<string>MMDLinkURL</string>
 									</dict>
 									<dict>
 										<key>Default</key>
-										<string>%Variable%MMDLinkText%</string>
+										<string></string>
 										<key>Variable</key>
 										<string>MMDLinkTitle</string>
 									</dict>
@@ -247,6 +255,94 @@
 										<string>MMDLinkInline</string>
 									</dict>
 								</array>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Get &lt;title&gt; of URL</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMDLinkTitle</string>
+									<key>VariableConditionType</key>
+									<string>IsEmpty</string>
+									<key>VariableValue</key>
+									<string>1</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!usr/bin/php
+
+&lt;?php // Plug-in 42: Get Title From URL (http://pluginphp.com/plug-in42.php)
+
+$page = $_ENV["KMVAR_MMDLinkURL"];
+$result = GetTitleFromURL($page);
+
+if (!$result) echo ""; // custom fail case if necessary
+else echo "$result";
+
+function GetTitleFromURL($page)
+{
+   $contents = @file_get_contents($page);
+   if (!$contents) return FALSE;
+   
+   preg_match("/\&lt;title\&gt;(.*)\&lt;\/title\&gt;/", $contents, $matches);
+   return $matches[1];
+}
+
+?&gt;</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>MMDLinkTitle</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -775,6 +871,18 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
+						<string>MMDFetchTitle</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
 						<string>MMDLinkTag</string>
 					</dict>
 					<dict>
@@ -796,8 +904,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -808,29 +914,27 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>392636532.38059199</real>
 				<key>Name</key>
-				<string>Link New</string>
+				<string>1: Link New</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>37</integer>
+						<integer>18</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
+						<integer>0</integer>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -841,10 +945,12 @@
 				<string>6593D006-469A-445C-B8CE-2D0005E7054E</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>6144</integer>
 		<key>Name</key>
-		<string>Markdown</string>
+		<string>Markdown Link</string>
 		<key>UID</key>
-		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+		<string>C6199C1B-FC8A-44FF-9407-3FBFE9F72CF0</string>
 	</dict>
 </array>
 </plist>
