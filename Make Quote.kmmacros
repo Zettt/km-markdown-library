@@ -33,8 +33,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.20000000000000001</real>
 						<key>Time</key>
 						<string>0.2</string>
 						<key>TimeOutAbortsMacro</key>
@@ -53,6 +51,12 @@
 						<string>$1&gt; $2</string>
 						<key>Search</key>
 						<string>(\s*)(.+)</string>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+						<key>TargetUseNamedClipboard</key>
+						<false/>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -75,8 +79,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -87,16 +89,18 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=&gt;=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>393719157.71564299</real>
 				<key>Name</key>
-				<string>Make Quote</string>
+				<string>07)Make Quote</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -108,8 +112,6 @@
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>

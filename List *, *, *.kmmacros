@@ -33,8 +33,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.5</real>
 						<key>Time</key>
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
@@ -53,6 +51,12 @@
 						<string>$1* $2</string>
 						<key>Search</key>
 						<string>(\s*)(.+)</string>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+						<key>TargetUseNamedClipboard</key>
+						<false/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -75,8 +79,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -87,16 +89,16 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>393719894.43813097</real>
 				<key>Name</key>
-				<string>List *, *, *</string>
+				<string>25)List *, *, *</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -112,8 +114,6 @@
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 				</array>
 				<key>UID</key>

@@ -45,8 +45,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
-						<key>Seconds</key>
-						<real>0.5</real>
 						<key>Time</key>
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
@@ -71,8 +69,6 @@
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -154,11 +150,11 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -167,8 +163,6 @@ traverse_array($parsed_list, 0, $indentation);
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
@@ -187,8 +181,10 @@ traverse_array($parsed_list, 0, $indentation);
 				</array>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>393719891.110107</real>
 				<key>Name</key>
-				<string>List 1, 2, 3</string>
+				<string>26)List 1, 2, 3</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -204,8 +200,6 @@ traverse_array($parsed_list, 0, $indentation);
 						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
 					</dict>
 				</array>
 				<key>UID</key>
