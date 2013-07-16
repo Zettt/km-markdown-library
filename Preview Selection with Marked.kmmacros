@@ -136,9 +136,9 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>393163300.41219902</real>
+				<real>395684669.35560203</real>
 				<key>Name</key>
-				<string>Preview Selection with Marked</string>
+				<string>41)Preview Selection with Marked</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
