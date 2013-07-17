@@ -921,9 +921,9 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>392636532.38059199</real>
+				<real>395747183.01034099</real>
 				<key>Name</key>
-				<string>1: Link New</string>
+				<string>1: New Link</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
