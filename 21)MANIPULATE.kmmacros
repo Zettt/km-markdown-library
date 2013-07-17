@@ -12,12 +12,10 @@
 			<dict>
 				<key>Actions</key>
 				<array/>
-				<key>CustomIconData</key>
-				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=—=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>393720008.00879401</real>
+				<real>395775683.06691802</real>
 				<key>Name</key>
 				<string>21)MANIPULATE</string>
 				<key>Triggers</key>
