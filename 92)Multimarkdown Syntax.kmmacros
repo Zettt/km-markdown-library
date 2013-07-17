@@ -18,7 +18,7 @@
 						<key>IsDefaultApplication</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>OpenURL</string>
 						<key>TimeOutAbortsMacro</key>
@@ -30,9 +30,9 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>394737524.056027</real>
+				<real>395769671.75633502</real>
 				<key>Name</key>
-				<string>98)View Multimarkdown Syntax Guide</string>
+				<string>92)Multimarkdown Syntax</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
