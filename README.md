@@ -25,12 +25,8 @@ Screencast for version 1: http://youtu.be/IzZefvu7nTI
 
 A pure download version containing no Git files is [available](https://www.box.com/s/0j21c071kh0bqrpco2x8 "km-markdown-library-v1.3.zip") here. (Preferred method)
 
-[Download version 2 beta 2](https://app.box.com/s/xv6jzaxgxiihciu3b7sj "km-markdown-library-v2b2.zip") instead. (Things *will* break!)
+[Download version 2 beta 2](https://app.box.com/s/xv6jzaxgxiihciu3b7sj "km-markdown-library-v2b2.zip") instead. (Things could potentially break, but I try my best that they don’t!)
 
 # Documentation #
 
 [Documentation is available from the Wiki.](https://github.com/Zettt/km-markdown-library/wiki "Home · Zettt/km-markdown-library Wiki · GitHub")
-
-# Changes in v1.3 #
-
-* Making text italic and bold with Maestro now supports “TextMate-like expansion”. Type ⌥⌘I to start typing italic text. Write text and press ⇥ to insert the finishing \*. This also works for the wrapping macros (, [, “, etc.
