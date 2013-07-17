@@ -1,0 +1,3 @@
+[submodule "markdown-mark"]
+	path = markdown-mark
+	url = https://github.com/dcurtis/markdown-mark.git
