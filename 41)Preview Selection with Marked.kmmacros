@@ -90,7 +90,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -480,7 +480,7 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395759054.53439498</real>
+				<real>395769370.49692798</real>
 				<key>Name</key>
 				<string>41)Preview Selection with Marked</string>
 				<key>Triggers</key>

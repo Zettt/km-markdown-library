@@ -44,7 +44,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SearchReplaceClipboard</string>
 						<key>Replace</key>
@@ -98,7 +98,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395759079.48909199</real>
+				<real>395769303.74395102</real>
 				<key>Name</key>
 				<string>08)Make Quote</string>
 				<key>Triggers</key>

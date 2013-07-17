@@ -58,7 +58,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -104,7 +104,7 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395687770.58972001</real>
+				<real>395769416.57306403</real>
 				<key>Name</key>
 				<string>54)formd</string>
 				<key>Triggers</key>

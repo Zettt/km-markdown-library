@@ -202,7 +202,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>PlugIn</string>
 								<key>PlugInFolderName</key>
@@ -303,7 +303,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395759096.04337299</real>
+				<real>395769290.40288699</real>
 				<key>Name</key>
 				<string>03)Make Bold</string>
 				<key>Triggers</key>

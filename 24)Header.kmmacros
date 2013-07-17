@@ -65,7 +65,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
@@ -470,7 +470,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SetVariableToText</string>
 										<key>Text</key>
@@ -482,7 +482,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
 										<key>Text</key>
@@ -514,7 +514,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>Until</string>
 								<key>TimeOutAbortsMacro</key>
@@ -626,7 +626,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395684412.52195501</real>
+				<real>395769344.581047</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>

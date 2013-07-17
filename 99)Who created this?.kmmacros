@@ -29,7 +29,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
@@ -93,7 +93,7 @@ Or open directly in your browser:
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -122,7 +122,7 @@ Or open directly in your browser:
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -169,7 +169,7 @@ Or open directly in your browser:
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -216,7 +216,7 @@ Or open directly in your browser:
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -271,7 +271,7 @@ Or open directly in your browser:
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395685610.35074401</real>
+				<real>395769481.59400398</real>
 				<key>Name</key>
 				<string>99)Who created this?</string>
 				<key>Triggers</key>

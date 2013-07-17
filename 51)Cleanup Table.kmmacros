@@ -44,7 +44,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -449,7 +449,7 @@ sub setWidth {
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>393719682.03978199</real>
+				<real>395766297.851834</real>
 				<key>Name</key>
 				<string>51)Cleanup Table</string>
 				<key>Triggers</key>

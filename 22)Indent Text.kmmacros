@@ -44,7 +44,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -116,7 +116,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395763233.44058102</real>
+				<real>395769314.363702</real>
 				<key>Name</key>
 				<string>22)Indent Text</string>
 				<key>Triggers</key>

@@ -96,7 +96,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -121,7 +121,7 @@ pbpaste | /usr/local/bin/mmd</string>
 								<key>IsActive</key>
 								<false/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>KeyCode</key>
 								<integer>9</integer>
 								<key>MacroActionType</key>
@@ -135,7 +135,7 @@ pbpaste | /usr/local/bin/mmd</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>DeletePastClipboard</string>
 								<key>PastExpression</key>
@@ -467,7 +467,7 @@ pbpaste | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395766745.567792</real>
+				<real>395769380.93952501</real>
 				<key>Name</key>
 				<string>42)Convert Selection to Markdown</string>
 				<key>Triggers</key>
