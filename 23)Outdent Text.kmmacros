@@ -44,17 +44,13 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
 						<string>#!/usr/bin/env ruby
-
-# ThisService Ruby service script example
-# Service type: Filter.
-# Revision 1.
 
 # Unicode considerations:
 #  Set $KCODE to 'u'. This makes STDIN and STDOUT both act as containing UTF-8.
@@ -124,7 +120,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395684494.02298403</real>
+				<real>395763329.39255798</real>
 				<key>Name</key>
 				<string>23)Outdent Text</string>
 				<key>Triggers</key>
