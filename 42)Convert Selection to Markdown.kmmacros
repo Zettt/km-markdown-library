@@ -119,6 +119,20 @@ pbpaste | /usr/local/bin/mmd</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
+								<false/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>KeyCode</key>
+								<integer>9</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>256</integer>
+								<key>ReleaseAll</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
@@ -453,7 +467,7 @@ pbpaste | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395759755.58800203</real>
+				<real>395766745.567792</real>
 				<key>Name</key>
 				<string>42)Convert Selection to Markdown</string>
 				<key>Triggers</key>
