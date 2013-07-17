@@ -11,13 +11,28 @@
 		<array>
 			<dict>
 				<key>Actions</key>
-				<array/>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>OpenURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>URL</key>
+						<string>https://github.com/Zettt/km-markdown-library/wiki</string>
+					</dict>
+				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395766640.26692301</real>
+				<real>395769454.71985501</real>
 				<key>Name</key>
-				<string>90)-</string>
+				<string>98)km-markdown Guide</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -26,7 +41,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>F1BDBFA0-5416-4E81-9DF9-B8B66A713516</string>
+				<string>0EB60124-2E3A-4CC4-958A-128A94B6CEC4</string>
 			</dict>
 		</array>
 		<key>Name</key>
