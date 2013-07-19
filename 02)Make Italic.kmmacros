@@ -153,11 +153,11 @@
 										<key>Captures</key>
 										<array>
 											<string></string>
-											<string>MMDMatchBefore</string>
+											<string>MMD__Match Before</string>
 											<string></string>
-											<string>MMDMatchFormatted</string>
+											<string>MMD__Match Formatted</string>
 											<string></string>
-											<string>MMDMatchRest</string>
+											<string>MMD__Match Rest</string>
 										</array>
 										<key>IsActive</key>
 										<true/>
@@ -271,7 +271,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDMatchBefore</string>
+						<string>MMD__Match Before</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -283,7 +283,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDMatchFormatted</string>
+						<string>MMD__Match Formatted</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -295,7 +295,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDMatchRest</string>
+						<string>MMD__Match Rest</string>
 					</dict>
 				</array>
 				<key>CustomIconData</key>
@@ -661,7 +661,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395920791.66201597</real>
+				<real>395962462.02029198</real>
 				<key>Name</key>
 				<string>02)Make Italic</string>
 				<key>Triggers</key>
