@@ -34,7 +34,7 @@
 						<key>Text</key>
 						<string>%CurrentApplication%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -69,32 +69,32 @@
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
-						<string></string>
+						<string>![Alt](URL "Title")</string>
 						<key>ResultButtonVariable</key>
 						<string>Result Button</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
-						<string>Enter image information</string>
+						<string>Enter image information…</string>
 						<key>Variables</key>
 						<array>
 							<dict>
 								<key>Default</key>
 								<string></string>
 								<key>Variable</key>
-								<string>MMDImageAlt</string>
+								<string>MMD__Image Alt</string>
 							</dict>
 							<dict>
 								<key>Default</key>
 								<string></string>
 								<key>Variable</key>
-								<string>MMDImageURL</string>
+								<string>MMD__Image URL</string>
 							</dict>
 							<dict>
 								<key>Default</key>
 								<string></string>
 								<key>Variable</key>
-								<string>MMDImageTitle</string>
+								<string>MMD__Image Title</string>
 							</dict>
 						</array>
 					</dict>
@@ -120,7 +120,7 @@
 						<key>MacroActionType</key>
 						<string>UseVariable</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -132,7 +132,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -155,7 +155,7 @@
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMDImageTitle</string>
+									<string>MMD__Image Title</string>
 									<key>VariableConditionType</key>
 									<string>IsEmpty</string>
 									<key>VariableValue</key>
@@ -179,7 +179,7 @@
 								<key>Paste</key>
 								<true/>
 								<key>Text</key>
-								<string>![%Variable%MMDImageAlt%](%Variable%MMDImageURL% "%Variable%MMDImageTitle%")</string>
+								<string>![%Variable%MMD__Image Alt%](%Variable%MMD__Image URL% "%Variable%MMD__Image Title%")</string>
 							</dict>
 						</array>
 						<key>IsActive</key>
@@ -202,7 +202,7 @@
 								<key>Paste</key>
 								<true/>
 								<key>Text</key>
-								<string>![%Variable%MMDImageAlt%](%Variable%MMDImageURL%)</string>
+								<string>![%Variable%MMD__Image Alt%](%Variable%MMD__Image URL%)</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -230,7 +230,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDImageAlt</string>
+						<string>MMD__Image Alt</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -242,7 +242,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDImageURL</string>
+						<string>MMD__Image URL</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -254,7 +254,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDImageTitle</string>
+						<string>MMD__Image Title</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -599,7 +599,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395769357.957403</real>
+				<real>395963668.57802999</real>
 				<key>Name</key>
 				<string>31)Image</string>
 				<key>Triggers</key>
