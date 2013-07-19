@@ -34,7 +34,7 @@
 						<key>MacroActionType</key>
 						<string>Pause</string>
 						<key>Time</key>
-						<string>0.5</string>
+						<string>0.2</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -744,7 +744,7 @@ sub setWidth {
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395776121.73130602</real>
+				<real>395959095.99225402</real>
 				<key>Name</key>
 				<string>51)Cleanup Table</string>
 				<key>Triggers</key>

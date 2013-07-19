@@ -30,11 +30,11 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>Pause</string>
 						<key>Time</key>
-						<string>0.5</string>
+						<string>0.1</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -373,7 +373,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395757995.82242101</real>
+				<real>395959046.03878301</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
