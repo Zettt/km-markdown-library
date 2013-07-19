@@ -34,7 +34,7 @@
 						<key>Text</key>
 						<string>%CurrentApplication%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -69,26 +69,26 @@
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
-						<string></string>
+						<string>Enter desired header level and whether text should be Title Cased.</string>
 						<key>ResultButtonVariable</key>
 						<string>Result Button</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
-						<string>Header Options</string>
+						<string>Header Options…</string>
 						<key>Variables</key>
 						<array>
 							<dict>
 								<key>Default</key>
 								<string>3</string>
 								<key>Variable</key>
-								<string>MMDHeaderLevel</string>
+								<string>MMD__Header Level</string>
 							</dict>
 							<dict>
 								<key>Default</key>
 								<string>0|1</string>
 								<key>Variable</key>
-								<string>MMDHeaderCapitalize</string>
+								<string>MMD__Header Title Case</string>
 							</dict>
 						</array>
 					</dict>
@@ -102,7 +102,7 @@
 						<key>Text</key>
 						<string></string>
 						<key>Variable</key>
-						<string>MMDHeaderTemp</string>
+						<string>MMD__Header Temp</string>
 					</dict>
 					<dict>
 						<key>Conditions</key>
@@ -148,9 +148,9 @@
 										<key>MacroActionType</key>
 										<string>SetVariableToText</string>
 										<key>Text</key>
-										<string>#%Variable%MMDHeaderTemp%</string>
+										<string>#%Variable%MMD__Header Temp%</string>
 										<key>Variable</key>
-										<string>MMDHeaderTemp</string>
+										<string>MMD__Header Temp</string>
 									</dict>
 									<dict>
 										<key>IsActive</key>
@@ -160,11 +160,11 @@
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
 										<key>Text</key>
-										<string>MMDHeaderLevel-1</string>
+										<string>MMD__Header Level-1</string>
 										<key>UseFormat</key>
 										<false/>
 										<key>Variable</key>
-										<string>MMDHeaderLevel</string>
+										<string>MMD__Header Level</string>
 									</dict>
 								</array>
 								<key>Conditions</key>
@@ -175,7 +175,7 @@
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMDHeaderLevel</string>
+											<string>MMD__Header Level</string>
 											<key>VariableConditionType</key>
 											<string>Is</string>
 											<key>VariableValue</key>
@@ -206,7 +206,17 @@
 								<key>Paste</key>
 								<true/>
 								<key>Text</key>
-								<string>%Variable%MMDHeaderTemp% </string>
+								<string>%Variable%MMD__Header Temp% </string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>DeletePastClipboard</string>
+								<key>PastExpression</key>
+								<string>0</string>
 							</dict>
 							<dict>
 								<key>Count</key>
@@ -234,7 +244,7 @@
 								<key>Paste</key>
 								<true/>
 								<key>Text</key>
-								<string> %Variable%MMDHeaderTemp%</string>
+								<string> %Variable%MMD__Header Temp%</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -252,9 +262,11 @@
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>0</string>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Header Level</string>
 							</dict>
 						</array>
 						<key>IsActive</key>
@@ -299,7 +311,7 @@
 								<key>MacroActionType</key>
 								<string>Pause</string>
 								<key>Time</key>
-								<string>0.5</string>
+								<string>0.2</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 							</dict>
@@ -313,7 +325,17 @@
 								<key>Text</key>
 								<string>%CurrentClipboard%</string>
 								<key>Variable</key>
-								<string>MMDHeaderText</string>
+								<string>MMD__Header Text</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>DeletePastClipboard</string>
+								<key>PastExpression</key>
+								<string>0</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -334,7 +356,7 @@
 								<array>
 									<string></string>
 									<string></string>
-									<string>MMDHeaderText</string>
+									<string>MMD__Header Text</string>
 									<string></string>
 								</array>
 								<key>IsActive</key>
@@ -346,7 +368,7 @@
 								<key>Search</key>
 								<string>(#+\s+)(.*)(\s+#+)</string>
 								<key>Variable</key>
-								<string>MMDHeaderText</string>
+								<string>MMD__Header Text</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -369,7 +391,7 @@
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMDHeaderCapitalize</string>
+											<string>MMD__Header Title Case</string>
 											<key>VariableConditionType</key>
 											<string>Is</string>
 											<key>VariableValue</key>
@@ -395,11 +417,11 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<false/>
+										<true/>
 										<key>MacroActionType</key>
 										<string>FilterVariable</string>
 										<key>Variable</key>
-										<string>MMDHeaderText</string>
+										<string>MMD__Header Text</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
@@ -437,7 +459,7 @@
 								<key>MacroActionType</key>
 								<string>UseVariable</string>
 								<key>Variable</key>
-								<string>CurrentApp</string>
+								<string>MMD__Current App</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -449,7 +471,7 @@
 								<key>Text</key>
 								<string>%Delete%</string>
 								<key>Variable</key>
-								<string>CurrentApp</string>
+								<string>MMD__Current App</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -470,27 +492,27 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<false/>
+										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToText</string>
 										<key>Text</key>
-										<string>#%Variable%MMDHeaderTemp%</string>
+										<string>#%Variable%MMD__Header Temp%</string>
 										<key>Variable</key>
-										<string>MMDHeaderTemp</string>
+										<string>MMD__Header Temp</string>
 									</dict>
 									<dict>
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<false/>
+										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
 										<key>Text</key>
-										<string>MMDHeaderLevel-1</string>
+										<string>MMD__Header Level-1</string>
 										<key>UseFormat</key>
 										<false/>
 										<key>Variable</key>
-										<string>MMDHeaderLevel</string>
+										<string>MMD__Header Level</string>
 									</dict>
 								</array>
 								<key>Conditions</key>
@@ -501,7 +523,7 @@
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMDHeaderLevel</string>
+											<string>MMD__Header Level</string>
 											<key>VariableConditionType</key>
 											<string>Is</string>
 											<key>VariableValue</key>
@@ -532,7 +554,7 @@
 								<key>Paste</key>
 								<true/>
 								<key>Text</key>
-								<string>%Variable%MMDHeaderTemp% %Variable%MMDHeaderText% %Variable%MMDHeaderTemp%</string>
+								<string>%Variable%MMD__Header Temp% %Variable%MMD__Header Text% %Variable%MMD__Header Temp%</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -556,7 +578,7 @@
 								<key>Text</key>
 								<string>%Delete%</string>
 								<key>Variable</key>
-								<string>MMDHeaderText</string>
+								<string>MMD__Header Text</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -568,7 +590,7 @@
 								<key>Text</key>
 								<string>%Delete%</string>
 								<key>Variable</key>
-								<string>MMDHeaderCapitalize</string>
+								<string>MMD__Header Title Case</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -580,7 +602,7 @@
 								<key>Text</key>
 								<string>%Delete%</string>
 								<key>Variable</key>
-								<string>MMDHeaderLevel</string>
+								<string>MMD__Header Level</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -592,29 +614,7 @@
 								<key>Text</key>
 								<string>%Delete%</string>
 								<key>Variable</key>
-								<string>MMDHeaderSymbols</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SetVariableToText</string>
-								<key>Text</key>
-								<string>%Delete%</string>
-								<key>Variable</key>
-								<string>MMDHeaderTemp</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>0</string>
+								<string>MMD__Header Temp</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -626,7 +626,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395769344.581047</real>
+				<real>395963336.40112197</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
