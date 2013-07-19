@@ -22,7 +22,7 @@
 						<key>Text</key>
 						<string>\t</string>
 						<key>Variable</key>
-						<string>MMDIndentCharacter</string>
+						<string>MMD__Indent Character</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -60,7 +60,7 @@
 						<key>Text</key>
 						<string>%CurrentClipboard%</string>
 						<key>Variable</key>
-						<string>MMDOrderedList</string>
+						<string>MMD__Ordered List</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -90,8 +90,8 @@
 
 // Change this to your preferred indentation style. Use '\t' for tabs.
 
-$indentation = $_ENV["KMVAR_MMDIndentCharacter"];
-$list = $_ENV["KMVAR_MMDOrderedList"];
+$indentation = $_ENV["KMVAR_MMD__Indent_Character"];
+$list = $_ENV["KMVAR_MMD__Ordered_List"];
 
 function parse_simple_list($list, $indentation)
 {
@@ -494,7 +494,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395959061.99515498</real>
+				<real>395965703.05934101</real>
 				<key>Name</key>
 				<string>26)List 1, 2, 3</string>
 				<key>Triggers</key>
