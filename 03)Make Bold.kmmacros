@@ -142,7 +142,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -190,7 +190,7 @@
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 										<key>Text</key>
-										<string>%Variable%MMDMatchBefore%%Variable%MMDMatchFormatted%%Variable%MMDMatchRest%</string>
+										<string>%Variable%MMD__Match Before%%Variable%MMD__Match Formatted%%Variable%MMD__Match Rest%</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
@@ -661,7 +661,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395962513.66754401</real>
+				<real>395965428.44558501</real>
 				<key>Name</key>
 				<string>03)Make Bold</string>
 				<key>Triggers</key>

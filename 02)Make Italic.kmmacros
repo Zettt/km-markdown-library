@@ -190,7 +190,7 @@
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 										<key>Text</key>
-										<string>%Variable%MMDMatchBefore%%Variable%MMDMatchFormatted%%Variable%MMDMatchRest%</string>
+										<string>%Variable%MMD__Match Before%%Variable%MMD__Match Formatted%%Variable%MMD__Match Rest%</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
@@ -661,7 +661,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395962462.02029198</real>
+				<real>395965473.82080102</real>
 				<key>Name</key>
 				<string>02)Make Italic</string>
 				<key>Triggers</key>
