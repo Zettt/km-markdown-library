@@ -34,7 +34,7 @@
 						<key>Text</key>
 						<string>%CurrentApplication%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -69,26 +69,26 @@
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
-						<string></string>
+						<string>[^Tag]: Text</string>
 						<key>ResultButtonVariable</key>
 						<string>Result Button</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
-						<string>Enter Footnote</string>
+						<string>Enter Footnote…</string>
 						<key>Variables</key>
 						<array>
 							<dict>
 								<key>Default</key>
 								<string></string>
 								<key>Variable</key>
-								<string>MMDFootnoteTag</string>
+								<string>MMD__Footnote Tag</string>
 							</dict>
 							<dict>
 								<key>Default</key>
 								<string></string>
 								<key>Variable</key>
-								<string>MMDFootnoteText</string>
+								<string>MMD__Footnote Text</string>
 							</dict>
 						</array>
 					</dict>
@@ -114,7 +114,7 @@
 						<key>MacroActionType</key>
 						<string>UseVariable</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -126,7 +126,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -152,7 +152,7 @@
 						<key>Paste</key>
 						<true/>
 						<key>Text</key>
-						<string>[^%Variable%MMDFootnoteTag%]</string>
+						<string>[^%Variable%MMD__Footnote Tag%]</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -195,6 +195,20 @@
 						<false/>
 					</dict>
 					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>36</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
 						<key>Action</key>
 						<string>ByPasting</string>
 						<key>IsActive</key>
@@ -206,7 +220,7 @@
 						<key>Paste</key>
 						<true/>
 						<key>Text</key>
-						<string>[^%Variable%MMDFootnoteTag%]: %Variable%MMDFootnoteText%</string>
+						<string>[^%Variable%MMD__Footnote Tag%]: %Variable%MMD__Footnote Text%</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -218,7 +232,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDFootnoteTag</string>
+						<string>MMD__Footnote Tag</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -230,7 +244,7 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDFootnoteText</string>
+						<string>MMD__Footnote Text</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -593,7 +607,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395757446.97838199</real>
+				<real>395965236.502985</real>
 				<key>Name</key>
 				<string>32)Footnote</string>
 				<key>Triggers</key>
