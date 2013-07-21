@@ -25,7 +25,17 @@
 									<key>MenuConditionType</key>
 									<string>IsEnabled</string>
 									<key>MenuTitle</key>
-									<string>Copy</string>
+									<string>Cut</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Menu</string>
+									<key>MenuConditionSelectionType</key>
+									<string>Is</string>
+									<key>MenuConditionType</key>
+									<string>IsEnabled</string>
+									<key>MenuTitle</key>
+									<string>Bearbeiten</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -76,7 +86,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396097119.56322801</real>
+				<real>396103383.66929603</real>
 				<key>Name</key>
 				<string>Helper - Is Text Selected?</string>
 				<key>Triggers</key>
