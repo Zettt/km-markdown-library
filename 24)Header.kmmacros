@@ -22,6 +22,32 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
+						<string>Check for text selection</string>
+					</dict>
+					<dict>
+						<key>Count</key>
+						<integer>1</integer>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>2FA80014-C9C2-45AE-BE4A-CA56E27EF8C0</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
 						<string>Save frontmost app in variable</string>
 					</dict>
 					<dict>
@@ -111,13 +137,13 @@
 							<array>
 								<dict>
 									<key>ConditionType</key>
-									<string>Menu</string>
-									<key>MenuConditionSelectionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Cut Menu Item</string>
+									<key>VariableConditionType</key>
 									<string>Is</string>
-									<key>MenuConditionType</key>
-									<string>IsEnabled</string>
-									<key>MenuTitle</key>
-									<string>Copy</string>
+									<key>VariableValue</key>
+									<string>true</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -125,6 +151,30 @@
 						</dict>
 						<key>ElseActions</key>
 						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Cut Menu Item</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Header Title Case</string>
+							</dict>
 							<dict>
 								<key>IsActive</key>
 								<true/>
@@ -268,6 +318,18 @@
 								<key>Variable</key>
 								<string>MMD__Header Level</string>
 							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Header Temp</string>
+							</dict>
 						</array>
 						<key>IsActive</key>
 						<true/>
@@ -277,6 +339,18 @@
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
 						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Cut Menu Item</string>
+							</dict>
 							<dict>
 								<key>IsActive</key>
 								<true/>
@@ -626,7 +700,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395963336.40112197</real>
+				<real>396097240.78226399</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
@@ -647,7 +721,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>2B070D15-FD76-4B3D-A6B2-BD9EEC01BC36</string>
+				<string>9AAD73D8-E28B-403F-A147-339257C252A5</string>
 			</dict>
 		</array>
 		<key>Name</key>
