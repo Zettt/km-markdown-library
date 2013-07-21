@@ -29,7 +29,7 @@
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
-							<string>All</string>
+							<string>Any</string>
 						</dict>
 						<key>ElseActions</key>
 						<array>
@@ -76,7 +76,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396095999.64675301</real>
+				<real>396096873.89028698</real>
 				<key>Name</key>
 				<string>Helper - Is Text Selected? (No AppleScript Version)</string>
 				<key>Triggers</key>
