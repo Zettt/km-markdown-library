@@ -1,19 +1,19 @@
-km-markdown-library
-===================
+Markdown for Keyboard Maestro 2
+===============================
 
-With these macros you can write Markdown with any text editor using the help of Keyboard Maestro.  
+These macros help you write Markdown with any text editor using the magic that is Keyboard Maestro.
 
-Whenever necessary you get a dialog where you can insert information, such as URLs, text for links, etc. Then, when you click OK, the text gets inserted into your document and you can continue writing.  
-In fact, when user action is required, e.g. in the "[New Link][]” macro, you can leave your editor window, open/close/switch to other apps and look the information up. These macros work with (almost) every editor. The frontmost app is saved to a variable when executed, when all information is inserted, this variable is used to switch back to this app, therefore bringing forward your editor's window.
+When user interaction is required, e.g. for collecting URLs, text for links, etc., the frontmost app is saved, which allows you to switch apps as much as needed, your editor will be restored later. This makes these macros so flexible that you can use (almost) every text editor.
 
-Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros.  
-Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave a lot of inspiration for this project.
+**NOTE: You must set one thing manually!** There’s a Helper macro included with the name “Helper - Is Text Selected?”. In there is an If/Then/Else action. If your system is set to something other than English, either change `Cut` to your language’s text, e.g. `Bearbeiten`, or, better yet, add a new condition `menu item with this name: “Bearbeiten” is enabled`. This enables you to use multiple system languages.
+
+Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros. Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave a lot of inspiration for this project.
 
 # New in Version 2 #
 
-My main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.  
+Main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.
 
-[Major changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2 "Changes in Version 2 · Zettt/km-markdown-library Wiki · GitHub")
+Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2 "Changes in Version 2 · Zettt/km-markdown-library Wiki · GitHub")
 
 ## Screencast for version 2 ##
 
@@ -21,9 +21,9 @@ My main focus for version 2 was speed optimization, interaction, accessibility f
 
 Screencast for version 1: http://youtu.be/IzZefvu7nTI
 
-# Download #
+# Download v1#
 
-A pure download version containing no Git files is [available](https://www.box.com/s/0j21c071kh0bqrpco2x8 "km-markdown-library-v1.3.zip") here. (Preferred method)
+A download version containing no Git files is [available](https://www.box.com/s/0j21c071kh0bqrpco2x8 "km-markdown-library-v1.3.zip") here. (Preferred method) **You should remove the old macros before adding the new ones!**
 
 [Download version 2 beta 2](https://app.box.com/s/xv6jzaxgxiihciu3b7sj "km-markdown-library-v2b2.zip") instead. (Things could potentially break, but I try my best that they don’t!)
 
