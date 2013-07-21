@@ -34,7 +34,7 @@
 						<key>MacroActionType</key>
 						<string>Pause</string>
 						<key>Time</key>
-						<string>0.2</string>
+						<string>0.1</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -396,7 +396,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395775688.512465</real>
+				<real>395920838.41247803</real>
 				<key>Name</key>
 				<string>08)Make Quote</string>
 				<key>Triggers</key>
