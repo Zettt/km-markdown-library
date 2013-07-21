@@ -139,7 +139,7 @@ clipboard_to_references(pboard)
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
@@ -509,7 +509,7 @@ clipboard_to_references(pboard)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395757470.33564198</real>
+				<real>396101726.03137302</real>
 				<key>Name</key>
 				<string>2: Link List from Clipboard</string>
 				<key>Triggers</key>

@@ -40,7 +40,7 @@
 						<key>MacroActionType</key>
 						<string>Pause</string>
 						<key>Time</key>
-						<string>0.5</string>
+						<string>0.2</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -513,7 +513,7 @@ puts bottom + "\n\n#{o.join("\n")}\n"</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395757476.78067899</real>
+				<real>396101720.86231601</real>
 				<key>Name</key>
 				<string>3: Link Inlines to References</string>
 				<key>Triggers</key>

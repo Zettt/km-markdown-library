@@ -28,6 +28,32 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
+						<string>Check for text selection</string>
+					</dict>
+					<dict>
+						<key>Count</key>
+						<integer>1</integer>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>2FA80014-C9C2-45AE-BE4A-CA56E27EF8C0</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
 						<string>Save frontmost app in variable</string>
 					</dict>
 					<dict>
@@ -40,7 +66,7 @@
 						<key>Text</key>
 						<string>%CurrentApplication%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -61,13 +87,13 @@
 							<array>
 								<dict>
 									<key>ConditionType</key>
-									<string>Menu</string>
-									<key>MenuConditionSelectionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Cut Menu Item</string>
+									<key>VariableConditionType</key>
 									<string>Is</string>
-									<key>MenuConditionType</key>
-									<string>IsEnabled</string>
-									<key>MenuTitle</key>
-									<string>Copy</string>
+									<key>VariableValue</key>
+									<string>true</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -75,6 +101,18 @@
 						</dict>
 						<key>ElseActions</key>
 						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Cut Menu Item</string>
+							</dict>
 							<dict>
 								<key>Buttons</key>
 								<array>
@@ -92,42 +130,44 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>PromptForUserInput</string>
 								<key>Prompt</key>
-								<string></string>
+								<string>[Text](URL "Title")
+
+Inline means the link will not be a reference link.</string>
 								<key>ResultButtonVariable</key>
 								<string>Result Button</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
-								<string>Enter text, URL, and title</string>
+								<string>Enter text, URL, and title…</string>
 								<key>Variables</key>
 								<array>
 									<dict>
 										<key>Default</key>
 										<string></string>
 										<key>Variable</key>
-										<string>MMDLinkText</string>
+										<string>MMD__Link Text</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string></string>
 										<key>Variable</key>
-										<string>MMDLinkURL</string>
+										<string>MMD__Link URL</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string></string>
 										<key>Variable</key>
-										<string>MMDLinkTitle</string>
+										<string>MMD__Link Title</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string>1|0</string>
 										<key>Variable</key>
-										<string>MMDLinkInline</string>
+										<string>MMD__Link Inline</string>
 									</dict>
 								</array>
 							</dict>
@@ -146,11 +186,11 @@
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>Comment</string>
+								<string>SetVariableToText</string>
 								<key>Text</key>
-								<string>If the cut menu is not available, no text is selected.</string>
-								<key>Title</key>
-								<string>Cut is enabled → selection exists</string>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Cut Menu Item</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -174,7 +214,7 @@
 								<key>MacroActionType</key>
 								<string>Pause</string>
 								<key>Time</key>
-								<string>0.5</string>
+								<string>0.2</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 							</dict>
@@ -188,7 +228,7 @@
 								<key>Text</key>
 								<string>%CurrentClipboard%</string>
 								<key>Variable</key>
-								<string>MMDLinkText</string>
+								<string>MMD__Link Text</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -217,42 +257,44 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>PromptForUserInput</string>
 								<key>Prompt</key>
-								<string></string>
+								<string>[Text](URL "Title")
+
+Inline means the link will not be a reference link.</string>
 								<key>ResultButtonVariable</key>
 								<string>Result Button</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
-								<string>Enter URL and title</string>
+								<string>Enter URL and title…</string>
 								<key>Variables</key>
 								<array>
 									<dict>
 										<key>Default</key>
-										<string>%Variable%MMDLinkText%</string>
+										<string>%Variable%MMD__Link Text%</string>
 										<key>Variable</key>
-										<string>MMDLinkText</string>
+										<string>MMD__Link Text</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string>%PastClipboard%0%</string>
 										<key>Variable</key>
-										<string>MMDLinkURL</string>
+										<string>MMD__Link URL</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string></string>
 										<key>Variable</key>
-										<string>MMDLinkTitle</string>
+										<string>MMD__Link Title</string>
 									</dict>
 									<dict>
 										<key>Default</key>
 										<string>1|0</string>
 										<key>Variable</key>
-										<string>MMDLinkInline</string>
+										<string>MMD__Link Inline</string>
 									</dict>
 								</array>
 							</dict>
@@ -281,7 +323,7 @@
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMDLinkTitle</string>
+									<string>MMD__Link Title</string>
 									<key>VariableConditionType</key>
 									<string>IsEmpty</string>
 									<key>VariableValue</key>
@@ -307,7 +349,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -317,7 +359,7 @@
 
 &lt;?php // Plug-in 42: Get Title From URL (http://pluginphp.com/plug-in42.php)
 
-$page = $_ENV["KMVAR_MMDLinkURL"];
+$page = $_ENV["KMVAR_MMD__Link_URL"];
 $result = GetTitleFromURL($page);
 
 if (!$result) echo ""; // custom fail case if necessary
@@ -342,7 +384,7 @@ function GetTitleFromURL($page)
 								<key>UseText</key>
 								<true/>
 								<key>Variable</key>
-								<string>MMDLinkTitle</string>
+								<string>MMD__Link Title</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -370,7 +412,7 @@ function GetTitleFromURL($page)
 						<key>MacroActionType</key>
 						<string>UseVariable</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -382,7 +424,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>CurrentApp</string>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -405,7 +447,7 @@ function GetTitleFromURL($page)
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMDLinkInline</string>
+									<string>MMD__Link Inline</string>
 									<key>VariableConditionType</key>
 									<string>Is</string>
 									<key>VariableValue</key>
@@ -434,7 +476,7 @@ function GetTitleFromURL($page)
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMDLinkTitle</string>
+											<string>MMD__Link Title</string>
 											<key>VariableConditionType</key>
 											<string>IsNotEmpty</string>
 											<key>VariableValue</key>
@@ -470,7 +512,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkText%](%Variable%MMDLinkURL%)</string>
+										<string>[%Variable%MMD__Link Text%](%Variable%MMD__Link URL%)</string>
 									</dict>
 								</array>
 								<key>IsActive</key>
@@ -505,7 +547,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkText%](%Variable%MMDLinkURL% "%Variable%MMDLinkTitle%")</string>
+										<string>[%Variable%MMD__Link Text%](%Variable%MMD__Link URL% "%Variable%MMD__Link Title%")</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
@@ -548,7 +590,7 @@ function GetTitleFromURL($page)
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMDLinkInline</string>
+									<string>MMD__Link Inline</string>
 									<key>VariableConditionType</key>
 									<string>Is</string>
 									<key>VariableValue</key>
@@ -595,14 +637,14 @@ function GetTitleFromURL($page)
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
-								<string>Tag to use</string>
+								<string>Tag to use…</string>
 								<key>Variables</key>
 								<array>
 									<dict>
 										<key>Default</key>
 										<string></string>
 										<key>Variable</key>
-										<string>MMDLinkTag</string>
+										<string>MMD__Link Tag</string>
 									</dict>
 								</array>
 							</dict>
@@ -619,7 +661,7 @@ function GetTitleFromURL($page)
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMDLinkInline</string>
+									<string>MMD__Link Inline</string>
 									<key>VariableConditionType</key>
 									<string>Is</string>
 									<key>VariableValue</key>
@@ -648,7 +690,7 @@ function GetTitleFromURL($page)
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMDLinkTitle</string>
+											<string>MMD__Link Title</string>
 											<key>VariableConditionType</key>
 											<string>IsNotEmpty</string>
 											<key>VariableValue</key>
@@ -684,7 +726,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkText%][%Variable%MMDLinkTag%]</string>
+										<string>[%Variable%MMD__Link Text%][%Variable%MMD__Link Tag%]</string>
 									</dict>
 									<dict>
 										<key>IsActive</key>
@@ -715,6 +757,20 @@ function GetTitleFromURL($page)
 										<false/>
 									</dict>
 									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>KeyCode</key>
+										<integer>36</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>0</integer>
+										<key>ReleaseAll</key>
+										<false/>
+									</dict>
+									<dict>
 										<key>Action</key>
 										<string>ByPasting</string>
 										<key>IsActive</key>
@@ -726,7 +782,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkTag%]: %Variable%MMDLinkURL%</string>
+										<string>[%Variable%MMD__Link Tag%]: %Variable%MMD__Link URL%</string>
 									</dict>
 								</array>
 								<key>IsActive</key>
@@ -761,7 +817,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkText%][%Variable%MMDLinkTag%]</string>
+										<string>[%Variable%MMD__Link Text%][%Variable%MMD__Link Tag%]</string>
 									</dict>
 									<dict>
 										<key>IsActive</key>
@@ -792,6 +848,20 @@ function GetTitleFromURL($page)
 										<false/>
 									</dict>
 									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>KeyCode</key>
+										<integer>36</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>0</integer>
+										<key>ReleaseAll</key>
+										<false/>
+									</dict>
+									<dict>
 										<key>Action</key>
 										<string>ByPasting</string>
 										<key>IsActive</key>
@@ -803,7 +873,7 @@ function GetTitleFromURL($page)
 										<key>Paste</key>
 										<true/>
 										<key>Text</key>
-										<string>[%Variable%MMDLinkTag%]: %Variable%MMDLinkURL% "%Variable%MMDLinkTitle%"</string>
+										<string>[%Variable%MMD__Link Tag%]: %Variable%MMD__Link URL% "%Variable%MMD__Link Title%"</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
@@ -835,7 +905,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDLinkText</string>
+						<string>MMD__Link Text</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -847,7 +917,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDLinkURL</string>
+						<string>MMD__Link URL</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -859,7 +929,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDLinkTitle</string>
+						<string>MMD__Link Title</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -871,7 +941,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDFetchTitle</string>
+						<string>MMD__Link Tag</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -883,19 +953,7 @@ function GetTitleFromURL($page)
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDLinkTag</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>%Delete%</string>
-						<key>Variable</key>
-						<string>MMDLinkInline</string>
+						<string>MMD__Link Inline</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -1281,7 +1339,7 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395757467.098391</real>
+				<real>396102665.56018901</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
