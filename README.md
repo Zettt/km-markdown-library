@@ -30,3 +30,7 @@ A download version containing no Git files is [available](https://www.box.com/s/
 # Documentation #
 
 [Documentation is available from the Wiki.](https://github.com/Zettt/km-markdown-library/wiki "Home · Zettt/km-markdown-library Wiki · GitHub")
+
+# Donations #
+
+If you really want, donate a cup of tea or show your appreciation through a donation. Flattr is accepted. Thanks!
