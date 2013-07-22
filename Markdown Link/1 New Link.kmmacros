@@ -362,12 +362,12 @@ Inline means the link will not be a reference link.</string>
 $page = $_ENV["KMVAR_MMD__Link_URL"];
 $result = GetTitleFromURL($page);
 
-if (!$result) echo ""; // custom fail case if necessary
+if (!$result) echo "";
 else echo "$result";
 
 function GetTitleFromURL($page)
 {
-   $contents = @file_get_contents($page);
+   $contents = @file_get_contents($page, FALSE, NULL, 0, 40000);
    if (!$contents) return FALSE;
    
    preg_match("/\&lt;title\&gt;(.*)\&lt;\/title\&gt;/", $contents, $matches);
@@ -1339,7 +1339,7 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396102665.56018901</real>
+				<real>396200564.52860701</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
