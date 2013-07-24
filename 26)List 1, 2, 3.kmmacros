@@ -176,7 +176,19 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>MMDIndentCharacter</string>
+						<string>MMD__Indent Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Ordered List</string>
 					</dict>
 				</array>
 				<key>CustomIconData</key>
@@ -494,7 +506,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395965703.05934101</real>
+				<real>396372583.25547898</real>
 				<key>Name</key>
 				<string>26)List 1, 2, 3</string>
 				<key>Triggers</key>
