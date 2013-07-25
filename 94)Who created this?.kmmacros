@@ -33,18 +33,18 @@
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
-						<string>Hi, I'm Andreas, I make videos for technology products. Animations, screencasts, drawings, etc. If you have a nice app, just contact me and we can see what we can do for you. (contact@zcasting3000.com)
+						<string>Hi, I'm Andreas, I make videos for technology products. If you have a nice app, just contact me. I'm not a mean person. (contact@zcasting3000.com)
 
-In my free time I enjoy scripting and other nerdery.[^1] That’s why I wrote this. To scratch an itch, to have some fun in my spare time. It started at about the time when it was unclear whether there’s ever going to be a new version of TextMate. And I loved TextMate so much. I settled for another editor (Vim) and wanted a more universal way to work with Markdown. I figured Keyboard Maestro could do most of the stuff, but I wasn't quite sure. So I simply got started.   
-Keyboard Maestro turned out to even improve upon most TextMate workflows. Its ability to present a user dialog, and its ability to remember variable stuff, like frontmost app names.
+In my free time I enjoy scripting and other nerdery.[^1] That’s why I wrote this. To scratch an itch and to have some fun in my spare time. It started at about the time when it was unclear whether there’s ever going to be a new version of TextMate. I loved TextMate so much. I settled for another editor (Vim) in the meanwhile, but I was still jealous of all the cool features of TextMate. Then Keyboard Maestro 5 introduced the nifty variable and user input mechanics. I figured that could make quite a difference in my Markdown workflow, but I wasn't quite sure if I could really pull a whole Markdown thing in Keyboard Maestro. So I simply got started.  
+As it turned out, Keyboard Maestro even improves upon most TextMate workflows.
 
-So this is what it is now. It’s not perfect, but it’s the best version I can create right now. I am improving this library quite regularly, be sure to head over to my blog to follow development or follow me on GitHub.
+So, this is what it is now. It’s not perfect, but it’s the best version I can create right now. I am improving this library quite regularly, be sure to head over to my blog to follow development or follow me on GitHub.
 
 MOSX Blog: mosx.tumblr.com  
-MOSX: macosxscreencasts.com
+MOSX Website: macosxscreencasts.com  
 GitHub: github.com/zettt
 
-Or open directly in your browser:
+…or open directly in your browser.
 
 [^1]: Working out, meditation, reading…</string>
 						<key>ResultButtonVariable</key>
@@ -651,7 +651,7 @@ Or open directly in your browser:
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396445753.236875</real>
+				<real>396446814.11457503</real>
 				<key>Name</key>
 				<string>94)Who created this?</string>
 				<key>Triggers</key>
