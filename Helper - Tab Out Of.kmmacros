@@ -32,7 +32,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>PauseUntil</string>
 						<key>TimeOutAbortsMacro</key>
@@ -42,7 +42,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>KeyCode</key>
 						<integer>51</integer>
 						<key>MacroActionType</key>
@@ -58,7 +58,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>392570290.283988</real>
+				<real>396446996.56444502</real>
 				<key>Name</key>
 				<string>Helper - Tab Out Of</string>
 				<key>Triggers</key>

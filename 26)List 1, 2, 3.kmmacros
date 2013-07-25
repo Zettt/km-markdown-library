@@ -182,7 +182,7 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -506,7 +506,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396372583.25547898</real>
+				<real>396446948.50032997</real>
 				<key>Name</key>
 				<string>26)List 1, 2, 3</string>
 				<key>Triggers</key>
