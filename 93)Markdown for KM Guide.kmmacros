@@ -24,7 +24,7 @@
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>URL</key>
-						<string>https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide</string>
+						<string>https://github.com/Zettt/km-markdown-library/wiki</string>
 					</dict>
 				</array>
 				<key>CustomIconData</key>
@@ -356,9 +356,9 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396445737.33457297</real>
+				<real>396445749.11959398</real>
 				<key>Name</key>
-				<string>92)Multimarkdown Syntax</string>
+				<string>93)Markdown for KM Guide</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -367,7 +367,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>EEDBAA04-1E9C-4CBD-8B74-233C59E2903E</string>
+				<string>0EB60124-2E3A-4CC4-958A-128A94B6CEC4</string>
 			</dict>
 		</array>
 		<key>Name</key>
