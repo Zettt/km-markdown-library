@@ -153,7 +153,7 @@ Inline means the link will not be a reference link.</string>
 									</dict>
 									<dict>
 										<key>Default</key>
-										<string></string>
+										<string>%PastClipboard%0%</string>
 										<key>Variable</key>
 										<string>MMD__Link URL</string>
 									</dict>
@@ -1339,7 +1339,7 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396200564.52860701</real>
+				<real>396444759.91366601</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
