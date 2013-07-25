@@ -17,9 +17,9 @@ Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library
 
 ## Screencast for version 2 ##
 
-[http://youtu.be/U76GvbsW2i8]()
+[http://youtu.be/U76GvbsW2i8](http://youtu.be/U76GvbsW2i8)
 
-Screencast for version 1: [http://youtu.be/IzZefvu7nTI]()
+Screencast for version 1: [http://youtu.be/IzZefvu7nTI](http://youtu.be/IzZefvu7nTI)
 
 # Donations #
 
