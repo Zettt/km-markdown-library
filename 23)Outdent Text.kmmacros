@@ -52,10 +52,6 @@
 						<key>Text</key>
 						<string>#!/usr/bin/env ruby
 
-# Unicode considerations:
-#  Set $KCODE to 'u'. This makes STDIN and STDOUT both act as containing UTF-8.
-$KCODE = 'u'
-
 #  Since any Ruby version before 1.9 doesn't much care for Unicode,
 #  patch in a new String#utf8_length method that returns the correct length
 #  for UTF-8 strings.
@@ -120,7 +116,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395958986.03089201</real>
+				<real>396461852.87047702</real>
 				<key>Name</key>
 				<string>23)Outdent Text</string>
 				<key>Triggers</key>
