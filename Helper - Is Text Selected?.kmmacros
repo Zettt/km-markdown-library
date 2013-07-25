@@ -25,7 +25,7 @@
 									<key>MenuConditionType</key>
 									<string>IsEnabled</string>
 									<key>MenuTitle</key>
-									<string>Cut</string>
+									<string>Copy</string>
 								</dict>
 								<dict>
 									<key>ConditionType</key>
@@ -35,7 +35,7 @@
 									<key>MenuConditionType</key>
 									<string>IsEnabled</string>
 									<key>MenuTitle</key>
-									<string>Bearbeiten</string>
+									<string>Kopieren</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -47,7 +47,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>SetVariableToText</string>
 								<key>Text</key>
@@ -68,7 +68,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>SetVariableToText</string>
 								<key>Text</key>
@@ -86,7 +86,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396262527.78107297</real>
+				<real>396446802.89486498</real>
 				<key>Name</key>
 				<string>Helper - Is Text Selected?</string>
 				<key>Triggers</key>
