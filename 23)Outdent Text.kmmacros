@@ -16,23 +16,9 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string>You can place Seth Brown's [formd][1] wherever you want as long as you provide the correct in Execute Shell Script below.
-
-[1]: http://www.drbunsen.org/formd-a-markdown-formatting-tool.html</string>
-						<key>Title</key>
-						<string>Note: requires external formd tool</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
-						<integer>8</integer>
+						<integer>7</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
@@ -46,11 +32,11 @@
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>%CurrentClipboard%</string>
-						<key>Variable</key>
-						<string>formd</string>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>DisplayKind</key>
@@ -64,31 +50,49 @@
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>#!/bin/sh
+						<string>#!/usr/bin/env ruby
 
-formd="$KMVAR_formd"
+# Unicode considerations:
+#  Set $KCODE to 'u'. This makes STDIN and STDOUT both act as containing UTF-8.
+$KCODE = 'u'
 
-echo "$formd" |  /usr/local/bin/formd.py -r</string>
+#  Since any Ruby version before 1.9 doesn't much care for Unicode,
+#  patch in a new String#utf8_length method that returns the correct length
+#  for UTF-8 strings.
+UNICODE_COMPETENT = ((RUBY_VERSION)[0..2].to_f &gt; 1.8)
+
+unless UNICODE_COMPETENT # lower than 1.9
+  class String
+    def utf8_length
+      i = 0
+      i = self.scan(/(.)/).length
+      i
+    end
+  end
+else # 1.9 and above
+  class String
+    alias_method :utf8_length, :length
+  end
+end
+
+input = IO.popen('pbpaste', 'r+').read nil
+
+input.split("\n").each {|line|
+  if line =~ /\A\s{2,4}(.*)/
+    puts $1
+  else
+    puts line
+  end
+}
+</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
 						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>%Delete%</string>
-						<key>Variable</key>
-						<string>formd</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -97,25 +101,47 @@ echo "$formd" |  /usr/local/bin/formd.py -r</string>
 						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>1</integer>
 						<key>PastExpression</key>
-						<string>1</string>
+						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>PastExpression</key>
+						<string>0</string>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=←=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>395958986.03089201</real>
 				<key>Name</key>
-				<string>formd</string>
+				<string>23)Outdent Text</string>
 				<key>Triggers</key>
 				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>33</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6656</integer>
+					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
 						<string>StatusMenu</string>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>32068494-3FC3-4F56-BDDA-2DD785B86EAF</string>
+				<string>F4A85BDA-6823-4CBD-A596-42B20EBAFB46</string>
 			</dict>
 		</array>
 		<key>Name</key>

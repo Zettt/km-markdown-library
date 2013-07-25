@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>7</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.2</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>#!/usr/bin/env perl
+#
+# $Id: table_cleanup.pl 499 2008-03-23 13:03:19Z fletcher $
+#
+# Cleanup the spacing and alignment of MultiMarkdown tables
+#
+# Used by my TextMate Bundle, but can be used elsewhere as well
+#
+# Copyright (c) 2006-2008 Fletcher T. Penney
+#	&lt;http://fletcherpenney.net/&gt;
+#
+# MultiMarkdown Version 2.0.b6
+#
+{
+use utf8;
+
+local $/;
+$text = &lt;&gt;;
+}
+
+my %max_width = ();
+my @alignments = ();
+
+
+# Reusable regexp's to match table
+my $less_than_tab = 3;
+
+my $line_start = qr{
+	[ ]{0,$less_than_tab}
+}mx;
+
+my $table_row = qr{
+	[^\n]*?\|[^\n]*?\n
+}mx;
+	
+my $first_row = qr{
+	$line_start
+	\S+.*?\|.*?\n
+}mx;
+
+my $table_rows = qr{
+	(?:\n?$table_row)
+}mx;
+
+my $table_caption = qr{
+	$line_start
+	\[.*?\][ \t]*\n
+}mx;
+
+my $table_divider = qr{
+	$line_start
+	[\|\-\+\:\.][ \-\+\|\:\.]*?\|[ \-\+\|\:\.]*
+}mx;
+
+my $whole_table = qr{
+	($table_caption)?		# Optional caption
+	($first_row				# First line must start at beginning
+	($table_row)*?)?		# Header Rows
+	$table_divider			# Divider/Alignment definitions
+	$table_rows+			# Body Rows
+	\n?[^\n]*?\|[^\n]*?		# Allow last row not to have a "\n" for cleaning while editing
+	($table_caption)?		# Optional caption
+}mx;
+
+
+# Find whole tables, then break them up and process them
+
+$text =~ s{
+	^($whole_table)			# Whole table in $1
+	(\n|\Z)					# End of file or 2 blank lines
+}{
+	use utf8;
+	my $table = $1 . "\n";	
+	my $table_original = $table;
+	$result = "";
+	@alignments = ();
+	%max_width = ();
+	
+	# Strip Caption and Summary
+	$table =~ s/^$line_start\[\s*(.*?)\s*\](\[\s*(.*?)\s*\])?[ \t]*$//m;
+	$table =~ s/\n$line_start\[\s*(.*?)\s*\][ \t]*\n/\n/s;
+	
+	$table = "\n" . $table;	
+	# Need to be greedy
+	$table =~ s/\n($table_divider)\n($table_rows+)//s;
+	my $alignment_string = $1;
+	my $body = $2;
+	my $header = $table;
+
+	# Process column alignment
+	while ($alignment_string =~ /\|?\s*(.+?)\s*(\||\Z)/gs) {
+		my $cell = $1;
+		if ($cell =~ /\:$/) {
+			if ($cell =~ /^\:/) {
+				push(@alignments,"center");
+			} else {
+				push(@alignments,"right");
+			}
+		} else {
+			if ($cell =~ /^\:/) {
+				push(@alignments,"left");
+			} else {
+				if (($cell =~ /^\./) || ($cell =~ /\.$/)) {
+					push(@alignments,"char");
+				} else {
+					push(@alignments,"");
+				}
+			}
+		}
+	}
+
+	$table = $header . "\n" . $body;
+	
+	# First pass - find widest cell in each column (for single column cells only)
+	foreach my $line (split(/\n/, $table)) {
+		my $count = 0;
+		while ($line =~ /(\|?\s*[^\|]+?\s*(\|+|\Z))/gs) {
+			use utf8;
+			my $cell = $1;		# Width of actual text in cell
+			my $ending = $2;	# Is there a trailing `|`?
+			
+#			print "length of \"$cell\" is " . length($cell) ."\n";
+			if ($ending =~ /\|\|/) {
+				# For first pass, do single cells only
+				$count += (length($ending));
+				next;
+			}
+
+			setWidth($count, $cell);			
+			$count++
+		}
+	}
+	
+	# Second pass - handle cells that span multiple rows
+	foreach my $line (split(/\n/, $table)) {
+		my $count = 0;
+		while ($line =~ /(\|?\s*[^\|]+?\s*(\|+|\Z))/gs) {
+			my $cell = $1;		# Width of actual text in cell
+			my $ending = $2;	# Is there a trailing `|`?
+			
+			if ($ending =~ /\|\|/) {
+				setWidth($count, $cell);			
+				$count += (length($ending));
+				next;
+			}
+			$count++
+		}
+	}
+	
+	# Fix length of alignment definitions
+	
+	$table_original =~ s{
+		\n($table_divider)\n
+	}{
+		my $divider = $1;
+		my $count = 0;
+		$divider =~ s{
+			(\|?)\s*([^\|]+?)\s*(\|+|\Z)
+		}{
+			my $opening = $1;
+			my $cell = $2;
+			my $ending = $3;
+			my $result = "";
+
+			my $goal_length = $max_width{$count} -3;
+			if ($count == 0) {
+				if ($opening eq ""){
+					$goal_length++;
+				} else {
+					$goal_length--;
+				}
+			}
+			if ($cell =~ /^\:/) {
+				$goal_length--;
+				$result = ":";
+			}
+			if ($cell =~ /[\:\+]$/) {
+				$goal_length--;
+			}
+			for (my $i=0;$i &lt; $goal_length;$i++){
+				$result.="-";
+			}
+			if ($cell =~ /\:$/) {
+				$result .=":";
+			}
+			if ($cell =~ /\+$/) {
+				$result .="+";
+			}
+			$count++;
+			$opening . "$result" . $ending;
+		}xsge;
+		"\n$divider\n";
+	}sxe;
+
+	# Second pass - reformat table cells to appropriate width
+
+	$table_original =~ s{
+		# match each line
+		(.*)
+	}{
+		$line = $1;
+		my $result = "";
+		my $count = 0;
+		
+		# Now process them
+		
+		if (($line =~ /^\[/) &amp;&amp; ($line !~ /\|/)){
+			$result .= $line;
+		} else {
+		while ($line =~ /(\|?)\s*([^\|]+?)\s*(\|+|\Z)/gs) {
+			my $opening = $1;
+			my $cell = $2;
+			my $ending = $3;
+			my $lead = 0;
+			my $pad_lead = 0;
+			my $pad_trail = 0;
+			my $len = length($2);		# Length of actual contents
+			
+			# Not all first column cells have a leading `|`
+			if ($count &gt; 0) {
+				$pad_lead = 1;
+			} elsif (length($opening) &gt; 0) {
+				$pad_lead = 1;
+			}
+
+			# Buffer before trailing `|`
+			if (length($ending) &gt; 0) {
+				$pad_trail = 1;
+			}
+
+			# How much space to fill? (account for multiple columns)
+			my $width = 0;
+			if ($ending =~ /\|/) {
+				$width = maxWidth($count,length($ending));
+			} else {
+				$width = maxWidth($count, 1);
+			}
+			
+			if ($alignments[$count] =~ /^(left)?$/) {
+				$lead = $len + $pad_lead;
+				$trail = $width - $lead  - length($opening);
+			}
+
+			if ($alignments[$count] =~ /^right$/) {
+				if ($count == 0) {
+					if ($opening eq "") {
+						$opening = "|";
+						$pad_lead = 1;
+						$width++;
+					}
+				}
+				$trail = $pad_trail+length($ending);
+				$lead = $width - $trail - length($opening);
+			}
+			
+			if ($alignments[$count] =~ /^center$/) {
+				if ($count == 0) {
+					if ($opening eq "") {
+						$opening = "|";
+						$pad_lead = 1;
+						$width++;
+					}
+				}
+				# Divide padding space
+				my $pad_total =  $width - $len;
+				$pad_lead = int($pad_total/2)+1;
+				$pad_trail = $pad_total - $pad_lead;
+				$trail = $pad_trail+length($ending);
+				$lead = $width - $trail - length($opening);
+			}
+
+			$result .= $opening . sprintf("%*s", $lead, $cell) . sprintf("%*s", $trail, $ending);
+		
+			if ($ending =~ /\|\|/) {
+				$count += (length($ending));
+			} else {
+				$count++;
+			}
+		}
+		}
+		
+		# Clean up end of line so that there are two trailing spaces
+		$result =~ s/ *$//;
+		$result =~ s/([^ ]) *$/$1  /;
+		
+		$result;
+	}xmge;
+	
+	$table_original;
+}xsge;
+
+
+print $text;
+
+
+sub maxWidth {
+	# Return the total width for a range of columns
+	my ($start_col, $cols) = @_;
+	my $total = 0;
+	
+	for (my $i = $start_col;$i &lt; ($start_col + $cols);$i++) {
+		$total += $max_width{$i};
+	}
+	
+	return $total;
+}
+
+sub setWidth {
+	# Set widths for column(s) based on cell contents
+	my ($start_col, $cell) = @_;
+
+	$cell =~ /(\|?)\s*([^\|]+?)\s*(\|+|\Z)/;
+	my $opening = 	$1;
+	my $contents =	$2;
+	my $closing =	$3;
+	
+	my $padding =	0;
+
+	$padding++ if (length($opening) &gt; 0);	# For first cell
+	$padding++ if ($start_col &gt; 0);			# All cells except first definitely have an opening `|`
+	$padding++ if (length($closing) &gt; 0);
+				
+	$contents =~ s/&amp;\s*(.*?)\s*$/$1/;	# I don't remember what this does
+	
+	my $cell_length = length($contents) + $padding + length($opening)  + length($closing);
+	
+	if ($closing =~ /\|\|/) {
+		# This cell spans multiple columns
+		my @current_max = ();
+		my $cols = length($closing);
+		my $current_total = 0;
+		
+		for (my $i = $start_col;$i &lt; ($start_col + $cols);$i++) {
+			$current_total += $max_width{$i};
+		}
+
+		if ($current_total &lt; $cell_length) {
+			my %columns = ();
+			# Proportionally divide extra space
+			for (my $i = $start_col; $i &lt; ($start_col + $cols);$i++) {
+				$max_width{$i} = int($max_width{$i} * ($cell_length/$current_total));
+				$columns{$i} = $max_width{$i};
+			}
+			$current_total = 0;
+			for (my $i = $start_col;$i &lt; ($start_col + $cols);$i++) {
+				$current_total += $max_width{$i};
+			}
+			my $missing = $cell_length - $current_total;
+
+			# Now find the amount lost from fractions, and add back to largest columns
+			foreach my $a_col (sort { $max_width{$b} &lt;=&gt; $max_width{$a} }keys %columns) {
+				if ($missing &gt; 0) {
+					$max_width{$a_col}++;
+					$missing--;
+				}
+			}
+		}
+		
+	} else {
+		if ($max_width{$start_col}&lt; $cell_length) {
+			$max_width{$start_col} = $cell_length;
+		}	
+	}
+	
+}
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+				</array>
+				<key>CustomIconData</key>
+				<data>
+				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
+				cHBsAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWFw
+				cGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAtkZXNjAAABCAAAAG9kc2Nt
+				AAABeAAABWxjcHJ0AAAG5AAAADh3dHB0AAAHHAAAABRy
+				WFlaAAAHMAAAABRnWFlaAAAHRAAAABRiWFlaAAAHWAAA
+				ABRyVFJDAAAHbAAAAA5jaGFkAAAHfAAAACxiVFJDAAAH
+				bAAAAA5nVFJDAAAHbAAAAA5kZXNjAAAAAAAAABRHZW5l
+				cmljIFJHQiBQcm9maWxlAAAAAAAAAAAAAAAUR2VuZXJp
+				YyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbWx1
+				YwAAAAAAAAAeAAAADHNrU0sAAAAoAAABeGhySFIAAAAo
+				AAABoGNhRVMAAAAkAAAByHB0QlIAAAAmAAAB7HVrVUEA
+				AAAqAAACEmZyRlUAAAAoAAACPHpoVFcAAAAWAAACZGl0
+				SVQAAAAoAAACem5iTk8AAAAmAAAComtvS1IAAAAWAAAC
+				yGNzQ1oAAAAiAAAC3mhlSUwAAAAeAAADAGRlREUAAAAs
+				AAADHmh1SFUAAAAoAAADSnN2U0UAAAAmAAAConpoQ04A
+				AAAWAAADcmphSlAAAAAaAAADiHJvUk8AAAAkAAADomVs
+				R1IAAAAiAAADxnB0UE8AAAAmAAAD6G5sTkwAAAAoAAAE
+				DmVzRVMAAAAmAAAD6HRoVEgAAAAkAAAENnRyVFIAAAAi
+				AAAEWmZpRkkAAAAoAAAEfHBsUEwAAAAsAAAEpHJ1UlUA
+				AAAiAAAE0GFyRUcAAAAmAAAE8mVuVVMAAAAmAAAFGGRh
+				REsAAAAuAAAFPgBWAWEAZQBvAGIAZQBjAG4A/QAgAFIA
+				RwBCACAAcAByAG8AZgBpAGwARwBlAG4AZQByAGkBDQBr
+				AGkAIABSAEcAQgAgAHAAcgBvAGYAaQBsAFAAZQByAGYA
+				aQBsACAAUgBHAEIAIABnAGUAbgDoAHIAaQBjAFAAZQBy
+				AGYAaQBsACAAUgBHAEIAIABHAGUAbgDpAHIAaQBjAG8E
+				FwQwBDMEMAQ7BEwEPQQ4BDkAIAQ/BEAEPgREBDAEOQQ7
+				ACAAUgBHAEIAUAByAG8AZgBpAGwAIABnAOkAbgDpAHIA
+				aQBxAHUAZQAgAFIAVgBCkBp1KAAgAFIARwBCACCCcl9p
+				Y8+P8ABQAHIAbwBmAGkAbABvACAAUgBHAEIAIABnAGUA
+				bgBlAHIAaQBjAG8ARwBlAG4AZQByAGkAcwBrACAAUgBH
+				AEIALQBwAHIAbwBmAGkAbMd8vBgAIABSAEcAQgAg1QS4
+				XNMMx3wATwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBv
+				AGYAaQBsBeQF6AXVBeQF2QXcACAAUgBHAEIAIAXbBdwF
+				3AXZAEEAbABsAGcAZQBtAGUAaQBuAGUAcwAgAFIARwBC
+				AC0AUAByAG8AZgBpAGwAwQBsAHQAYQBsAOEAbgBvAHMA
+				IABSAEcAQgAgAHAAcgBvAGYAaQBsZm6QGgAgAFIARwBC
+				ACBjz4/wZYdO9k4AgiwAIABSAEcAQgAgMNcw7TDVMKEw
+				pDDrAFAAcgBvAGYAaQBsACAAUgBHAEIAIABnAGUAbgBl
+				AHIAaQBjA5MDtQO9A7kDugPMACADwAPBA78DxgOvA7sA
+				IABSAEcAQgBQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBl
+				AG4A6QByAGkAYwBvAEEAbABnAGUAbQBlAGUAbgAgAFIA
+				RwBCAC0AcAByAG8AZgBpAGUAbA5CDhsOIw5EDh8OJQ5M
+				ACAAUgBHAEIAIA4XDjEOSA4nDkQOGwBHAGUAbgBlAGwA
+				IABSAEcAQgAgAFAAcgBvAGYAaQBsAGkAWQBsAGUAaQBu
+				AGUAbgAgAFIARwBCAC0AcAByAG8AZgBpAGkAbABpAFUA
+				bgBpAHcAZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBs
+				ACAAUgBHAEIEHgQxBEkEOAQ5ACAEPwRABD4ERAQ4BDsE
+				TAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAAUgBH
+				AEIAIAYnBkQGOQYnBkUARwBlAG4AZQByAGkAYwAgAFIA
+				RwBCACAAUAByAG8AZgBpAGwAZQBHAGUAbgBlAHIAZQBs
+				ACAAUgBHAEIALQBiAGUAcwBrAHIAaQB2AGUAbABzAGV0
+				ZXh0AAAAAENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4s
+				IGFsbCByaWdodHMgcmVzZXJ2ZWQuAFhZWiAAAAAAAADz
+				UgABAAAAARbPWFlaIAAAAAAAAHRNAAA97gAAA9BYWVog
+				AAAAAAAAWnUAAKxzAAAXNFhZWiAAAAAAAAAoGgAAFZ8A
+				ALg2Y3VydgAAAAAAAAABAc0AAHNmMzIAAAAAAAEMQgAA
+				Bd7///MmAAAHkgAA/ZH///ui///9owAAA9wAAMBsgAAg
+				UDggAHsDOsDGkDDMFh0PiERiUTikVhzngbMgaLgbDiZ7
+				gaCgYCi0lk0nlEpgj+gZ+gaFgcHgTAkcqm03nE5AEsgR
+				AgaygZNnVDolFiqzgbmhlGplNo0YgT/igmqgAatXAAEr
+				VOrkUflfAArsQAbVlk1Skp9tQAQVtrtviB8uQAQt1lVo
+				iwMvQAaF9AAjwFwrjcwgAGGHAD1xV3lQ/xwAYGRwVOH2
+				VADDzE5vE2UOdABe0GTnCe0gAMenoublQW1lkswP2Gii
+				zw2gAqgmADr3WpougLwAzqh2UVLfFACm5FO1U4AfNyGS
+				HnR4cEX/VABE7E7f08pnLoYo8AAanjAHNAeCr78AAp9g
+				AwjcuHeoyA+gAP/3wR5/QARH92T5KKvQGAAacCgAEEEK
+				MsptAAGMHAAe0Iv+2QgwqABfQwowdw2ABjQ86aoxAABS
+				RIADii2mxNxUAAzRbESCQAt4Lxm10GAdG6KnbHQABPHo
+				AR0dsXoHGLJuwIgAOiHiKuqX4AGDJ8hIdIkoyom0pxE2
+				6CwXKqJyu0QETAABhTGgrKh8AB8TTLkpTWAA3TeAAPTk
+				AAczqABUzwABJT3NsYSoCdAAAcdBgAHVDRHEoRUUAAO0
+				bH8dzXLyutOMYAE5S4AHnTQAAbTqCjJUAAE7Uc20krhD
+				VQAD9DyitUEMAA91jNqlIEhsQCNXAAFzXaK1wIwAF3YM
+				qKgACgIEoUojRZQADxZqCv6RAAExac2qQgSZMgms+22g
+				buJ8hyQIEkSBJJbkou4lyBJgiVsISgSF1rcym2IjSBI4
+				gSPIGgIADwEAAAMAAAABACAAAAEBAAMAAAABACAAAAEC
+				AAMAAAAEAAAUNgEDAAMAAAABAAUAAAEGAAMAAAABAAIA
+				AAERAAQAAAABAAARIgESAAMAAAABAAEAAAEVAAMAAAAB
+				AAQAAAEWAAMAAAABACAAAAEXAAQAAAABAAACWgEcAAMA
+				AAABAAEAAAE9AAMAAAABAAIAAAFSAAMAAAABAAEAAAFT
+				AAMAAAAEAAAUPodzAAcAAAeoAAAURgAAHS4ACAAIAAgA
+				CAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBYWVog
+				B9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAA
+				AAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAALZGVzYwAAAQgAAABvZHNjbQAAAXgAAAVs
+				Y3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAA
+				AAAUZ1hZWgAAB0QAAAAUYlhZWgAAB1gAAAAUclRSQwAA
+				B2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RS
+				QwAAB2wAAAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0Ig
+				UHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
+				b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAA
+				HgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVT
+				AAAAJAAAAchwdEJSAAAAJgAAAex1a1VBAAAAKgAAAhJm
+				ckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAA
+				AnpuYk5PAAAAJgAAAqJrb0tSAAAAFgAAAshjc0NaAAAA
+				IgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhV
+				AAAAKAAAA0pzdlNFAAAAJgAAAqJ6aENOAAAAFgAAA3Jq
+				YUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAA
+				A8ZwdFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAA
+				JgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpmaUZJ
+				AAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBh
+				ckVHAAAAJgAABPJlblVTAAAAJgAABRhkYURLAAAALgAA
+				BT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAA
+				cgBvAGYAaQBsAEcAZQBuAGUAcgBpAQ0AawBpACAAUgBH
+				AEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIA
+				RwBCACAAZwBlAG4A6AByAGkAYwBQAGUAcgBmAGkAbAAg
+				AFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAE
+				OwRMBD0EOAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBC
+				AFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
+				IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUABy
+				AG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4AZQByAGkA
+				YwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcABy
+				AG8AZgBpAGzHfLwYACAAUgBHAEIAINUEuFzTDMd8AE8A
+				YgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXk
+				BegF1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBBAGwA
+				bABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBv
+				AGYAaQBsAMEAbAB0AGEAbADhAG4AbwBzACAAUgBHAEIA
+				IABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWH
+				TvZOAIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIA
+				bwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkAYwOT
+				A7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIA
+				UABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOkAcgBp
+				AGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAA
+				cgBvAGYAaQBlAGwOQg4bDiMORA4fDiUOTAAgAFIARwBC
+				ACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIA
+				IABQAHIAbwBmAGkAbABpAFkAbABlAGkAbgBlAG4AIABS
+				AEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUA
+				cgBzAGEAbABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBC
+				BB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
+				QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZE
+				BjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcAQgAgAFAA
+				cgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBC
+				AC0AYgBlAHMAawByAGkAdgBlAGwAcwBldGV4dAAAAABD
+				b3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmln
+				aHRzIHJlc2VydmVkLgBYWVogAAAAAAAA81IAAQAAAAEW
+				z1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1
+				AACscwAAFzRYWVogAAAAAAAAKBoAABWfAAC4NmN1cnYA
+				AAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAA
+				B5IAAP2R///7ov///aMAAAPcAADAbIAAIEAoEADnBT1B
+				QhBYZDYdD4hDnhBUNBUbBTrBURBYJEY9H5BDH9BTxBXj
+				BQcG5UABPLQA/5hIZlAgDNQA2ZwAHLO4Y8oK/4YIqEAG
+				dRQAD6RM5k8KYABnTwA3qlEKBDy5VwAo61SpDVy4AFLY
+				ZBVYcCbMAFZaQASrZXIYtbgACrcwA97tY5ALL0AGRfQA
+				C8BIXngwAOMMAGtiaVZJCescAELkZCd8oAEVl7dAsZIK
+				QDwAv9AABjo4ay9MACJqQA8tZmZfrsMOAAaNpL5iltwA
+				NMy9dDM3mQnwdtQHdxd7D9/MgJywAZ+cAAh0QAiOoAH7
+				1+PmtdLROAFd3wAFfEAB55QA2vR2QBJ4EDqVQhEAGf8w
+				A/vtTqhUm9rp9AoygSNoGpQSQIhpuQO1yRoEksBIEg6B
+				ISgSFvUpaKIsgIAAAA8BAAADAAAAAQAQAAABAQADAAAA
+				AQAQAAABAgADAAAABAAAHegBAwADAAAAAQAFAAABBgAD
+				AAAAAQACAAABEQAEAAAAAQAAG+4BEgADAAAAAQABAAAB
+				FQADAAAAAQAEAAABFgADAAAAAQAQAAABFwAEAAAAAQAA
+				AT8BHAADAAAAAQABAAABPQADAAAAAQACAAABUgADAAAA
+				AQABAAABUwADAAAABAAAHfCHcwAHAAAHqAAAHfgAAAAA
+				AAgACAAIAAgAAQABAAEAAQAAB6hhcHBsAiAAAG1udHJS
+				R0IgWFlaIAfZAAIAGQALABoAC2Fjc3BBUFBMAAAAAGFw
+				cGwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBw
+				bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAC2Rlc2MAAAEIAAAAb2RzY20A
+				AAF4AAAFbGNwcnQAAAbkAAAAOHd0cHQAAAccAAAAFHJY
+				WVoAAAcwAAAAFGdYWVoAAAdEAAAAFGJYWVoAAAdYAAAA
+				FHJUUkMAAAdsAAAADmNoYWQAAAd8AAAALGJUUkMAAAds
+				AAAADmdUUkMAAAdsAAAADmRlc2MAAAAAAAAAFEdlbmVy
+				aWMgUkdCIFByb2ZpbGUAAAAAAAAAAAAAABRHZW5lcmlj
+				IFJHQiBQcm9maWxlAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVj
+				AAAAAAAAAB4AAAAMc2tTSwAAACgAAAF4aHJIUgAAACgA
+				AAGgY2FFUwAAACQAAAHIcHRCUgAAACYAAAHsdWtVQQAA
+				ACoAAAISZnJGVQAAACgAAAI8emhUVwAAABYAAAJkaXRJ
+				VAAAACgAAAJ6bmJOTwAAACYAAAKia29LUgAAABYAAALI
+				Y3NDWgAAACIAAALeaGVJTAAAAB4AAAMAZGVERQAAACwA
+				AAMeaHVIVQAAACgAAANKc3ZTRQAAACYAAAKiemhDTgAA
+				ABYAAANyamFKUAAAABoAAAOIcm9STwAAACQAAAOiZWxH
+				UgAAACIAAAPGcHRQTwAAACYAAAPobmxOTAAAACgAAAQO
+				ZXNFUwAAACYAAAPodGhUSAAAACQAAAQ2dHJUUgAAACIA
+				AARaZmlGSQAAACgAAAR8cGxQTAAAACwAAASkcnVSVQAA
+				ACIAAATQYXJFRwAAACYAAATyZW5VUwAAACYAAAUYZGFE
+				SwAAAC4AAAU+AFYBYQBlAG8AYgBlAGMAbgD9ACAAUgBH
+				AEIAIABwAHIAbwBmAGkAbABHAGUAbgBlAHIAaQENAGsA
+				aQAgAFIARwBCACAAcAByAG8AZgBpAGwAUABlAHIAZgBp
+				AGwAIABSAEcAQgAgAGcAZQBuAOgAcgBpAGMAUABlAHIA
+				ZgBpAGwAIABSAEcAQgAgAEcAZQBuAOkAcgBpAGMAbwQX
+				BDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQEMAQ5BDsA
+				IABSAEcAQgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBp
+				AHEAdQBlACAAUgBWAEKQGnUoACAAUgBHAEIAIIJyX2lj
+				z4/wAFAAcgBvAGYAaQBsAG8AIABSAEcAQgAgAGcAZQBu
+				AGUAcgBpAGMAbwBHAGUAbgBlAHIAaQBzAGsAIABSAEcA
+				QgAtAHAAcgBvAGYAaQBsx3y8GAAgAFIARwBCACDVBLhc
+				0wzHfABPAGIAZQBjAG4A/QAgAFIARwBCACAAcAByAG8A
+				ZgBpAGwF5AXoBdUF5AXZBdwAIABSAEcAQgAgBdsF3AXc
+				BdkAQQBsAGwAZwBlAG0AZQBpAG4AZQBzACAAUgBHAEIA
+				LQBQAHIAbwBmAGkAbADBAGwAdABhAGwA4QBuAG8AcwAg
+				AFIARwBCACAAcAByAG8AZgBpAGxmbpAaACAAUgBHAEIA
+				IGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCk
+				MOsAUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUA
+				cgBpAGMDkwO1A70DuQO6A8wAIAPAA8EDvwPGA68DuwAg
+				AFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUA
+				bgDpAHIAaQBjAG8AQQBsAGcAZQBtAGUAZQBuACAAUgBH
+				AEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwA
+				IABSAEcAQgAgDhcOMQ5IDicORA4bAEcAZQBuAGUAbAAg
+				AFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4A
+				ZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAaQBsAGkAVQBu
+				AGkAdwBlAHIAcwBhAGwAbgB5ACAAcAByAG8AZgBpAGwA
+				IABSAEcAQgQeBDEESQQ4BDkAIAQ/BEAEPgREBDgEOwRM
+				ACAAUgBHAEIGRQZEBkEAIAYqBjkGMQZKBkEAIABSAEcA
+				QgAgBicGRAY5BicGRQBHAGUAbgBlAHIAaQBjACAAUgBH
+				AEIAIABQAHIAbwBmAGkAbABlAEcAZQBuAGUAcgBlAGwA
+				IABSAEcAQgAtAGIAZQBzAGsAcgBpAHYAZQBsAHMAZXRl
+				eHQAAAAAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwg
+				YWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNS
+				AAEAAAABFs9YWVogAAAAAAAAdE0AAD3uAAAD0FhZWiAA
+				AAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAA
+				uDZjdXJ2AAAAAAAAAAEBzQAAc2YzMgAAAAAAAQxCAAAF
+				3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGw=
+				</data>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>395959095.99225402</real>
+				<key>Name</key>
+				<string>51)Cleanup Table</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>StatusMenu</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>406D2819-94AB-475F-BDB2-149F395F77CE</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Markdown</string>
+		<key>UID</key>
+		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
+	</dict>
+</array>
+</plist>

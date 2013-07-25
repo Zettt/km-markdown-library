@@ -18,7 +18,7 @@
 						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
-						<integer>125</integer>
+						<integer>7</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
@@ -31,14 +31,12 @@
 						<true/>
 						<key>IsDisclosed</key>
 						<false/>
-						<key>KeyCode</key>
-						<integer>36</integer>
 						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>DisplayKind</key>
@@ -52,113 +50,86 @@
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>#!/usr/bin/env ruby -rjcode -Ku
+						<string>#!/usr/bin/env ruby
 
+# Unicode considerations:
+#  Set $KCODE to 'u'. This makes STDIN and STDOUT both act as containing UTF-8.
 $KCODE = 'u'
+
+#  Since any Ruby version before 1.9 doesn't much care for Unicode,
+#  patch in a new String#utf8_length method that returns the correct length
+#  for UTF-8 strings.
 UNICODE_COMPETENT = ((RUBY_VERSION)[0..2].to_f &gt; 1.8)
 
 unless UNICODE_COMPETENT # lower than 1.9
   class String
-     def utf8_length
-        i = 0
-        i = self.scan(/(.)/).length
-        i
-     end
+    def utf8_length
+      i = 0
+      i = self.scan(/(.)/).length
+      i
+    end
   end
 else # 1.9 and above
   class String
-     alias_method :utf8_length, :length
+    alias_method :utf8_length, :length
   end
 end
 
-def clipboard_to_references(input)
-  links = input.scan /(?:\[([^\]]+)\]\: )?(https?:\/\/[^ \n"]+)/m
+input = IO.popen('pbpaste', 'r+').read nil
 
-  if links.empty? &amp;&amp; input.empty?
-  	exit
-  else
-    norepeat = []
-    output = []
-    links.each {|url| 
-    	if url[0].nil?
-    	  if url[1] =~ (/http:\/\/itunes.apple.com\/(.+?)\/app\/(.+?)\/id\d+/)
-    	    name = $2
-    	  elsif url[1] =~ /(itunes|phobos).apple.com/
-    	    name = "itunes"
-    	  else
-    		  domain = url[1].match(/https?:\/\/([^\/]+)/)
-    		  parts = domain[1].split('.')
-    		  name = case parts.length
-    			  when 1: parts[0]
-    			  when 2: parts[0]
-    			  else parts[1]
-    		  end
-    		end
-    	else
-    		name = url[0]
-    	end
-
-    	while norepeat.include? name
-    		if name =~ / ?[0-9]$/
-    			name.next!
-    		else 
-    			name = name + " 2"
-    		end
-    	end
-    	output &lt;&lt; {'title' =&gt; name, 'link' =&gt; url[1] }
-    	norepeat.push name
-    }
-    output = output.sort {|a,b| a['title'] &lt;=&gt; b['title']}
-    counter = 0
-    output.each { |x| 
-    	counter += 1
-    	puts "[#{x['title']}]: #{x['link']}"
-    }
-  end
-end
-
-pboard = %x{__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste}.strip
-clipboard_to_references(pboard)
+input.split("\n").each {|line|
+  puts "    #{line}"
+}
 </string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
-						<true/>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
 						<key>UseText</key>
 						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
-						<key>Past</key>
-						<integer>0</integer>
+						<key>PastExpression</key>
+						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
 					</dict>
 				</array>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=→=86=0=0=0=KMCOLOR:255,255,255,255</string>
 				<key>IsActive</key>
 				<true/>
+				<key>ModificationDate</key>
+				<real>396372386.29764301</real>
 				<key>Name</key>
-				<string>Link List from Clipboard</string>
+				<string>22)Indent Text</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>37</integer>
+						<integer>30</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>6144</integer>
-						<key>TriggerRepeat</key>
-						<false/>
+						<integer>6656</integer>
 					</dict>
 					<dict>
 						<key>MacroTriggerType</key>
@@ -166,7 +137,7 @@ clipboard_to_references(pboard)
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>CACEDEAD-88E0-47AD-90B0-E2B30DA41FD3</string>
+				<string>4DF62F61-0A58-43AA-BE64-3C52B9B4F9DA</string>
 			</dict>
 		</array>
 		<key>Name</key>

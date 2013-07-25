@@ -5,7 +5,7 @@
 	<key>Name</key>
 	<string>Wrap Text</string>
 	<key>Script</key>
-	<string>Action.scpt</string>
+	<string>Action.sh</string>
 	<key>Icon</key>
 	<string>KM_Wrapper_Plugin_Icon.png</string>
 	<key>Title</key>

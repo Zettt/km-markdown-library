@@ -1,0 +1,6 @@
+[submodule "markdown-mark"]
+	path = markdown-mark
+	url = https://github.com/dcurtis/markdown-mark.git
+[submodule "formd"]
+	path = formd
+	url = https://github.com/drbunsen/formd.git
