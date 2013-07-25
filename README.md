@@ -27,7 +27,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download v2 #
 
-[Download version 2.0](https://app.box.com/s/xv6jzaxgxiihciu3b7sj "km-markdown-library-v2b2.zip") (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+[Download version 2.0](https://app.box.com/s/f5wpiz0vb50b9m63laxq) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 **You should remove the old macros before adding these!**
 
