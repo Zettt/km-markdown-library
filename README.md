@@ -29,7 +29,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 [Download version 2.0.1](https://app.box.com/s/9p9011wtdse741f3nx9i) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
-2.0.1 adds support for the just released MultiMarkdown 4.2 superscript (`^`) and subscript (`^`) markup.
+2.0.1 adds support for the just released MultiMarkdown 4.2 superscript (`^`) and subscript (`~`) markup.
 
 **You should remove the old macros before adding these!**
 
