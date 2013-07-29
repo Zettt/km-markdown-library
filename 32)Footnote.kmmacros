@@ -80,7 +80,7 @@
 						<array>
 							<dict>
 								<key>Default</key>
-								<string></string>
+								<string>%ICUDateTime%yyyyMMdd-HHmmss%</string>
 								<key>Variable</key>
 								<string>MMD__Footnote Tag</string>
 							</dict>
@@ -607,7 +607,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395965236.502985</real>
+				<real>396796485.38154697</real>
 				<key>Name</key>
 				<string>32)Footnote</string>
 				<key>Triggers</key>
