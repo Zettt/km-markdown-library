@@ -21,21 +21,15 @@
 									<key>ConditionType</key>
 									<string>Menu</string>
 									<key>MenuConditionSelectionType</key>
-									<string>Is</string>
+									<string>Shortcut</string>
 									<key>MenuConditionType</key>
 									<string>IsEnabled</string>
+									<key>MenuModifiers</key>
+									<integer>256</integer>
+									<key>MenuShortcut</key>
+									<string>C</string>
 									<key>MenuTitle</key>
 									<string>Copy</string>
-								</dict>
-								<dict>
-									<key>ConditionType</key>
-									<string>Menu</string>
-									<key>MenuConditionSelectionType</key>
-									<string>Is</string>
-									<key>MenuConditionType</key>
-									<string>IsEnabled</string>
-									<key>MenuTitle</key>
-									<string>Kopieren</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -86,7 +80,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396446802.89486498</real>
+				<real>397816519.03812599</real>
 				<key>Name</key>
 				<string>Helper - Is Text Selected?</string>
 				<key>Triggers</key>
