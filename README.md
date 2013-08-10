@@ -13,7 +13,7 @@ Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Bre
 
 Main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.
 
-Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2 "Changes in Version 2 · Zettt/km-markdown-library Wiki · GitHub")
+Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2-and-2.1 "Changes in Version 2 and 2.1")
 
 ## Screencast for version 2 ##
 
@@ -27,14 +27,13 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download v2 #
 
-[Download version 2.0.1](https://app.box.com/s/9p9011wtdse741f3nx9i) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
-
-2.0.1 adds support for the just released MultiMarkdown 4.2 superscript (`^`) and subscript (`~`) markup.
+[Download version 2.1](https://app.box.com/s/uobvuurnk8pymh7guv1j) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 **You should remove the old macros before adding these!**
 
 Older versions:
 
+* [v 2.0.1](https://app.box.com/s/9p9011wtdse741f3nx9i) 
 * [v 2.0](https://app.box.com/s/f5wpiz0vb50b9m63laxq)
 * [v 1.3.1](https://app.box.com/s/vd1ofs4jabpq8lrt6nta)
 
