@@ -106,7 +106,7 @@
 # setenv LANG en_US.UTF-8 #older systems
 export LANG=en_US.UTF-8 #umlauts
 
-if [[ -x /usr/local/bin/pandoc ]] || [[ -x /bin/pandoc ]] || [[ -x /Users/`whoami`/bin/pandoc ]] || [[ -x /Users/`whoami`/.bin/pandoc ]]; then
+if [[ -x /usr/local/bin/pandoc ]] || [[ -x /bin/pandoc ]] || [[ -x $HOME/bin/pandoc ]] || [[ -x $HOME/.bin/pandoc ]]; then
 	# pandoc is installed
 	echo "$KMVAR_MMD__Markdownify" | /usr/local/bin/pandoc -f html -t markdown --no-wrap --reference-links
 fi
@@ -517,7 +517,7 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>397841358.36441702</real>
+				<real>397851932.11161399</real>
 				<key>Name</key>
 				<string>43)Markdownify</string>
 				<key>Triggers</key>
