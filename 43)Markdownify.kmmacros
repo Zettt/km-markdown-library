@@ -81,7 +81,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>Comment</string>
 								<key>Text</key>
@@ -95,7 +95,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -147,7 +147,7 @@ fi
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -517,7 +517,7 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>397841218.79584098</real>
+				<real>397841358.36441702</real>
 				<key>Name</key>
 				<string>43)Markdownify</string>
 				<key>Triggers</key>
