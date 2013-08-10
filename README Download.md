@@ -44,7 +44,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 * You don’t need to set the “Copy” menu entry manually anymore. Keyboard Maestro has a better way for the “Is Text Selected?” Helper. 
 * The Footnote macro now auto-suggests a footnote tag based on the word the cursor is standing on.
-* A new macro has been included to “Markdownify” a selection using [Heck Yes Markdown](http://heckyesmarkdown.com "Heck Yes Markdown"). (Internet connection required)
+* A new macro has been included to “Markdownify” a selection using [Heck Yes Markdown](http://heckyesmarkdown.com "Heck Yes Markdown"). Alternatively this macro will try to use [Pandoc](http://johnmacfarlane.net/pandoc/ "Pandoc - About pandoc"), check for its availability in several places. If you have installed Pandoc in an uncommon place, please adjust. Also you can delete the “if online”-block to use Pandoc only. The script is set to use `--reference-links`. 
 
 ## v2.0.1: ##
 
