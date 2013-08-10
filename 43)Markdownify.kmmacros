@@ -42,7 +42,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -76,15 +76,19 @@
 							<string>All</string>
 						</dict>
 						<key>ElseActions</key>
-						<array/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>IfThenElse</string>
-						<key>ThenActions</key>
 						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Computer is offline, let's try Pandoc instead</string>
+							</dict>
 							<dict>
 								<key>DisplayKind</key>
 								<string>Pasting</string>
@@ -100,6 +104,57 @@
 								<string>#!/bin/sh
 
 # setenv LANG en_US.UTF-8 #older systems
+export LANG=en_US.UTF-8 #umlauts
+
+if [[ -x /usr/local/bin/pandoc ]] || [[ -x /bin/pandoc ]] || [[ -x /Users/`whoami`/bin/pandoc ]] || [[ -x /Users/`whoami`/.bin/pandoc ]]; then
+	# pandoc is installed
+	echo "$KMVAR_MMD__Markdownify" | /usr/local/bin/pandoc -f html -t markdown --no-wrap --reference-links
+fi
+</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Computer is online, let's use Marky</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Pasting</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/bin/sh
+
 export LANG=en_US.UTF-8 #umlauts
 
 curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__Markdownify" --silent</string>
@@ -462,7 +517,7 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>397841073.37757897</real>
+				<real>397841218.79584098</real>
 				<key>Name</key>
 				<string>43)Markdownify</string>
 				<key>Triggers</key>
