@@ -59,7 +59,7 @@
 									<key>Variable</key>
 									<string>MMD_Current App</string>
 									<key>VariableConditionType</key>
-									<string>DoesNotContain</string>
+									<string>DoesNotMatch</string>
 									<key>VariableValue</key>
 									<string>Vim</string>
 								</dict>
@@ -69,9 +69,19 @@
 									<key>Variable</key>
 									<string>MMD_Current App</string>
 									<key>VariableConditionType</key>
-									<string>DoesNotContain</string>
+									<string>DoesNotMatch</string>
 									<key>VariableValue</key>
 									<string>MacVim</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD_Current App</string>
+									<key>VariableConditionType</key>
+									<string>DoesNotMatch</string>
+									<key>VariableValue</key>
+									<string>Emacs</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -166,6 +176,18 @@
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Lowercase</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>FilterVariable</string>
+						<key>Variable</key>
+						<string>MMD__Footnote Tag</string>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -754,7 +776,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>397728870.24232</real>
+				<real>398022299.45787901</real>
 				<key>Name</key>
 				<string>32)Footnote</string>
 				<key>Triggers</key>
