@@ -441,7 +441,7 @@
 											<key>ConditionType</key>
 											<string>Variable</string>
 											<key>Variable</key>
-											<string>MMD__Header Title Case</string>
+											<string>MMD__Title Case</string>
 											<key>VariableConditionType</key>
 											<string>Is</string>
 											<key>VariableValue</key>
@@ -456,7 +456,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -688,7 +688,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396446937.25013697</real>
+				<real>399302071.49763</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
