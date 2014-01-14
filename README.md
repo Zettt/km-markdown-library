@@ -27,12 +27,15 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download v2 #
 
-[Download version 2.1.1](https://app.box.com/s/qrepwaijqe4094kx6axg) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+[Download version 2.1.2](https://app.box.com/s/h82xio1lix89p1wgysza) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+
+[Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2-and-2.1)
 
 **You should remove the old macros before adding these!**
 
 Older versions:
 
+* [v 2.1.1](https://app.box.com/s/qrepwaijqe4094kx6axg)
 * [v 2.1](https://app.box.com/s/uobvuurnk8pymh7guv1j)
 * [v 2.0.1](https://app.box.com/s/9p9011wtdse741f3nx9i)
 * [v 2.0](https://app.box.com/s/f5wpiz0vb50b9m63laxq)
