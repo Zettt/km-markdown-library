@@ -25,6 +25,87 @@
 						<string>Check for text selection</string>
 					</dict>
 					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.apple.finder</string>
+										<key>Name</key>
+										<string>Finder</string>
+										<key>NewFile</key>
+										<string>/System/Library/CoreServices/Finder.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>Active</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>FixFinderSelectionBug</key>
+								<false/>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>OpenFinderSelection</string>
+								<key>TargetApplication</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.brettterpstra.marky</string>
+									<key>Name</key>
+									<string>Marked</string>
+									<key>NewFile</key>
+									<string>/Applications/Marked.app</string>
+								</dict>
+								<key>TargetingType</key>
+								<string>Specific</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>CancelThisMacro</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Cancel</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Check for text selection</string>
+					</dict>
+					<dict>
 						<key>Count</key>
 						<integer>1</integer>
 						<key>IsActive</key>
@@ -83,7 +164,7 @@
 								<key>Subtitle</key>
 								<string></string>
 								<key>Text</key>
-								<string>Please select some text for this macro to work.</string>
+								<string>You need to have either text selected or a file selected in Finder to preview with Marked.</string>
 								<key>Title</key>
 								<string>No text selection</string>
 							</dict>
@@ -530,7 +611,7 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396101545.56387001</real>
+				<real>411377200.89701003</real>
 				<key>Name</key>
 				<string>41)Preview Selection with Marked</string>
 				<key>Triggers</key>
@@ -541,7 +622,7 @@ open -a "Marked" "$UUIDDoc"
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>D7843B2A-F917-439F-B149-79FDE23F04C2</string>
+				<string>94519857-F07B-4B29-92A3-F38B3162ACE5</string>
 			</dict>
 		</array>
 		<key>Name</key>
