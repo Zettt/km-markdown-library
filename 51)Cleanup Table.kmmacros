@@ -56,7 +56,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -441,7 +441,7 @@ sub setWidth {
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
@@ -451,7 +451,7 @@ sub setWidth {
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
@@ -756,7 +756,7 @@ sub setWidth {
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>411441313.73767197</real>
+				<real>411441545.66995502</real>
 				<key>Name</key>
 				<string>51)Cleanup Table</string>
 				<key>Triggers</key>
