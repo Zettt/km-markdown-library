@@ -16,7 +16,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>KeyCode</key>
 						<integer>7</integer>
 						<key>MacroActionType</key>
@@ -30,7 +30,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -756,7 +756,7 @@ sub setWidth {
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>411441545.66995502</real>
+				<real>411441647.13116598</real>
 				<key>Name</key>
 				<string>51)Cleanup Table</string>
 				<key>Triggers</key>
