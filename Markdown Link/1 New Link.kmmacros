@@ -137,8 +137,6 @@
 								<string>[Text](URL "Title")
 
 Inline means the link will not be a reference link.</string>
-								<key>ResultButtonVariable</key>
-								<string>Result Button</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
@@ -264,8 +262,6 @@ Inline means the link will not be a reference link.</string>
 								<string>[Text](URL "Title")
 
 Inline means the link will not be a reference link.</string>
-								<key>ResultButtonVariable</key>
-								<string>Result Button</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
@@ -367,14 +363,22 @@ else echo "$result";
 
 function GetTitleFromURL($page)
 {
-   $contents = @file_get_contents($page, FALSE, NULL, 0, 40000);
-   if (!$contents) return FALSE;
-   
+
+	$context = stream_context_create(array('http' =&gt;
+		array(
+			'timeout' =&gt; 1, //this should be 5, but for some odd reason the download runs longer than the time set here
+			)
+	));
+
+	$contents = @file_get_contents($page, FALSE, $context, 0, 40000);
+	if (!$contents) return FALSE;
+
    preg_match("/\&lt;title\&gt;(.*)\&lt;\/title\&gt;/", $contents, $matches);
    return $matches[1];
 }
 
-?&gt;</string>
+?&gt; 
+</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>TrimResults</key>
@@ -632,8 +636,6 @@ function GetTitleFromURL($page)
 								<string>PromptForUserInput</string>
 								<key>Prompt</key>
 								<string></string>
-								<key>ResultButtonVariable</key>
-								<string>Result Button</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>Title</key>
@@ -1339,7 +1341,7 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396444759.91366601</real>
+				<real>412691531.38940001</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
