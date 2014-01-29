@@ -343,7 +343,7 @@ Inline means the link will not be a reference link.</string>
 								<key>DisplayKind</key>
 								<string>Variable</string>
 								<key>IsActive</key>
-								<true/>
+								<false/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -366,7 +366,7 @@ function GetTitleFromURL($page)
 
 	$context = stream_context_create(array('http' =&gt;
 		array(
-			'timeout' =&gt; 1, //this should be 5, but for some odd reason the download runs longer than the time set here
+			'timeout' =&gt; 5, //this should be 5, but for some odd reason the download runs longer than the time set here
 			)
 	));
 
@@ -378,6 +378,40 @@ function GetTitleFromURL($page)
 }
 
 ?&gt; 
+</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>MMD__Link Title</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/bin/sh
+
+#URL="http://mosx.tumblr.com"
+URL="$KMVAR_MMD__Link_URL"
+
+content=$(curl --connect-timeout 5 --max-time 5 --range 0-39999 --silent "$URL" | awk 'BEGIN{IGNORECASE=1;FS="&lt;title&gt;|&lt;/title&gt;";RS=EOF} {print $2}' | sed '/^$/d')
+
+if [ "$content" ]; then
+	echo "$content"
+fi
 </string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
@@ -1341,7 +1375,7 @@ function GetTitleFromURL($page)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>412691531.38940001</real>
+				<real>412700979.84837103</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
