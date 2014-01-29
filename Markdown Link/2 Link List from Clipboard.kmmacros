@@ -58,9 +58,13 @@
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>#!/usr/bin/env ruby -rjcode -Ku
+						<string>#!/usr/bin/env ruby -Ku
 
-$KCODE = 'u'
+if RUBY_VERSION.to_f &gt; 1.9
+	Encoding.default_external = Encoding::UTF_8
+	Encoding.default_internal = Encoding::UTF_8
+end
+
 UNICODE_COMPETENT = ((RUBY_VERSION)[0..2].to_f &gt; 1.8)
 
 unless UNICODE_COMPETENT # lower than 1.9
@@ -78,8 +82,8 @@ else # 1.9 and above
 end
 
 def clipboard_to_references(input)
-  links = input.scan /(?:\[([^\]]+)\]\: )?(https?:\/\/[^ \n"]+)/m
-
+  # links = input.scan /(?:\[([^\]]+)\]\: )?(https?:\/\/[^ \n"&gt;\)]+)/m
+  links = input.scan(/(?:\[([^\]]+)\]\: )?(https?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w&amp;\?=.-]*)*\/?)/im)
   if links.empty? &amp;&amp; input.empty?
   	exit
   else
@@ -95,8 +99,10 @@ def clipboard_to_references(input)
     		  domain = url[1].match(/https?:\/\/([^\/]+)/)
     		  parts = domain[1].split('.')
     		  name = case parts.length
-    			  when 1: parts[0]
-    			  when 2: parts[0]
+    			  when 1
+					parts[0]
+    			  when 2
+					parts[0]
     			  else parts[1]
     		  end
     		end
@@ -114,18 +120,18 @@ def clipboard_to_references(input)
     	output &lt;&lt; {'title' =&gt; name, 'link' =&gt; url[1] }
     	norepeat.push name
     }
-    output = output.sort {|a,b| a['title'] &lt;=&gt; b['title']}
-    counter = 0
-    output.each { |x| 
-    	counter += 1
-    	puts "[#{x['title']}]: #{x['link']}"
-    }
+    output.sort! {|a,b| a['title'] &lt;=&gt; b['title']}
+	output
   end
 end
 
 pboard = %x{__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste}.strip
-clipboard_to_references(pboard)
-</string>
+output = clipboard_to_references(pboard)
+counter = 0
+output.each { |x| 
+  counter += 1
+  puts "[#{x['title']}]: #{x['link']}"
+}</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -509,7 +515,7 @@ clipboard_to_references(pboard)
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396101726.03137302</real>
+				<real>411443031.63071901</real>
 				<key>Name</key>
 				<string>2: Link List from Clipboard</string>
 				<key>Triggers</key>
@@ -530,7 +536,7 @@ clipboard_to_references(pboard)
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>CACEDEAD-88E0-47AD-90B0-E2B30DA41FD3</string>
+				<string>0E47DAC6-4176-4EFF-9EF4-4A245A60D62D</string>
 			</dict>
 		</array>
 		<key>Modifiers</key>
