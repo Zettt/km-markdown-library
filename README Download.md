@@ -30,7 +30,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download #
 
-[Download version 2.1](https://app.box.com/s/uobvuurnk8pymh7guv1j) 
+[Download version 2.1.3](https://app.box.com/s/tiiabn302rkjn16o7e8h) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 **You should remove the old macros before adding these!**
 
@@ -39,6 +39,23 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 [Documentation is available from the Wiki.](https://github.com/Zettt/km-markdown-library/wiki "Home · Zettt/km-markdown-library Wiki")
 
 # Changelog #
+
+## 2.1.3: ##
+
+* New feature: Link macro now times out at about 5 seconds. This makes it more convenient when you want to insert a link from a site that is just a tad too slow. You can change the timeout manually, if you so desire.
+* Fix: Link List from Clipboard has been updated by @fncll to incorporate Brett's own latest changes. Thanks for the fix!
+* Fix: Cleanup Table now works. Sorry this was my bad. Fix provided also by @fncll.
+
+## V2.1.2 ##
+
+* New feature: Preview with Marked now opens the Finder selected file if there is one.
+* Fixes: There was a typo with a variable in a macro. Can't remember which one it was, but it's fixed now.
+* Known issues: Cleanup Table is broken. If you can read Perl and have some time at hand, I'd appreciate if you can fix this and maybe send me a pull request.
+* Future features: I plan to look at Brett's [Strip Markdown Service](http://brettterpstra.com/2013/10/18/a-markdown-service-to-strip-markdown/) for the Remove Formatting macro.
+
+## v2.1.1: ##
+
+* Bugfix for Header macro.
 
 ## v2.1: ##
 
