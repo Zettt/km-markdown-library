@@ -72,7 +72,7 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
-						<string>List starts with a *</string>
+						<string>Set MMD__List Character to start first character of selection</string>
 					</dict>
 					<dict>
 						<key>Conditions</key>
@@ -247,6 +247,18 @@
 						<true/>
 					</dict>
 					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Find out what kind of list we have and re-indent based on first character</string>
+					</dict>
+					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -298,7 +310,7 @@
 										<key>Text</key>
 										<string></string>
 										<key>Title</key>
-										<string>The list does not have *, +, or -. Use *.</string>
+										<string>List does not have *, +, or -. Use default.</string>
 									</dict>
 									<dict>
 										<key>Action</key>
@@ -871,7 +883,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413220769.13956898</real>
+				<real>413221032.579992</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
