@@ -241,7 +241,7 @@
 											<key>ConditionType</key>
 											<string>Calculation</string>
 											<key>Text</key>
-											<string>NOW-(MMD__Current Time+10)</string>
+											<string>NOW-(MMD__Current Time+3)</string>
 										</dict>
 									</array>
 									<key>ConditionListMatch</key>
@@ -945,7 +945,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413247040.99131101</real>
+				<real>413247803.48002601</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
