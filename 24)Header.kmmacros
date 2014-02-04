@@ -18,6 +18,22 @@
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
+						<string>SetVariableToCalculation</string>
+						<key>StopOnFailure</key>
+						<false/>
+						<key>Text</key>
+						<string>0</string>
+						<key>UseFormat</key>
+						<false/>
+						<key>Variable</key>
+						<string>MMD__Header Level</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
 						<string>Comment</string>
 						<key>Text</key>
 						<string></string>
@@ -35,6 +51,212 @@
 						<string>ExecuteMacro</string>
 						<key>MacroUID</key>
 						<string>2FA80014-C9C2-45AE-BE4A-CA56E27EF8C0</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Increment/decrement</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Cut Menu Item</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>true</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToCalculation</string>
+								<key>StopOnFailure</key>
+								<false/>
+								<key>Text</key>
+								<string>NOW</string>
+								<key>UseFormat</key>
+								<false/>
+								<key>Variable</key>
+								<string>MMD__Current Time</string>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>124</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>Any</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>StopOnFailure</key>
+												<false/>
+												<key>Text</key>
+												<string>MMD__Header Level+1</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>123</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>Any</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>StopOnFailure</key>
+												<false/>
+												<key>Text</key>
+												<string>MMD__Header Level-1</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Calculation</string>
+											<key>Text</key>
+											<string>NOW-(MMD__Current Time+10)</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>None</string>
+								</dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Until</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -75,48 +297,79 @@
 						<string>Prompt for header options</string>
 					</dict>
 					<dict>
-						<key>Buttons</key>
-						<array>
-							<dict>
-								<key>Button</key>
-								<string>OK</string>
-							</dict>
-							<dict>
-								<key>Button</key>
-								<string>Cancel</string>
-								<key>Cancel</key>
-								<true/>
-							</dict>
-						</array>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Header Level</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>0</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>PromptForUserInput</string>
-						<key>Prompt</key>
-						<string>Enter desired header level and whether text should be Title Cased.</string>
-						<key>ResultButtonVariable</key>
-						<string>Result Button</string>
-						<key>TimeOutAbortsMacro</key>
 						<true/>
-						<key>Title</key>
-						<string>Header Options…</string>
-						<key>Variables</key>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>Default</key>
-								<string>3</string>
-								<key>Variable</key>
-								<string>MMD__Header Level</string>
-							</dict>
-							<dict>
-								<key>Default</key>
-								<string>0|1</string>
-								<key>Variable</key>
-								<string>MMD__Title Case</string>
+								<key>Buttons</key>
+								<array>
+									<dict>
+										<key>Button</key>
+										<string>OK</string>
+									</dict>
+									<dict>
+										<key>Button</key>
+										<string>Cancel</string>
+										<key>Cancel</key>
+										<true/>
+									</dict>
+								</array>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>PromptForUserInput</string>
+								<key>Prompt</key>
+								<string>Enter desired header level and whether text should be Title Cased.</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>Title</key>
+								<string>Header Options…</string>
+								<key>Variables</key>
+								<array>
+									<dict>
+										<key>Default</key>
+										<string>3</string>
+										<key>Variable</key>
+										<string>MMD__Header Level</string>
+									</dict>
+									<dict>
+										<key>Default</key>
+										<string>0|1</string>
+										<key>Variable</key>
+										<string>MMD__Title Case</string>
+									</dict>
+								</array>
 							</dict>
 						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -209,6 +462,8 @@
 										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
+										<key>StopOnFailure</key>
+										<false/>
 										<key>Text</key>
 										<string>MMD__Header Level-1</string>
 										<key>UseFormat</key>
@@ -557,6 +812,8 @@
 										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
+										<key>StopOnFailure</key>
+										<false/>
 										<key>Text</key>
 										<string>MMD__Header Level-1</string>
 										<key>UseFormat</key>
@@ -688,7 +945,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>399302071.49763</real>
+				<real>413247040.99131101</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
