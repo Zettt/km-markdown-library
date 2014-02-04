@@ -508,13 +508,76 @@ traverse_array($parsed_list, 0, $indentation);
 								<key>Replace</key>
 								<string>$1%Variable%MMD__List_Character% $2</string>
 								<key>Search</key>
-								<string>(\t*?)\b(.+)</string>
+								<string>(\t*?)(\S.*)</string>
 								<key>TargetNamedClipboardRedundantDisplayName</key>
 								<string>Default Clipboard</string>
 								<key>TargetNamedClipboardUID</key>
 								<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 								<key>TargetUseNamedClipboard</key>
 								<false/>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Variable</string>
+													<key>Variable</key>
+													<string>MMD__Current_Line</string>
+													<key>VariableConditionType</key>
+													<string>Matches</string>
+													<key>VariableValue</key>
+													<string>[\-\+\*]\s</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array/>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>Collections</key>
+								<dict>
+									<key>CollectionList</key>
+									<array>
+										<dict>
+											<key>CollectionType</key>
+											<string>LinesInClipboard</string>
+											<key>CollectionType2</key>
+											<string>LinesIn</string>
+											<key>IncludeBlankLines</key>
+											<false/>
+											<key>Source</key>
+											<string>Clipboard</string>
+										</dict>
+									</array>
+								</dict>
+								<key>IsActive</key>
+								<false/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>For</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>Variable</key>
+								<string>MMD__Current_Line</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -859,7 +922,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413214633.51709598</real>
+				<real>413217549.30362201</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
