@@ -280,6 +280,18 @@
 						<key>ElseActions</key>
 						<array>
 							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>List is numbered list</string>
+							</dict>
+							<dict>
 								<key>Conditions</key>
 								<dict>
 									<key>ConditionList</key>
@@ -310,7 +322,7 @@
 										<key>Text</key>
 										<string></string>
 										<key>Title</key>
-										<string>List does not have *, +, or -. Use default.</string>
+										<string>List does not appear to be a list yet. Use default.</string>
 									</dict>
 									<dict>
 										<key>Action</key>
@@ -614,6 +626,18 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>Variable</key>
 						<string>MMD__Indent Character</string>
 					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Ordered List</string>
+					</dict>
 				</array>
 				<key>CustomIconData</key>
 				<data>
@@ -895,7 +919,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413221101.74055099</real>
+				<real>413221245.86224902</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
