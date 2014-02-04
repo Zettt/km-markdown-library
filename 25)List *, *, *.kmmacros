@@ -564,6 +564,18 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Delete variables</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
@@ -883,7 +895,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413221032.579992</real>
+				<real>413221101.74055099</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
