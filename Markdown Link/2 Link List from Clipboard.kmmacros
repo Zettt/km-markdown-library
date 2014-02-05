@@ -59,26 +59,12 @@
 						<string></string>
 						<key>Text</key>
 						<string>#!/usr/bin/env ruby -Ku
+# encoding: utf-8
+# Markdown Service Tools v 2.11
 
 if RUBY_VERSION.to_f &gt; 1.9
 	Encoding.default_external = Encoding::UTF_8
 	Encoding.default_internal = Encoding::UTF_8
-end
-
-UNICODE_COMPETENT = ((RUBY_VERSION)[0..2].to_f &gt; 1.8)
-
-unless UNICODE_COMPETENT # lower than 1.9
-  class String
-     def utf8_length
-        i = 0
-        i = self.scan(/(.)/).length
-        i
-     end
-  end
-else # 1.9 and above
-  class String
-     alias_method :utf8_length, :length
-  end
 end
 
 def clipboard_to_references(input)
@@ -515,7 +501,7 @@ output.each { |x|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>411443031.63071901</real>
+				<real>413328405.55368698</real>
 				<key>Name</key>
 				<string>2: Link List from Clipboard</string>
 				<key>Triggers</key>
