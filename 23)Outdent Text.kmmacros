@@ -51,6 +51,17 @@
 						<string></string>
 						<key>Text</key>
 						<string>#!/usr/bin/env ruby
+# encoding: utf-8
+# Markdown Service Tools v 2.11
+
+if RUBY_VERSION.to_f &gt; 1.9
+	Encoding.default_external = Encoding::UTF_8
+	Encoding.default_internal = Encoding::UTF_8
+	#input = STDIN.read.force_encoding('utf-8')
+	input = IO.popen('pbpaste', 'r+').read.force_encoding('utf-8')
+else
+	input = STDIN.read
+end
 
 #  Since any Ruby version before 1.9 doesn't much care for Unicode,
 #  patch in a new String#utf8_length method that returns the correct length
@@ -71,10 +82,8 @@ else # 1.9 and above
   end
 end
 
-input = IO.popen('pbpaste', 'r+').read nil
-
 input.split("\n").each {|line|
-  if line =~ /\A\s{2,4}(.*)/
+  if line =~ /\A(?: {2,4}|\t)(.*)/
     puts $1
   else
     puts line
@@ -116,7 +125,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396461852.87047702</real>
+				<real>413327949.123622</real>
 				<key>Name</key>
 				<string>23)Outdent Text</string>
 				<key>Triggers</key>
