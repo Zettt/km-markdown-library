@@ -48,9 +48,9 @@
 						<key>MacroActionType</key>
 						<string>SearchReplaceClipboard</string>
 						<key>Replace</key>
-						<string>$1&gt; $2</string>
+						<string>&gt; </string>
 						<key>Search</key>
-						<string>(\s*)(.+)</string>
+						<string>(?m)^</string>
 						<key>TargetNamedClipboardRedundantDisplayName</key>
 						<string>Default Clipboard</string>
 						<key>TargetNamedClipboardUID</key>
@@ -396,7 +396,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>395920838.41247803</real>
+				<real>413326863.68915099</real>
 				<key>Name</key>
 				<string>08)Make Quote</string>
 				<key>Triggers</key>
