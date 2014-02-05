@@ -57,9 +57,7 @@
 if RUBY_VERSION.to_f &gt; 1.9
 	Encoding.default_external = Encoding::UTF_8
 	Encoding.default_internal = Encoding::UTF_8
-	#input = STDIN.read.force_encoding('utf-8')
 	input = IO.popen('pbpaste', 'r+').read.force_encoding('utf-8')
-	
 else
 	input = STDIN.read
 end
@@ -122,7 +120,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413327943.37241697</real>
+				<real>413328194.03995597</real>
 				<key>Name</key>
 				<string>22)Indent Text</string>
 				<key>Triggers</key>
