@@ -58,14 +58,19 @@
 						<key>Text</key>
 						<string>#!/usr/bin/env ruby
 
-def e_sh(str)
-	str.to_s.gsub(/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/n, '\\').gsub(/\n/, "'\n'").sub(/^$/, "''")
+require 'shellwords'
+
+if RUBY_VERSION.to_f &gt; 1.9
+	input = IO.popen('pbpaste', 'r+').read.force_encoding('utf-8')
+	
+else
+	input = IO.popen('pbpaste', 'r+').read
 end
 
 def find_headers(lines)
     in_headers = false
     lines.each_with_index {|line, i|
-        if line =~ /^\S[^\:]+\:( .*?)?$/
+        if line =~ /^\w[^\:\[]+\:( .*?)?$/
             in_headers = true
         elsif in_headers === true
             return i
@@ -75,13 +80,11 @@ def find_headers(lines)
     }
 end
 
-input = IO.popen('pbpaste', 'r+').read
-
 links = input.scan(/\((https?:\/\/([^\)]+))\)/)
-refs = input.scan(/^\[([^\]]+)\]: (\S+)$/)
+refs = input.scan(/^ {0,3}\[[^\^]([^\]]+)\]: (\S+)$/)
 lines = input.split("\n")
 
-bottom = lines[0..-1].join("\n").gsub(/^\[([^\]]+)\]: (\S+)\n?/,'')
+bottom = lines[0..-1].join("\n").gsub(/^\[[^\^]([^\]]+)\]: (\S+)\n?/,'')
 
 norepeat = []
 norepeatlinks = []
@@ -107,8 +110,10 @@ links.each {|url|
 		domain = url[0].match(/https?:\/\/([^\/]+)/)
 		parts = domain[1].split('.')
 		name = case parts.length
-			when 1: parts[0]
-			when 2: parts[0]
+			when 1
+				parts[0]
+			when 2
+				parts[0]
 			else parts[1]
 		end
 	while norepeat.include? name
@@ -127,7 +132,7 @@ o = []
 
 output.each_with_index { |x,i| 
 	o.push("[#{x['title']}]: #{x['link']}")
-	bottom = bottom.gsub(/\((#{e_sh x['orig']}|#{e_sh x['link']})\)/,"[#{x['title']}]").gsub(/\[#{e_sh x['orig']}\]/,"[#{x['title']}]")
+	bottom = bottom.gsub(/\((#{Shellwords.escape(x['orig'])}|#{Shellwords.escape(x['link'])})\)/,"[#{x['title']}]").gsub(/\[#{Shellwords.escape(x['orig'])}\]/,"[#{x['title']}]")
 }
 puts bottom + "\n\n#{o.join("\n")}\n"</string>
 						<key>TimeOutAbortsMacro</key>
@@ -513,7 +518,7 @@ puts bottom + "\n\n#{o.join("\n")}\n"</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396101720.86231601</real>
+				<real>413328820.11886901</real>
 				<key>Name</key>
 				<string>3: Link Inlines to References</string>
 				<key>Triggers</key>
