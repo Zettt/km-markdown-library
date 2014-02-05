@@ -59,7 +59,7 @@ if RUBY_VERSION.to_f &gt; 1.9
 	Encoding.default_internal = Encoding::UTF_8
 	input = IO.popen('pbpaste', 'r+').read.force_encoding('utf-8')
 else
-	input = STDIN.read
+	input = IO.popen('pbpaste', 'r+').read
 end
 
 #  Since any Ruby version before 1.9 doesn't much care for Unicode,
@@ -124,7 +124,7 @@ input.split("\n").each {|line|
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413328200.61385101</real>
+				<real>413328865.23411798</real>
 				<key>Name</key>
 				<string>23)Outdent Text</string>
 				<key>Triggers</key>
