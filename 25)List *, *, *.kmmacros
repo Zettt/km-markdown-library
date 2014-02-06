@@ -16,7 +16,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -96,7 +96,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -139,7 +139,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -148,7 +148,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>SetVariableToText</string>
 								<key>Text</key>
@@ -182,7 +182,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -225,7 +225,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -271,7 +271,7 @@
 									<key>VariableConditionType</key>
 									<string>Matches</string>
 									<key>VariableValue</key>
-									<string>[-+*]</string>
+									<string>[-\+\*]</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -330,7 +330,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
@@ -340,7 +340,7 @@
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 									</dict>
@@ -361,7 +361,7 @@
 										<key>MacroActionType</key>
 										<string>Comment</string>
 										<key>Text</key>
-										<string>Given that this is a numbered list and the desired output is a bullet list, we'll use the %MMD__Default List Character% instead of a number</string>
+										<string></string>
 										<key>Title</key>
 										<string>List is list already, replace with right list character.</string>
 									</dict>
@@ -371,25 +371,13 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<false/>
+										<true/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
-<<<<<<< HEAD
-										<string>%MMD__Default List Character% $1</string>
-										<key>Search</key>
-										<string>[\d\.]+?\s+?|[\-\+\*]\s+?((?&lt;=[\d-\+\-\*\.]\s).*)</string>
-										<key>TargetNamedClipboardRedundantDisplayName</key>
-										<string>Default Clipboard</string>
-										<key>TargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
-										<key>TargetUseNamedClipboard</key>
-										<false/>
-									</dict>
-=======
 										<string>$1$3</string>
 										<key>Search</key>
-										<string>(\s*)([0-9\*].{0,3})(\b)</string>
+										<string>(\s*)([0-9\-\+\*].{0,3})(\b)</string>
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
@@ -499,7 +487,38 @@ traverse_array($parsed_list, 0, $indentation);
 										<key>UseText</key>
 										<true/>
 									</dict>
->>>>>>> parent of 9cfa4ed... Fixes empty blank line
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>Comment</string>
+										<key>Text</key>
+										<string></string>
+										<key>Title</key>
+										<string>Removes blank line from shell script</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>CaseSensitiveRegEx</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SearchReplaceClipboard</string>
+										<key>Replace</key>
+										<string></string>
+										<key>Search</key>
+										<string>^(?:[\t ]*(?:\r?\n|\r))+</string>
+										<key>TargetNamedClipboardRedundantDisplayName</key>
+										<string>Default Clipboard</string>
+										<key>TargetNamedClipboardUID</key>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+										<key>TargetUseNamedClipboard</key>
+										<false/>
+									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
@@ -527,41 +546,21 @@ traverse_array($parsed_list, 0, $indentation);
 							</dict>
 							<dict>
 								<key>Action</key>
-								<string>IgnoreCaseRegEx</string>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SearchReplaceClipboard</string>
-								<key>Replace</key>
-								<string></string>
-								<key>Search</key>
-								<string>[-*+]\s</string>
-								<key>TargetNamedClipboardRedundantDisplayName</key>
-								<string>Default Clipboard</string>
-								<key>TargetNamedClipboardUID</key>
-								<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
-								<key>TargetUseNamedClipboard</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>Action</key>
 								<string>CaseSensitiveRegEx</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>SearchReplaceClipboard</string>
 								<key>Replace</key>
-								<string>%Variable%MMD__List_Character% $1</string>
+								<string>%Variable%MMD__List Character% $1</string>
 								<key>Search</key>
 								<string>[-\+\*]\s((?&lt;=[-\+\*]\s).*)</string>
 								<key>TargetNamedClipboardRedundantDisplayName</key>
 								<string>Default Clipboard</string>
 								<key>TargetNamedClipboardUID</key>
-								<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+								<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 								<key>TargetUseNamedClipboard</key>
 								<false/>
 							</dict>
@@ -614,6 +613,18 @@ traverse_array($parsed_list, 0, $indentation);
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Default List Character</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -932,11 +943,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-<<<<<<< HEAD
-				<real>413379827.46160299</real>
-=======
-				<real>413221245.86224902</real>
->>>>>>> parent of 9cfa4ed... Fixes empty blank line
+				<real>413307389.31150502</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
@@ -957,7 +964,7 @@ traverse_array($parsed_list, 0, $indentation);
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>5010528C-F4A2-42CF-B122-CB3BB7302FA0</string>
+				<string>E4D53A86-A42D-4ACD-AB4C-3DA0BC13449F</string>
 			</dict>
 		</array>
 		<key>Name</key>
