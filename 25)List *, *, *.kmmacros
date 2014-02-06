@@ -371,7 +371,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
@@ -505,13 +505,13 @@ traverse_array($parsed_list, 0, $indentation);
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<false/>
+										<true/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
 										<string></string>
 										<key>Search</key>
-										<string>^(?:[\t ]*(?:\r?\n|\r))+</string>
+										<string>\A[\n\r]*|[\n\r]*\Z</string>
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
@@ -943,7 +943,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413401303.45747399</real>
+				<real>413403219.08587199</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
