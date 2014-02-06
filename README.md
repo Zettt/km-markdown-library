@@ -5,8 +5,6 @@ These macros help you write Markdown with any text editor using the magic that i
 
 When user interaction is required, e.g. for collecting URLs, text for links, etc., the frontmost app is saved, which allows you to switch apps as much as needed, your editor will be restored later. This makes these macros so flexible that you can use (almost) every text editor.
 
-**NOTE: You must set one thing manually!** There’s a Helper macro included with the name “Helper - Is Text Selected?”. In there is an If/Then/Else action. If your system is set to something other than English, either change `Copy` to your language’s text, e.g. `Kopieren`, or, better yet, add a new condition `menu item with this name: “Kopieren” is enabled`. This enables you to use multiple system languages.
-
 Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Brett Terpstra](http://brettterpstra.com) for providing some of the basics of these macros. Also thanks to [Gabe from Macdrifter.com](http://macdrifter.com). His work gave a lot of inspiration for this project.
 
 # New in Version 2 #
