@@ -51,6 +51,26 @@
 						<true/>
 					</dict>
 					<dict>
+						<key>Action</key>
+						<string>CaseSensitiveRegEx</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SearchReplaceClipboard</string>
+						<key>Replace</key>
+						<string>$1$3</string>
+						<key>Search</key>
+						<string>((?m)^\s*)([\*\-\+\d\.\s]*)(.*)</string>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+						<key>TargetUseNamedClipboard</key>
+						<false/>
+					</dict>
+					<dict>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
@@ -73,8 +93,14 @@
 						<string>0</string>
 					</dict>
 					<dict>
+						<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>ClipboardTargetNamedClipboardUID</key>
+						<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+						<key>ClipboardTargetUseNamedClipboard</key>
+						<false/>
 						<key>DisplayKind</key>
-						<string>Pasting</string>
+						<string>Clipboard</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
@@ -157,6 +183,40 @@ traverse_array($parsed_list, 0, $indentation);
 						<true/>
 					</dict>
 					<dict>
+						<key>Action</key>
+						<string>CaseSensitiveRegEx</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SearchReplaceClipboard</string>
+						<key>Replace</key>
+						<string></string>
+						<key>Search</key>
+						<string>\A[\n\r]*|[\n\r]*\Z</string>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+						<key>TargetUseNamedClipboard</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
@@ -170,7 +230,7 @@ traverse_array($parsed_list, 0, $indentation);
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -506,7 +566,7 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396446948.50032997</real>
+				<real>413403018.31880701</real>
 				<key>Name</key>
 				<string>26)List 1, 2, 3</string>
 				<key>Triggers</key>
