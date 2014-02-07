@@ -64,7 +64,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -184,7 +184,7 @@ if __name__ == '__main__':
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
@@ -575,7 +575,7 @@ if __name__ == '__main__':
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413462906.11593801</real>
+				<real>413463334.283571</real>
 				<key>Name</key>
 				<string>3: Flip Link Style (ForMd)</string>
 				<key>Triggers</key>
