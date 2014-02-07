@@ -35,7 +35,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 Older versions:
 
-* [v 2.1.3](https://app.box.com/s/tiiabn302rkjn16o7e8h) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+* [v 2.1.3](https://app.box.com/s/tiiabn302rkjn16o7e8h)
 * [v 2.1.2](https://app.box.com/s/h82xio1lix89p1wgysza)
 * [v 2.1.1](https://app.box.com/s/qrepwaijqe4094kx6axg)
 * [v 2.1](https://app.box.com/s/uobvuurnk8pymh7guv1j)
