@@ -16,11 +16,13 @@ Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Bre
 
 Main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.
 
-Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes-in-Version-2 "Changes in Version 2 · Zettt/km-markdown-library Wiki · GitHub")
+Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
-## Screencast for version 2 ##
+## Screencast ##
 
-[http://youtu.be/U76GvbsW2i8](http://youtu.be/U76GvbsW2i8)
+Screencast for version 2.2: [http://youtu.be/LsF0jtaeMmg](http://youtu.be/LsF0jtaeMmg)
+
+Screencast for version 2: [http://youtu.be/U76GvbsW2i8](http://youtu.be/U76GvbsW2i8)
 
 Screencast for version 1: [http://youtu.be/IzZefvu7nTI](http://youtu.be/IzZefvu7nTI)
 
@@ -30,7 +32,9 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download #
 
-[Download version 2.1.3](https://app.box.com/s/tiiabn302rkjn16o7e8h) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+[Download version 2.2](https://app.box.com/s/sa1optqfdodckbrs4ww9) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+
+[Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
 **You should remove the old macros before adding these!**
 
@@ -39,6 +43,13 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 [Documentation is available from the Wiki.](https://github.com/Zettt/km-markdown-library/wiki "Home · Zettt/km-markdown-library Wiki")
 
 # Changelog #
+
+## 2.2 ##
+
+* List 1, 2, 3: This macro now allows you to dynamically change a list from and to other list styles, e.g. going from ordered to numbered, and vice versa. To change a list, simply change the first character of the list to: *, -, +, 1, 1. (or any other number). (Thanks go to @pslobo for his great help!)
+* ForMd: @drbunsen has granted permission to include ForMd in this library. It is not required to have a separate installation anymore. Therefore: the formd submodule has been removed, as has been the formd macro, but the old Link Inlines to References macro has also been replaced by ForMd, and is simply called Flip Link Style (ForMd). You can now easily switch link style as you go.
+* Fixed: Quote macro used to not replace empty lines with `>`. Sorry for the inconvenience!
+* Updated: Macros based on Brett Terpstra's Markdown Service Tools have been updated to v2.11.
 
 ## 2.1.3: ##
 
