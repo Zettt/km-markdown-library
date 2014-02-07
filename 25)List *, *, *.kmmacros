@@ -20,7 +20,7 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>-</string>
+						<string>*</string>
 						<key>Variable</key>
 						<string>MMD__Default List Character</string>
 					</dict>
@@ -330,7 +330,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
@@ -340,7 +340,7 @@
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 									</dict>
@@ -381,7 +381,7 @@
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 									</dict>
@@ -398,10 +398,30 @@
 										<string>MMD__Ordered List</string>
 									</dict>
 									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
 										<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>ClipboardTargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 										<key>ClipboardTargetUseNamedClipboard</key>
 										<false/>
 										<key>DisplayKind</key>
@@ -505,7 +525,7 @@ traverse_array($parsed_list, 0, $indentation);
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>SearchReplaceClipboard</string>
 										<key>Replace</key>
@@ -515,7 +535,7 @@ traverse_array($parsed_list, 0, $indentation);
 										<key>TargetNamedClipboardRedundantDisplayName</key>
 										<string>Default Clipboard</string>
 										<key>TargetNamedClipboardUID</key>
-										<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 										<key>TargetUseNamedClipboard</key>
 										<false/>
 									</dict>
@@ -560,7 +580,7 @@ traverse_array($parsed_list, 0, $indentation);
 								<key>TargetNamedClipboardRedundantDisplayName</key>
 								<string>Default Clipboard</string>
 								<key>TargetNamedClipboardUID</key>
-								<string>651180CD-B7B4-431C-A3A1-B987070A21FB</string>
+								<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
 								<key>TargetUseNamedClipboard</key>
 								<false/>
 							</dict>
@@ -943,9 +963,9 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413403219.08587199</real>
+				<real>413462008.621975</real>
 				<key>Name</key>
-				<string>25)List *, *, *</string>
+				<string>25)List *, *, * DEV</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -964,7 +984,7 @@ traverse_array($parsed_list, 0, $indentation);
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>E4D53A86-A42D-4ACD-AB4C-3DA0BC13449F</string>
+				<string>34EA63EC-E799-4A96-B149-C07B31F6A153</string>
 			</dict>
 		</array>
 		<key>Name</key>
