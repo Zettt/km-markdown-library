@@ -46,8 +46,8 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 ## 2.2 ##
 
-* List 1, 2, 3: This macro now allows you to dynamically change a list from and to other list styles, e.g. going from ordered to numbered, and vice versa. To change a list, simply change the first character of the list to: *, -, +, 1, 1. (or any other number). (Thanks go to @pslobo for his great help!)
-* ForMd: @drbunsen has granted permission to include ForMd in this library. It is not required to have a separate installation anymore. Therefore: the formd submodule has been removed, as has been the formd macro, but the old Link Inlines to References macro has also been replaced by ForMd, and is simply called Flip Link Style (ForMd). You can now easily switch link style as you go.
+* List 1, 2, 3: This macro now allows you to dynamically change a list from and to other list styles, e.g. going from ordered to numbered, and vice versa. To change a list, simply change the first character of the list to: `*`, `-`, `+`, `1`, `1.`, or any other number. (Thanks go to @pslobo for his great help!)
+* ForMd: @drbunsen has granted permission to include ForMd in this library. It is not required to have a separate installation anymore. Therefore: the formd submodule has been removed, as has been the formd macro, and the old Link Inlines to References macro has also been replaced by ForMd. It is now simply called Flip Link Style (ForMd). You can easily switch link styles as you go!
 * Fixed: Quote macro used to not replace empty lines with `>`. Sorry for the inconvenience!
 * Updated: Macros based on Brett Terpstra's Markdown Service Tools have been updated to v2.11.
 
