@@ -17,6 +17,30 @@
 						<true/>
 						<key>IsDisclosed</key>
 						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>*</string>
+						<key>Variable</key>
+						<string>MMD__Default List Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>\t</string>
+						<key>Variable</key>
+						<string>MMD__Indent Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
 						<key>KeyCode</key>
 						<integer>7</integer>
 						<key>MacroActionType</key>
@@ -39,24 +63,530 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>CaseSensitiveRegEx</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
-						<string>SearchReplaceClipboard</string>
-						<key>Replace</key>
-						<string>$1* $2</string>
-						<key>Search</key>
-						<string>(\s*)(.+)</string>
-						<key>TargetNamedClipboardRedundantDisplayName</key>
-						<string>Default Clipboard</string>
-						<key>TargetNamedClipboardUID</key>
-						<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
-						<key>TargetUseNamedClipboard</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Set MMD__List Character to start first character of selection</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ClipboardConditionType</key>
+									<string>Matches</string>
+									<key>ClipboardText</key>
+									<string>^\*{1,1}</string>
+									<key>ConditionType</key>
+									<string>Clipboard</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>*</string>
+								<key>Variable</key>
+								<string>MMD__List Character</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ClipboardConditionType</key>
+									<string>Matches</string>
+									<key>ClipboardText</key>
+									<string>^\-{1,1}</string>
+									<key>ConditionType</key>
+									<string>Clipboard</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>-</string>
+								<key>Variable</key>
+								<string>MMD__List Character</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ClipboardConditionType</key>
+									<string>Matches</string>
+									<key>ClipboardText</key>
+									<string>^\+{1,1}</string>
+									<key>ConditionType</key>
+									<string>Clipboard</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>+</string>
+								<key>Variable</key>
+								<string>MMD__List Character</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ClipboardConditionType</key>
+									<string>Matches</string>
+									<key>ClipboardText</key>
+									<string>^[0-9]{1,1}</string>
+									<key>ConditionType</key>
+									<string>Clipboard</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>number</string>
+								<key>Variable</key>
+								<string>MMD__List Character</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
 						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Find out what kind of list we have and re-indent based on first character</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__List Character</string>
+									<key>VariableConditionType</key>
+									<string>Matches</string>
+									<key>VariableValue</key>
+									<string>[-\+\*]</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>List is numbered list</string>
+							</dict>
+							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__List Character</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>number</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>Comment</string>
+										<key>Text</key>
+										<string></string>
+										<key>Title</key>
+										<string>List does not appear to be a list yet. Use default.</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>CaseSensitiveRegEx</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SearchReplaceClipboard</string>
+										<key>Replace</key>
+										<string>$1%Variable%MMD__Default List Character% $2</string>
+										<key>Search</key>
+										<string>((?m)^\s*)[\*\-\+\d\.]*\s*(.*)</string>
+										<key>TargetNamedClipboardRedundantDisplayName</key>
+										<string>Default Clipboard</string>
+										<key>TargetNamedClipboardUID</key>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+										<key>TargetUseNamedClipboard</key>
+										<false/>
+									</dict>
+								</array>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>Comment</string>
+										<key>Text</key>
+										<string></string>
+										<key>Title</key>
+										<string>List is list already, replace with right list character.</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>CaseSensitiveRegEx</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SearchReplaceClipboard</string>
+										<key>Replace</key>
+										<string>$1$3</string>
+										<key>Search</key>
+										<string>((?m)^\s*)([\*\-\+\d\.]*\s?)(.*)</string>
+										<key>TargetNamedClipboardRedundantDisplayName</key>
+										<string>Default Clipboard</string>
+										<key>TargetNamedClipboardUID</key>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+										<key>TargetUseNamedClipboard</key>
+										<false/>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%CurrentClipboard%</string>
+										<key>Variable</key>
+										<string>MMD__Ordered List</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
+										<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
+										<string>Default Clipboard</string>
+										<key>ClipboardTargetNamedClipboardUID</key>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+										<key>ClipboardTargetUseNamedClipboard</key>
+										<false/>
+										<key>DisplayKind</key>
+										<string>Clipboard</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>ExecuteShellScript</string>
+										<key>Path</key>
+										<string></string>
+										<key>Text</key>
+										<string>#!/usr/bin/php
+
+&lt;?php
+
+// Change this to your preferred indentation style. Use '\t' for tabs.
+
+$indentation = $_ENV["KMVAR_MMD__Indent_Character"];
+$list = $_ENV["KMVAR_MMD__Ordered_List"];
+
+function parse_simple_list($list, $indentation)
+{
+  $result = array();
+  $path = array();
+
+  foreach (explode("\n", $list) as $line)
+  {
+    $depth = 0;
+    while (substr($line, 0, strlen($indentation)) === $indentation)
+    {
+      $depth += 1;
+      $line = substr($line, strlen($indentation));
+    }
+
+    while ($depth &lt; sizeof($path))
+    {
+      array_pop($path);
+    }
+
+    $path[$depth] = $line;
+
+    $parent =&amp; $result;
+    foreach ($path as $depth =&gt; $key)
+    {
+      if (!isset($parent[$key]))
+      {
+        $parent[$line] = array();
+        break;
+      }
+
+      $parent =&amp; $parent[$key];
+    }
+  }
+
+  return $result;
+}
+
+function traverse_array($array, $depth, $indentation)
+{
+  $prefix = (!$depth)? '': str_repeat("$indentation", $depth);
+  $counter = 0;
+  foreach($array as $key=&gt;$value)
+  {
+    echo $prefix.++$counter.". ".$key."\n";
+    if(is_array($value) &amp;&amp; count($value))
+    {
+      traverse_array($value, $depth + 1, $indentation);
+    }
+  }
+}
+
+$parsed_list = parse_simple_list($list, $indentation);
+traverse_array($parsed_list, 0, $indentation);
+</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>TrimResults</key>
+										<false/>
+										<key>TrimResultsNew</key>
+										<false/>
+										<key>UseText</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>Comment</string>
+										<key>Text</key>
+										<string></string>
+										<key>Title</key>
+										<string>Removes blank line from shell script</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>CaseSensitiveRegEx</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SearchReplaceClipboard</string>
+										<key>Replace</key>
+										<string></string>
+										<key>Search</key>
+										<string>\A[\n\r]*|[\n\r]*\Z</string>
+										<key>TargetNamedClipboardRedundantDisplayName</key>
+										<string>Default Clipboard</string>
+										<key>TargetNamedClipboardUID</key>
+										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+										<key>TargetUseNamedClipboard</key>
+										<false/>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>List is list already, replace with right list character.</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>CaseSensitiveRegEx</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SearchReplaceClipboard</string>
+								<key>Replace</key>
+								<string>$1%Variable%MMD__List Character% $2</string>
+								<key>Search</key>
+								<string>((?m)^\s*)[\*\-\+\d\.]*\s*(.*)</string>
+								<key>TargetNamedClipboardRedundantDisplayName</key>
+								<string>Default Clipboard</string>
+								<key>TargetNamedClipboardUID</key>
+								<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+								<key>TargetUseNamedClipboard</key>
+								<false/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -78,6 +608,18 @@
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Delete variables</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
@@ -91,6 +633,54 @@
 						<string>DeletePastClipboard</string>
 						<key>PastExpression</key>
 						<string>0</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Default List Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__List Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Indent Character</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Ordered List</string>
 					</dict>
 				</array>
 				<key>CustomIconData</key>
@@ -373,7 +963,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396372374.60158801</real>
+				<real>413462117.64601201</real>
 				<key>Name</key>
 				<string>25)List *, *, *</string>
 				<key>Triggers</key>
@@ -394,7 +984,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>70ED666A-A4AC-4240-9313-7E5567414569</string>
+				<string>34EA63EC-E799-4A96-B149-C07B31F6A153</string>
 			</dict>
 		</array>
 		<key>Name</key>
