@@ -96,7 +96,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -139,7 +139,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -182,7 +182,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -225,7 +225,7 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -570,7 +570,7 @@ traverse_array($parsed_list, 0, $indentation);
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>SearchReplaceClipboard</string>
 								<key>Replace</key>
@@ -963,9 +963,9 @@ traverse_array($parsed_list, 0, $indentation);
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>413462008.621975</real>
+				<real>413462117.64601201</real>
 				<key>Name</key>
-				<string>25)List *, *, * DEV</string>
+				<string>25)List *, *, *</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
