@@ -25,6 +25,8 @@
 						<string>Check for text selection</string>
 					</dict>
 					<dict>
+						<key>Asynchronously</key>
+						<false/>
 						<key>Count</key>
 						<integer>1</integer>
 						<key>IsActive</key>
@@ -86,6 +88,8 @@
 								<string>"</string>
 							</dict>
 							<dict>
+								<key>Asynchronously</key>
+								<false/>
 								<key>Count</key>
 								<integer>1</integer>
 								<key>IsActive</key>
@@ -171,32 +175,128 @@
 								<true/>
 							</dict>
 							<dict>
-								<key>DisplayKind</key>
-								<string>Pasting</string>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Double Quotes Style</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>straight</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Variable</string>
+													<key>Variable</key>
+													<string>MMD__Double Quotes Style</string>
+													<key>VariableConditionType</key>
+													<string>Is</string>
+													<key>VariableValue</key>
+													<string>smart</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>DisplayKind</key>
+												<string>Pasting</string>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>PlugIn</string>
+												<key>PlugInFolderName</key>
+												<string>Wrap Text</string>
+												<key>PlugInParameters</key>
+												<dict>
+													<key>Animal</key>
+													<string>Wombat</string>
+													<key>Text</key>
+													<string>%CurrentClipboard%</string>
+													<key>WrapEnd</key>
+													<string>”</string>
+													<key>WrapStart</key>
+													<string>“</string>
+													<key>Wrapper</key>
+													<string>**</string>
+												</dict>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+												<key>TrimResultsNew</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>PlugIn</string>
-								<key>PlugInFolderName</key>
-								<string>Wrap Text</string>
-								<key>PlugInParameters</key>
-								<dict>
-									<key>Animal</key>
-									<string>Wombat</string>
-									<key>Text</key>
-									<string>%CurrentClipboard%</string>
-									<key>WrapEnd</key>
-									<string>"</string>
-									<key>WrapStart</key>
-									<string>"</string>
-									<key>Wrapper</key>
-									<string>**</string>
-								</dict>
-								<key>TimeOutAbortsMacro</key>
 								<true/>
-								<key>TrimResultsNew</key>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>DisplayKind</key>
+										<string>Pasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>PlugIn</string>
+										<key>PlugInFolderName</key>
+										<string>Wrap Text</string>
+										<key>PlugInParameters</key>
+										<dict>
+											<key>Animal</key>
+											<string>Wombat</string>
+											<key>Text</key>
+											<string>%CurrentClipboard%</string>
+											<key>WrapEnd</key>
+											<string>"</string>
+											<key>WrapStart</key>
+											<string>"</string>
+											<key>Wrapper</key>
+											<string>**</string>
+										</dict>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>TrimResultsNew</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
 								<true/>
 							</dict>
 							<dict>
@@ -520,7 +620,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396101371.04757202</real>
+				<real>421667775.45578098</real>
 				<key>Name</key>
 				<string>04)Wrap in ""</string>
 				<key>Triggers</key>
