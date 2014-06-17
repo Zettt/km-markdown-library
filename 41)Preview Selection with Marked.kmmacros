@@ -106,6 +106,8 @@
 						<string>Check for text selection</string>
 					</dict>
 					<dict>
+						<key>Asynchronously</key>
+						<false/>
 						<key>Count</key>
 						<integer>1</integer>
 						<key>IsActive</key>
@@ -611,7 +613,7 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>411377200.89701003</real>
+				<real>424708466.30751699</real>
 				<key>Name</key>
 				<string>41)Preview Selection with Marked</string>
 				<key>Triggers</key>
