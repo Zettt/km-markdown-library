@@ -22,6 +22,77 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
+						<string>Make sure Double Quotes Style preference is set</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Double Quotes Style</string>
+									<key>VariableConditionType</key>
+									<string>IsEmpty</string>
+									<key>VariableValue</key>
+									<string>true</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Double Quotes Style</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>Any</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Asynchronously</key>
+								<false/>
+								<key>Count</key>
+								<integer>1</integer>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteMacro</string>
+								<key>MacroUID</key>
+								<string>07A6B611-DD28-4EFB-AC20-0976EE0E8B59</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
 						<string>Check for text selection</string>
 					</dict>
 					<dict>
@@ -620,7 +691,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>421667775.45578098</real>
+				<real>424694690.23051202</real>
 				<key>Name</key>
 				<string>04)Wrap in ""</string>
 				<key>Triggers</key>
