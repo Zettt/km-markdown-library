@@ -201,7 +201,7 @@
 						<key>Replace</key>
 						<string></string>
 						<key>Search</key>
-						<string>[\.!;,\?¡\s:'"\-_]</string>
+						<string>[\.!;,\?¡\s:'"\-_\(\)\[\]]</string>
 						<key>Variable</key>
 						<string>MMD__Footnote Tag</string>
 					</dict>
@@ -234,13 +234,11 @@
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
 						<string>[^Tag]: Text</string>
-						<key>ResultButtonVariable</key>
-						<string>Result Button</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
@@ -307,21 +305,47 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
-						<string>Insert footnote tag</string>
+						<string>Save text before footnote to get back to cursor position</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>126</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>768</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>7</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<true/>
+						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>[^%Variable%MMD__Footnote Tag%]</string>
+						<string>%CurrentClipboard%</string>
+						<key>Variable</key>
+						<string>MMD__Temp</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -333,7 +357,7 @@
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
-						<string>Get to end of document, insert footnote tag, let user write</string>
+						<string>Paste footnote tag, end of document, and footnote</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -390,6 +414,58 @@
 						<true/>
 						<key>Text</key>
 						<string>[^%Variable%MMD__Footnote Tag%]: %Variable%MMD__Footnote Text%</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>Insert saved text again</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>126</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>ByPasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>InsertText</string>
+						<key>Paste</key>
+						<true/>
+						<key>Text</key>
+						<string>%Variable%MMD__Temp%[^%Variable%MMD__Footnote Tag%]</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Temp</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -776,7 +852,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>398022299.45787901</real>
+				<real>430144966.38037199</real>
 				<key>Name</key>
 				<string>32)Footnote</string>
 				<key>Triggers</key>
@@ -797,7 +873,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>477D0164-90AA-4279-AE28-6810CE5CFB3C</string>
+				<string>E41759E5-C772-40AC-923B-7F0244684AB8</string>
 			</dict>
 		</array>
 		<key>Name</key>
