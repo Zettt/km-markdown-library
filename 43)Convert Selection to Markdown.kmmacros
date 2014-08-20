@@ -517,9 +517,9 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>397851932.11161399</real>
+				<real>430212642.38584298</real>
 				<key>Name</key>
-				<string>43)Markdownify</string>
+				<string>43)Convert Selection to Markdown</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
