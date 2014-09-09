@@ -73,8 +73,6 @@
 									<string>com.brettterpstra.marky</string>
 									<key>Name</key>
 									<string>Marked</string>
-									<key>NewFile</key>
-									<string>/Applications/Marked.app</string>
 								</dict>
 								<key>TargetingType</key>
 								<string>Specific</string>
@@ -196,6 +194,78 @@
 								<true/>
 								<key>IsDisclosed</key>
 								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Create Window and ID for Marked</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Application%1%</string>
+								<key>Variable</key>
+								<string>MMD__Current App</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%WindowName%1%</string>
+								<key>Variable</key>
+								<string>MMD__Current Window</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>PercentEncodeForURL</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>FilterVariable</string>
+								<key>Variable</key>
+								<string>MMD__Current App</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>PercentEncodeForURL</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>FilterVariable</string>
+								<key>Variable</key>
+								<string>MMD__Current Window</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Copy selection to clipboard</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
 								<key>KeyCode</key>
 								<integer>8</integer>
 								<key>MacroActionType</key>
@@ -218,38 +288,28 @@
 								<true/>
 							</dict>
 							<dict>
-								<key>DisplayKind</key>
-								<string>Window</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>ExecuteShellScript</string>
-								<key>Path</key>
-								<string></string>
+								<string>SetVariableToText</string>
 								<key>Text</key>
-								<string>#!/bin/sh
-
-# setenv LANG en_US.UTF-8
-export LANG=en_US.UTF-8
-
-UUID=`uuidgen`
-UUIDDoc="/tmp/$UUID.txt"
-
-pbpaste &gt; "$UUIDDoc"
-
-open -a "Marked" "$UUIDDoc" 
-
-</string>
-								<key>TimeOutAbortsMacro</key>
+								<string>%CurrentClipboard%</string>
+								<key>Variable</key>
+								<string>MMD__Preview Text</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>PercentEncodeForURL</string>
+								<key>IsActive</key>
 								<true/>
-								<key>TrimResults</key>
-								<true/>
-								<key>TrimResultsNew</key>
-								<true/>
-								<key>UseText</key>
-								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>FilterVariable</string>
+								<key>Variable</key>
+								<string>MMD__Preview Text</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -260,6 +320,80 @@ open -a "Marked" "$UUIDDoc"
 								<string>DeletePastClipboard</string>
 								<key>PastExpression</key>
 								<string>0</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Create preview</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDefaultApplication</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>OpenURL</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>URL</key>
+								<string>marked://preview?id=%Variable%MMD__Current App%&amp;window=%Variable%MMD__Current Window%&amp;text=%Variable%MMD__Preview Text%</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string></string>
+								<key>Title</key>
+								<string>Delete variables</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Current App</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Current Window</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Delete%</string>
+								<key>Variable</key>
+								<string>MMD__Preview Text</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -613,7 +747,7 @@ open -a "Marked" "$UUIDDoc"
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>424708466.30751699</real>
+				<real>431983609.523857</real>
 				<key>Name</key>
 				<string>41)Preview Selection with Marked</string>
 				<key>Triggers</key>
@@ -624,7 +758,7 @@ open -a "Marked" "$UUIDDoc"
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>94519857-F07B-4B29-92A3-F38B3162ACE5</string>
+				<string>89100847-507F-4C50-98E4-1A803F95C101</string>
 			</dict>
 		</array>
 		<key>Name</key>
