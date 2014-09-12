@@ -238,7 +238,9 @@
 						<key>MacroActionType</key>
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
-						<string>[^Tag]: Text</string>
+						<string>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.[^Tag]
+
+[^Tag]: Text</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
@@ -852,7 +854,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>430144966.38037199</real>
+				<real>432200560.90605098</real>
 				<key>Name</key>
 				<string>32)Footnote</string>
 				<key>Triggers</key>
