@@ -70,8 +70,6 @@
 						<string>PromptForUserInput</string>
 						<key>Prompt</key>
 						<string>![Alt](URL "Title")</string>
-						<key>ResultButtonVariable</key>
-						<string>Result Button</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>Title</key>
@@ -86,7 +84,7 @@
 							</dict>
 							<dict>
 								<key>Default</key>
-								<string></string>
+								<string>%CurrentClipboard%</string>
 								<key>Variable</key>
 								<string>MMD__Image URL</string>
 							</dict>
@@ -599,7 +597,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396102744.67604399</real>
+				<real>432200448.19286603</real>
 				<key>Name</key>
 				<string>31)Image</string>
 				<key>Triggers</key>
