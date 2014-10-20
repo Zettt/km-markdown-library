@@ -38,6 +38,32 @@ Don't forget to click "Try" to actually set this.</string>
 						<key>Variable</key>
 						<string>MMD__Double Quotes Style</string>
 					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>Slack
+IdeasOnCanvas
+Der Übercast</string>
+						<key>Variable</key>
+						<string>MMD__Current App Exceptions</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<false/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Double Quotes Style</string>
+					</dict>
 				</array>
 				<key>CustomIconData</key>
 				<data>
@@ -459,7 +485,7 @@ Don't forget to click "Try" to actually set this.</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>421667752.299384</real>
+				<real>435502817.23795801</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
