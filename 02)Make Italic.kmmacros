@@ -25,6 +25,8 @@
 						<string>Check for text selection</string>
 					</dict>
 					<dict>
+						<key>Asynchronously</key>
+						<false/>
 						<key>Count</key>
 						<integer>1</integer>
 						<key>IsActive</key>
@@ -39,19 +41,31 @@
 						<true/>
 					</dict>
 					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Application%1%</string>
+						<key>Variable</key>
+						<string>MMD__Current App</string>
+					</dict>
+					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
 							<array>
 								<dict>
 									<key>ConditionType</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<string>MMD__Cut Menu Item</string>
-									<key>VariableConditionType</key>
-									<string>Is</string>
-									<key>VariableValue</key>
-									<string>true</string>
+									<string>Text</string>
+									<key>Text</key>
+									<string>%Variable%MMD__Current App Exceptions%</string>
+									<key>TextConditionType</key>
+									<string>DoesNotContain</string>
+									<key>TextValue</key>
+									<string>%Variable%MMD__Current App%</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -60,68 +74,267 @@
 						<key>ElseActions</key>
 						<array>
 							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Cut Menu Item</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>true</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Delete%</string>
+										<key>Variable</key>
+										<string>MMD__Cut Menu Item</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>ByPasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>InsertText</string>
+										<key>Paste</key>
+										<true/>
+										<key>Text</key>
+										<string>_</string>
+									</dict>
+									<dict>
+										<key>Asynchronously</key>
+										<false/>
+										<key>Count</key>
+										<integer>1</integer>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>ExecuteMacro</string>
+										<key>MacroUID</key>
+										<string>EF4F2B9D-C58B-493B-88F4-F52714BD67FB</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>ByPasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>InsertText</string>
+										<key>Paste</key>
+										<true/>
+										<key>Text</key>
+										<string>_</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+								</array>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SetVariableToText</string>
-								<key>Text</key>
-								<string>%Delete%</string>
-								<key>Variable</key>
-								<string>MMD__Cut Menu Item</string>
-							</dict>
-							<dict>
-								<key>Action</key>
-								<string>ByPasting</string>
-								<key>IsActive</key>
 								<true/>
-								<key>IsDisclosed</key>
-								<false/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
-								<key>Text</key>
-								<string>*</string>
-							</dict>
-							<dict>
-								<key>Count</key>
-								<integer>1</integer>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>ExecuteMacro</string>
-								<key>MacroUID</key>
-								<string>EF4F2B9D-C58B-493B-88F4-F52714BD67FB</string>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Delete%</string>
+										<key>Variable</key>
+										<string>MMD__Cut Menu Item</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>KeyCode</key>
+										<integer>7</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>256</integer>
+										<key>ReleaseAll</key>
+										<false/>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>Pause</string>
+										<key>Time</key>
+										<string>0.1</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ClipboardConditionType</key>
+													<string>Contains</string>
+													<key>ClipboardText</key>
+													<string>*</string>
+													<key>ConditionType</key>
+													<string>Clipboard</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>Action</key>
+												<string>IgnoreCaseRegEx</string>
+												<key>Captures</key>
+												<array>
+													<string></string>
+													<string>MMD__Match Before</string>
+													<string></string>
+													<string>MMD__Match Formatted</string>
+													<string></string>
+													<string>MMD__Match Rest</string>
+												</array>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SearchClipboard</string>
+												<key>Search</key>
+												<string>(.*?)(\*+)(.*?)(\*+)(.*)</string>
+												<key>TargetNamedClipboardRedundantDisplayName</key>
+												<string>Default Clipboard</string>
+												<key>TargetNamedClipboardUID</key>
+												<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+												<key>TargetUseNamedClipboard</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>JustDisplay</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetClipboardToText</string>
+												<key>TargetNamedClipboardRedundantDisplayName</key>
+												<string>Default Clipboard</string>
+												<key>TargetNamedClipboardUID</key>
+												<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+												<key>TargetUseNamedClipboard</key>
+												<false/>
+												<key>Text</key>
+												<string>%Variable%MMD__Match Before%%Variable%MMD__Match Formatted%%Variable%MMD__Match Rest%</string>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>DisplayKind</key>
+										<string>Pasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>PlugIn</string>
+										<key>PlugInFolderName</key>
+										<string>Wrap Text</string>
+										<key>PlugInParameters</key>
+										<dict>
+											<key>Animal</key>
+											<string>Wombat</string>
+											<key>Text</key>
+											<string>%CurrentClipboard%</string>
+											<key>WrapEnd</key>
+											<string>_</string>
+											<key>WrapStart</key>
+											<string>_</string>
+											<key>Wrapper</key>
+											<string>**</string>
+										</dict>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>TrimResultsNew</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+								</array>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
-							</dict>
-							<dict>
-								<key>Action</key>
-								<string>ByPasting</string>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
-								<key>Text</key>
-								<string>*</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>0</string>
 							</dict>
 						</array>
 						<key>IsActive</key>
@@ -133,167 +346,267 @@
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SetVariableToText</string>
-								<key>Text</key>
-								<string>%Delete%</string>
-								<key>Variable</key>
-								<string>MMD__Cut Menu Item</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>KeyCode</key>
-								<integer>7</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>256</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>Pause</string>
-								<key>Time</key>
-								<string>0.1</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-							<dict>
 								<key>Conditions</key>
 								<dict>
 									<key>ConditionList</key>
 									<array>
 										<dict>
-											<key>ClipboardConditionType</key>
-											<string>Contains</string>
-											<key>ClipboardText</key>
-											<string>*</string>
 											<key>ConditionType</key>
-											<string>Clipboard</string>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Cut Menu Item</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>true</string>
 										</dict>
 									</array>
 									<key>ConditionListMatch</key>
 									<string>All</string>
 								</dict>
 								<key>ElseActions</key>
-								<array/>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Delete%</string>
+										<key>Variable</key>
+										<string>MMD__Cut Menu Item</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>ByPasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>InsertText</string>
+										<key>Paste</key>
+										<true/>
+										<key>Text</key>
+										<string>*</string>
+									</dict>
+									<dict>
+										<key>Asynchronously</key>
+										<false/>
+										<key>Count</key>
+										<integer>1</integer>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>ExecuteMacro</string>
+										<key>MacroUID</key>
+										<string>EF4F2B9D-C58B-493B-88F4-F52714BD67FB</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>ByPasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>InsertText</string>
+										<key>Paste</key>
+										<true/>
+										<key>Text</key>
+										<string>*</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+								</array>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
 								<array>
 									<dict>
-										<key>Action</key>
-										<string>IgnoreCaseRegEx</string>
-										<key>Captures</key>
-										<array>
-											<string></string>
-											<string>MMD__Match Before</string>
-											<string></string>
-											<string>MMD__Match Formatted</string>
-											<string></string>
-											<string>MMD__Match Rest</string>
-										</array>
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
-										<string>SearchClipboard</string>
-										<key>Search</key>
-										<string>(.*?)(\*+)(.*?)(\*+)(.*)</string>
-										<key>TargetNamedClipboardRedundantDisplayName</key>
-										<string>Default Clipboard</string>
-										<key>TargetNamedClipboardUID</key>
-										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
-										<key>TargetUseNamedClipboard</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Delete%</string>
+										<key>Variable</key>
+										<string>MMD__Cut Menu Item</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>KeyCode</key>
+										<integer>7</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>256</integer>
+										<key>ReleaseAll</key>
 										<false/>
 									</dict>
 									<dict>
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
-										<key>JustDisplay</key>
 										<false/>
 										<key>MacroActionType</key>
-										<string>SetClipboardToText</string>
-										<key>TargetNamedClipboardRedundantDisplayName</key>
-										<string>Default Clipboard</string>
-										<key>TargetNamedClipboardUID</key>
-										<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
-										<key>TargetUseNamedClipboard</key>
+										<string>Pause</string>
+										<key>Time</key>
+										<string>0.1</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ClipboardConditionType</key>
+													<string>Contains</string>
+													<key>ClipboardText</key>
+													<string>*</string>
+													<key>ConditionType</key>
+													<string>Clipboard</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
 										<false/>
-										<key>Text</key>
-										<string>%Variable%MMD__Match Before%%Variable%MMD__Match Formatted%%Variable%MMD__Match Rest%</string>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>Action</key>
+												<string>IgnoreCaseRegEx</string>
+												<key>Captures</key>
+												<array>
+													<string></string>
+													<string>MMD__Match Before</string>
+													<string></string>
+													<string>MMD__Match Formatted</string>
+													<string></string>
+													<string>MMD__Match Rest</string>
+												</array>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SearchClipboard</string>
+												<key>Search</key>
+												<string>(.*?)(\*+)(.*?)(\*+)(.*)</string>
+												<key>TargetNamedClipboardRedundantDisplayName</key>
+												<string>Default Clipboard</string>
+												<key>TargetNamedClipboardUID</key>
+												<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+												<key>TargetUseNamedClipboard</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>JustDisplay</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetClipboardToText</string>
+												<key>TargetNamedClipboardRedundantDisplayName</key>
+												<string>Default Clipboard</string>
+												<key>TargetNamedClipboardUID</key>
+												<string>ADC842DE-141E-432C-BEC9-1CF2938923ED</string>
+												<key>TargetUseNamedClipboard</key>
+												<false/>
+												<key>Text</key>
+												<string>%Variable%MMD__Match Before%%Variable%MMD__Match Formatted%%Variable%MMD__Match Rest%</string>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>DisplayKind</key>
+										<string>Pasting</string>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>PlugIn</string>
+										<key>PlugInFolderName</key>
+										<string>Wrap Text</string>
+										<key>PlugInParameters</key>
+										<dict>
+											<key>Animal</key>
+											<string>Wombat</string>
+											<key>Text</key>
+											<string>%CurrentClipboard%</string>
+											<key>WrapEnd</key>
+											<string>*</string>
+											<key>WrapStart</key>
+											<string>*</string>
+											<key>Wrapper</key>
+											<string>**</string>
+										</dict>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>TrimResultsNew</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>DeletePastClipboard</string>
+										<key>PastExpression</key>
+										<string>0</string>
 									</dict>
 								</array>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
-							</dict>
-							<dict>
-								<key>DisplayKind</key>
-								<string>Pasting</string>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>PlugIn</string>
-								<key>PlugInFolderName</key>
-								<string>Wrap Text</string>
-								<key>PlugInParameters</key>
-								<dict>
-									<key>Animal</key>
-									<string>Wombat</string>
-									<key>Text</key>
-									<string>%CurrentClipboard%</string>
-									<key>WrapEnd</key>
-									<string>*</string>
-									<key>WrapStart</key>
-									<string>*</string>
-									<key>Wrapper</key>
-									<string>**</string>
-								</dict>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-								<key>TrimResultsNew</key>
-								<true/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>0</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>0</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -310,6 +623,18 @@
 						<string>0.5</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Current App</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -711,7 +1036,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396262840.761639</real>
+				<real>435503093.70602798</real>
 				<key>Name</key>
 				<string>02)Make Italic</string>
 				<key>Triggers</key>
