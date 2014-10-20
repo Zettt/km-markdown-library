@@ -39,18 +39,51 @@
 						<true/>
 					</dict>
 					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Text</string>
+									<key>Text</key>
+									<string>%Variable%MMD__Current App Exceptions%</string>
+									<key>TextConditionType</key>
+									<string>DoesNotContain</string>
+									<key>TextValue</key>
+									<string>%Variable%MMD__Current App%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
-						<key>KeyCode</key>
-						<integer>51</integer>
+						<true/>
 						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>KeyCode</key>
+								<integer>51</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>0</integer>
+								<key>ReleaseAll</key>
+								<false/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 				</array>
 				<key>CustomIconData</key>
@@ -58,7 +91,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>396446996.56444502</real>
+				<real>435503043.317231</real>
 				<key>Name</key>
 				<string>Helper - Tab Out Of</string>
 				<key>Triggers</key>
