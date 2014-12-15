@@ -440,7 +440,7 @@ fi
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<true/>
+						<false/>
 						<key>MacroActionType</key>
 						<string>Comment</string>
 						<key>Text</key>
@@ -1460,7 +1460,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440372733.82831699</real>
+				<real>440372828.57342499</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
