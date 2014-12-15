@@ -171,7 +171,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>SetVariableToCalculation</string>
 								<key>Text</key>
@@ -206,7 +206,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -289,7 +289,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -372,7 +372,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -455,7 +455,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -538,7 +538,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -621,7 +621,7 @@
 										<key>IsActive</key>
 										<true/>
 										<key>IsDisclosed</key>
-										<true/>
+										<false/>
 										<key>MacroActionType</key>
 										<string>IfThenElse</string>
 										<key>ThenActions</key>
@@ -691,7 +691,7 @@
 											<key>ConditionType</key>
 											<string>Calculation</string>
 											<key>Text</key>
-											<string>NOW-(MMD__Current Time+10)=0</string>
+											<string>NOW-(MMD__Current Time+2)=0</string>
 										</dict>
 										<dict>
 											<key>ConditionType</key>
@@ -1353,7 +1353,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440375647.60976303</real>
+				<real>440375790.365282</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
