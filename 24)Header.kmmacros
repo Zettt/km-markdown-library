@@ -98,163 +98,7 @@
 							<string>All</string>
 						</dict>
 						<key>ElseActions</key>
-						<array>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SetVariableToCalculation</string>
-								<key>Text</key>
-								<string>NOW</string>
-								<key>UseFormat</key>
-								<false/>
-								<key>Variable</key>
-								<string>MMD__Current Time</string>
-							</dict>
-							<dict>
-								<key>Actions</key>
-								<array>
-									<dict>
-										<key>Conditions</key>
-										<dict>
-											<key>ConditionList</key>
-											<array>
-												<dict>
-													<key>ConditionType</key>
-													<string>Key</string>
-													<key>KeyCode</key>
-													<integer>124</integer>
-													<key>KeyConditionType</key>
-													<string>Down</string>
-												</dict>
-											</array>
-											<key>ConditionListMatch</key>
-											<string>Any</string>
-										</dict>
-										<key>ElseActions</key>
-										<array/>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
-										<key>MacroActionType</key>
-										<string>IfThenElse</string>
-										<key>ThenActions</key>
-										<array>
-											<dict>
-												<key>IsActive</key>
-												<true/>
-												<key>IsDisclosed</key>
-												<false/>
-												<key>MacroActionType</key>
-												<string>SetVariableToCalculation</string>
-												<key>Text</key>
-												<string>MMD__Header Level+1</string>
-												<key>UseFormat</key>
-												<false/>
-												<key>Variable</key>
-												<string>MMD__Header Level</string>
-											</dict>
-											<dict>
-												<key>IsActive</key>
-												<true/>
-												<key>IsDisclosed</key>
-												<false/>
-												<key>MacroActionType</key>
-												<string>Pause</string>
-												<key>Time</key>
-												<string>0.1</string>
-												<key>TimeOutAbortsMacro</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TimeOutAbortsMacro</key>
-										<true/>
-									</dict>
-									<dict>
-										<key>Conditions</key>
-										<dict>
-											<key>ConditionList</key>
-											<array>
-												<dict>
-													<key>ConditionType</key>
-													<string>Key</string>
-													<key>KeyCode</key>
-													<integer>123</integer>
-													<key>KeyConditionType</key>
-													<string>Down</string>
-												</dict>
-											</array>
-											<key>ConditionListMatch</key>
-											<string>Any</string>
-										</dict>
-										<key>ElseActions</key>
-										<array/>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
-										<key>MacroActionType</key>
-										<string>IfThenElse</string>
-										<key>ThenActions</key>
-										<array>
-											<dict>
-												<key>IsActive</key>
-												<true/>
-												<key>IsDisclosed</key>
-												<false/>
-												<key>MacroActionType</key>
-												<string>SetVariableToCalculation</string>
-												<key>Text</key>
-												<string>MMD__Header Level-1</string>
-												<key>UseFormat</key>
-												<false/>
-												<key>Variable</key>
-												<string>MMD__Header Level</string>
-											</dict>
-											<dict>
-												<key>IsActive</key>
-												<true/>
-												<key>IsDisclosed</key>
-												<false/>
-												<key>MacroActionType</key>
-												<string>Pause</string>
-												<key>Time</key>
-												<string>0.1</string>
-												<key>TimeOutAbortsMacro</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TimeOutAbortsMacro</key>
-										<true/>
-									</dict>
-								</array>
-								<key>Conditions</key>
-								<dict>
-									<key>ConditionList</key>
-									<array>
-										<dict>
-											<key>ConditionType</key>
-											<string>Calculation</string>
-											<key>Text</key>
-											<string>NOW-(MMD__Current Time+3)</string>
-										</dict>
-									</array>
-									<key>ConditionListMatch</key>
-									<string>None</string>
-								</dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>Until</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-						</array>
+						<array/>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
@@ -327,7 +171,7 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<false/>
+								<true/>
 								<key>MacroActionType</key>
 								<string>SetVariableToCalculation</string>
 								<key>Text</key>
@@ -349,17 +193,9 @@
 													<key>ConditionType</key>
 													<string>Key</string>
 													<key>KeyCode</key>
-													<integer>124</integer>
+													<integer>18</integer>
 													<key>KeyConditionType</key>
 													<string>Down</string>
-												</dict>
-												<dict>
-													<key>ConditionType</key>
-													<string>Modifiers</string>
-													<key>ModifiersDown</key>
-													<integer>4096</integer>
-													<key>ModifiersUp</key>
-													<integer>0</integer>
 												</dict>
 											</array>
 											<key>ConditionListMatch</key>
@@ -383,11 +219,37 @@
 												<key>MacroActionType</key>
 												<string>SetVariableToCalculation</string>
 												<key>Text</key>
-												<string>MMD__Header Level+1</string>
+												<string>1</string>
 												<key>UseFormat</key>
 												<false/>
 												<key>Variable</key>
 												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
 											</dict>
 											<dict>
 												<key>IsActive</key>
@@ -414,17 +276,9 @@
 													<key>ConditionType</key>
 													<string>Key</string>
 													<key>KeyCode</key>
-													<integer>123</integer>
+													<integer>19</integer>
 													<key>KeyConditionType</key>
 													<string>Down</string>
-												</dict>
-												<dict>
-													<key>ConditionType</key>
-													<string>Modifiers</string>
-													<key>ModifiersDown</key>
-													<integer>4096</integer>
-													<key>ModifiersUp</key>
-													<integer>0</integer>
 												</dict>
 											</array>
 											<key>ConditionListMatch</key>
@@ -448,11 +302,369 @@
 												<key>MacroActionType</key>
 												<string>SetVariableToCalculation</string>
 												<key>Text</key>
-												<string>MMD__Header Level-1</string>
+												<string>2</string>
 												<key>UseFormat</key>
 												<false/>
 												<key>Variable</key>
 												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>20</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>Text</key>
+												<string>3</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>21</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>Text</key>
+												<string>4</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>23</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>Text</key>
+												<string>5</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.1</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+										</array>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+									<dict>
+										<key>Conditions</key>
+										<dict>
+											<key>ConditionList</key>
+											<array>
+												<dict>
+													<key>ConditionType</key>
+													<string>Key</string>
+													<key>KeyCode</key>
+													<integer>22</integer>
+													<key>KeyConditionType</key>
+													<string>Down</string>
+												</dict>
+											</array>
+											<key>ConditionListMatch</key>
+											<string>All</string>
+										</dict>
+										<key>ElseActions</key>
+										<array/>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>IfThenElse</string>
+										<key>ThenActions</key>
+										<array>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToCalculation</string>
+												<key>Text</key>
+												<string>6</string>
+												<key>UseFormat</key>
+												<false/>
+												<key>Variable</key>
+												<string>MMD__Header Level</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>MacroActionType</key>
+												<string>SetVariableToText</string>
+												<key>Text</key>
+												<string>1</string>
+												<key>Variable</key>
+												<string>MMD__Break Loop</string>
+											</dict>
+											<dict>
+												<key>IsActive</key>
+												<true/>
+												<key>IsDisclosed</key>
+												<false/>
+												<key>KeyCode</key>
+												<integer>51</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
 											</dict>
 											<dict>
 												<key>IsActive</key>
@@ -479,11 +691,21 @@
 											<key>ConditionType</key>
 											<string>Calculation</string>
 											<key>Text</key>
-											<string>NOW-(MMD__Current Time+3)</string>
+											<string>NOW-(MMD__Current Time+10)</string>
+										</dict>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Break Loop</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>1</string>
 										</dict>
 									</array>
 									<key>ConditionListMatch</key>
-									<string>None</string>
+									<string>Any</string>
 								</dict>
 								<key>IsActive</key>
 								<true/>
@@ -1051,6 +1273,18 @@
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
+						<string>MMD__Break Loop</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
 						<string>MMD__Header Text</string>
 					</dict>
 					<dict>
@@ -1119,7 +1353,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>416908492.56761599</real>
+				<real>440375565.30140102</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
