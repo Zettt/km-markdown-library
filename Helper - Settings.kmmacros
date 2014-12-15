@@ -54,6 +54,18 @@ Der Übercast</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>NO</string>
+						<key>Variable</key>
+						<string>MMD__Add Affiliate Tags</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
 						<false/>
 						<key>IsDisclosed</key>
 						<true/>
@@ -485,7 +497,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>435502817.23795801</real>
+				<real>440374147.77594101</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
