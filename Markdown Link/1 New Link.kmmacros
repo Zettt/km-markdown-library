@@ -523,6 +523,141 @@ fi
 						<key>Text</key>
 						<string></string>
 						<key>Title</key>
+						<string>Add Affiliate Tags</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Add Affiliate Tags</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>YES</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Link URL</string>
+											<key>VariableConditionType</key>
+											<string>Contains</string>
+											<key>VariableValue</key>
+											<string>amazon</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array/>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Variable%MMD__Link URL%&amp;tag=zhome-21</string>
+										<key>Variable</key>
+										<string>MMD__Link URL</string>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>MMD__Link URL</string>
+											<key>VariableConditionType</key>
+											<string>Contains</string>
+											<key>VariableValue</key>
+											<string>itunes</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array/>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>IsActive</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<true/>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%Variable%MMD__Link URL%&amp;at=1l3vpUb&amp;ct=mmdkm</string>
+										<key>Variable</key>
+										<string>MMD__Link URL</string>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
 						<string>Activate app that was frontmost when macro was run</string>
 					</dict>
 					<dict>
@@ -1460,7 +1595,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440372828.57342499</real>
+				<real>440374064.134866</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
