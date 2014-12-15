@@ -298,7 +298,7 @@ Inline means the link will not be a reference link.</string>
 										<key>Default</key>
 										<string>1|0</string>
 										<key>Variable</key>
-										<string>MMD__Clean URL</string>
+										<string>MMD__Link Clean</string>
 									</dict>
 								</array>
 							</dict>
@@ -457,7 +457,7 @@ fi
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMD__Clean URL</string>
+									<string>MMD__Link Clean</string>
 									<key>VariableConditionType</key>
 									<string>Is</string>
 									<key>VariableValue</key>
@@ -1460,7 +1460,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440372518.033952</real>
+				<real>440372733.82831699</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
