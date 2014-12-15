@@ -691,7 +691,7 @@
 											<key>ConditionType</key>
 											<string>Calculation</string>
 											<key>Text</key>
-											<string>NOW-(MMD__Current Time+10)</string>
+											<string>NOW-(MMD__Current Time+10)=0</string>
 										</dict>
 										<dict>
 											<key>ConditionType</key>
@@ -1353,7 +1353,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440375565.30140102</real>
+				<real>440375647.60976303</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
