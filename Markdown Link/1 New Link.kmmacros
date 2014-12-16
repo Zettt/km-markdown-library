@@ -432,6 +432,42 @@ fi
 								<key>Variable</key>
 								<string>MMD__Link Title</string>
 							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Window</string>
+								<key>IsActive</key>
+								<false/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/bin/sh
+
+# been trying to make a better fetch title macro, to deal with Facebook URL's
+
+#URL="http://mosx.tumblr.com"
+#URL="$KMVAR_MMD__Link_URL"
+URL="https://www.facebook.com/andreas.zeitler"
+
+#content=$(curl --connect-timeout 5 --max-time 5 --range 0-39999 --silent "$URL" | awk 'BEGIN{IGNORECASE=1;FS="&lt;title&gt;|&lt;/title&gt;";RS=EOF} {print $1}') # | sed '/^$/d')
+content=$(curl --connect-timeout 5 --max-time 5 --range 0-39999 --silent "$URL" | sed -e 's/&lt;title.*&gt;\(.*\)&lt;\/?title&gt;/\1/' | sed '/^$/d')
+
+if [ "$content" ]; then
+	echo "$content"
+fi
+</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
@@ -489,7 +525,7 @@ fi
 								<key>Replace</key>
 								<string>$1$3</string>
 								<key>Search</key>
-								<string>(http[s]?:\/\/)(m\.|mobile\.|touch\.)(.*)</string>
+								<string>(http[s]?:\/\/)(m\.|mobile\.|mobile2\.|touch\.)(.*)</string>
 								<key>Variable</key>
 								<string>MMD__Link URL</string>
 							</dict>
@@ -1595,7 +1631,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440374064.134866</real>
+				<real>440412514.57363403</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
