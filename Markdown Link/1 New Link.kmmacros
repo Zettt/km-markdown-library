@@ -169,6 +169,12 @@ Inline means the link will not be a reference link.</string>
 										<key>Variable</key>
 										<string>MMD__Link Inline</string>
 									</dict>
+									<dict>
+										<key>Default</key>
+										<string>1|0</string>
+										<key>Variable</key>
+										<string>MMD__Link Clean</string>
+									</dict>
 								</array>
 							</dict>
 						</array>
@@ -1631,7 +1637,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440412514.57363403</real>
+				<real>440516797.53552598</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
