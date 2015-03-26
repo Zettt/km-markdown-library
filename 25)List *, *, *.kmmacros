@@ -632,9 +632,9 @@ if __name__ == '__main__':
 								<key>MacroActionType</key>
 								<string>SearchReplaceClipboard</string>
 								<key>Replace</key>
-								<string>$1%Variable%MMD__List Character% $3</string>
+								<string>$1%Variable%MMD__List Character% $2</string>
 								<key>Search</key>
-								<string>(?m)(^\s*)(?:[*+-]*\s*)(.*)</string>
+								<string>(?m)(^\s*)(?:[*+-[:alnum:]\.?]*\s*)(.*)</string>
 								<key>TargetNamedClipboardRedundantDisplayName</key>
 								<string>Default Clipboard</string>
 								<key>TargetNamedClipboardUID</key>
@@ -1021,9 +1021,9 @@ if __name__ == '__main__':
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>449058143.25417799</real>
+				<real>449058241.79172897</real>
 				<key>Name</key>
-				<string>25)List *, *, * v7</string>
+				<string>25)List *, *, * v8</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -1042,7 +1042,7 @@ if __name__ == '__main__':
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>BB2123BF-FCAC-4AC6-9F99-580A5404421D</string>
+				<string>F6C2EA50-AB6E-497D-93F7-09820B25CC14</string>
 			</dict>
 		</array>
 		<key>Name</key>
