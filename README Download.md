@@ -10,6 +10,7 @@ Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Bre
 # Installation Instructions #
 
 * To install the Markdown macros: Double click on the `.kmlibrary` file. Two new macro groups will be added to Keyboard Maestro: Markdown and Markdown Link.  
+* **You should remove the old macros before adding these!**
 * To install the (required) Wrap Text plugin: Open a new Finder window, click menu Go and hold down ⌥ (Option), click Library. Now go to "Application Support" → "Keyboard Maestro" → "Keyboard Maestro Actions". Move the "Wrap Text" folder to "Keyboard Maestro Actions”. Now you need to close Keyboard Maestro and its Engine and restart both, for the Wrap Text plugin to be available.
 
 # Changes in Version 2 #
@@ -37,8 +38,6 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 [Download version 2.3](https://app.box.com/s/cjch3nu8zzpc32m4gtp9ij794m3cllf7) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 [Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
-
-**You should remove the old macros before adding these!**
 
 # Documentation #
 
