@@ -11,9 +11,11 @@ Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Bre
 
 Main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.
 
-Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
+Read: [Changelog](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
-## Screencast ##
+## Screencasts ##
+
+Screencast for version 2.3: [http://youtu.be/iPig8_pRTHE](http://youtu.be/iPig8_pRTHE)
 
 Screencast for version 2.2: [http://youtu.be/LsF0jtaeMmg](http://youtu.be/LsF0jtaeMmg)
 
@@ -27,7 +29,8 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download v2 #
 
-[Download version 2.2](https://app.box.com/s/sa1optqfdodckbrs4ww9) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+
+[Download version 2.3](https://app.box.com/s/cjch3nu8zzpc32m4gtp9ij794m3cllf7) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 [Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
@@ -35,6 +38,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 Older versions:
 
+* [v 2.2](https://app.box.com/s/sa1optqfdodckbrs4ww9)
 * [v 2.1.3](https://app.box.com/s/tiiabn302rkjn16o7e8h)
 * [v 2.1.2](https://app.box.com/s/h82xio1lix89p1wgysza)
 * [v 2.1.1](https://app.box.com/s/qrepwaijqe4094kx6axg)

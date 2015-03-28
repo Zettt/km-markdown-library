@@ -16,9 +16,11 @@ Special thanks to [Rafael Bugajaweksi](https://github.com/rbugajewski/) and [Bre
 
 Main focus for version 2 was speed optimization, interaction, accessibility for non-English speakers, and usability.
 
-Read: [major changes in version 2.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
+Read: [Changelog](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
-## Screencast ##
+## Screencasts ##
+
+Screencast for version 2.3: [http://youtu.be/iPig8_pRTHE](http://youtu.be/iPig8_pRTHE)
 
 Screencast for version 2.2: [http://youtu.be/LsF0jtaeMmg](http://youtu.be/LsF0jtaeMmg)
 
@@ -32,7 +34,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download #
 
-[Download version 2.2](https://app.box.com/s/sa1optqfdodckbrs4ww9) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+[Download version 2.3](https://app.box.com/s/cjch3nu8zzpc32m4gtp9ij794m3cllf7) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 [Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
@@ -43,6 +45,19 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 [Documentation is available from the Wiki.](https://github.com/Zettt/km-markdown-library/wiki "Home · Zettt/km-markdown-library Wiki")
 
 # Changelog #
+
+## Version 2.3 ##
+
+* Settings! We now have preferences for this macro library. There's a helper where you can set things like:
+    * `MMD__Double Quotes Style`: set to either `straight` or `smart` to make the library default to `"straight"` or `“smart”` quotes. 
+    * `MMD__Current App Exceptions`: a configurable list of frontmost app names that allow you to configure exceptions for apps that use a different Markdown style, e.g. Slack, which uses underscores for `_italic_`.
+* Header macro: Gone is `←`, `→` to increase or decrease. Instead you can activate the macro and type `1-6` to insert the heading level directly. This is *much* faster than my previous solution.
+* A couple of changes to the Marked macros.
+* Footnote macro: on insert, the macro now restores the cursor position. I have to thank @nuclearzenfire for the original for this feature.
+* Link macro: 
+    * Clean URL option that tries to remove tracking codes from a URL.
+    * Option to add affiliate tags (very limited!)
+	* List macro: A previous version introduced the feature to "convert" list from one style to the other. This was causing problems and bugs. I am glad to say that @pslobo and @ryanm have been a *huge* help here. The macro used to have a PHP script that reiterates the lists, which is now written in Python. And it works in tests.
 
 ## 2.2 ##
 
