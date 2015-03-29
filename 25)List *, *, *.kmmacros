@@ -259,16 +259,6 @@
 						<string>Find out what kind of list we have and re-indent based on first character</string>
 					</dict>
 					<dict>
-						<key>DebuggerAction</key>
-						<string>Breakpoint</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>DebuggerAction</string>
-					</dict>
-					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -1021,9 +1011,9 @@ if __name__ == '__main__':
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>449058241.79172897</real>
+				<real>449316525.73951298</real>
 				<key>Name</key>
-				<string>25)List *, *, * v8</string>
+				<string>25)List *, *, *</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
