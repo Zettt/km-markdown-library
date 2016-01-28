@@ -158,7 +158,7 @@
 export LANG=en_US.UTF-8
 
 # pbpaste | /usr/local/bin/mmd
-echo "$KMVAR_MMD__Markdwon_Text" | /usr/local/bin/mmd</string>
+echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>TrimResults</key>
@@ -169,6 +169,20 @@ echo "$KMVAR_MMD__Markdwon_Text" | /usr/local/bin/mmd</string>
 								<true/>
 								<key>Variable</key>
 								<string>MMD__Converted Text</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>ByPasting</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>Paste</key>
+								<true/>
+								<key>Text</key>
+								<string>%Variable%MMD__Converted Text%</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -520,7 +534,7 @@ echo "$KMVAR_MMD__Markdwon_Text" | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>475661691.81292802</real>
+				<real>475661821.94622302</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>
