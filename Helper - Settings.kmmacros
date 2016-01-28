@@ -5,6 +5,8 @@
 	<dict>
 		<key>Activate</key>
 		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>457084305.76405799</real>
 		<key>IsActive</key>
 		<true/>
 		<key>Macros</key>
@@ -66,6 +68,18 @@ Der Übercast</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>NO</string>
+						<key>Variable</key>
+						<string>MMD__Suppress p Tag</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
 						<false/>
 						<key>IsDisclosed</key>
 						<true/>
@@ -77,6 +91,8 @@ Der Übercast</string>
 						<string>MMD__Double Quotes Style</string>
 					</dict>
 				</array>
+				<key>CreationDate</key>
+				<real>457084305.76405799</real>
 				<key>CustomIconData</key>
 				<data>
 				TU0AKgAAErSAACBQOCQWDQcDA0ABwKCgAE8JCYAksFBE
@@ -497,7 +513,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440374147.77594101</real>
+				<real>475662053.37291998</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
@@ -508,6 +524,8 @@ Der Übercast</string>
 		</array>
 		<key>Name</key>
 		<string>Markdown</string>
+		<key>ToggleMacroUID</key>
+		<string>0BBB8AE7-E6F5-4AF4-B629-9D661936C645</string>
 		<key>UID</key>
 		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
 	</dict>
