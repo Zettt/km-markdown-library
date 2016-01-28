@@ -5,6 +5,8 @@
 	<dict>
 		<key>Activate</key>
 		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>457084305.76405799</real>
 		<key>IsActive</key>
 		<true/>
 		<key>Macros</key>
@@ -92,6 +94,8 @@
 							<dict>
 								<key>DisplayKind</key>
 								<string>Pasting</string>
+								<key>IncludeStdErr</key>
+								<true/>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
@@ -144,6 +148,8 @@ fi
 							<dict>
 								<key>DisplayKind</key>
 								<string>Pasting</string>
+								<key>IncludeStdErr</key>
+								<true/>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
@@ -196,6 +202,8 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 						<string>MMD__Markdownify</string>
 					</dict>
 				</array>
+				<key>CreationDate</key>
+				<real>457084305.76405799</real>
 				<key>CustomIconData</key>
 				<data>
 				TU0AKgAACs6AACBQOCQUDwMXwMLQMrwMKwMUQMEwMJwM
@@ -517,9 +525,9 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>430212642.38584298</real>
+				<real>432200046.53374797</real>
 				<key>Name</key>
-				<string>43)Convert Selection to Markdown</string>
+				<string>43)Convert Selection to Markdown (Marky, Pandoc)</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -533,6 +541,8 @@ curl --url "http://heckyesmarkdown.com/go/" --data-urlencode "html=$KMVAR_MMD__M
 		</array>
 		<key>Name</key>
 		<string>Markdown</string>
+		<key>ToggleMacroUID</key>
+		<string>0BBB8AE7-E6F5-4AF4-B629-9D661936C645</string>
 		<key>UID</key>
 		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
 	</dict>
