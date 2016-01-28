@@ -132,27 +132,21 @@
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>Pause</string>
-								<key>Time</key>
-								<string>0.1</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%CurrentClipboard%</string>
+								<key>Variable</key>
+								<string>MMD__Markdown Text</string>
 							</dict>
 							<dict>
-								<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
-								<string>Default Clipboard</string>
-								<key>ClipboardTargetNamedClipboardUID</key>
-								<string>A99C8A49-B668-43B0-B175-54460F1E208A</string>
-								<key>ClipboardTargetUseNamedClipboard</key>
-								<false/>
 								<key>DisplayKind</key>
-								<string>Clipboard</string>
+								<string>Variable</string>
 								<key>IncludeStdErr</key>
 								<true/>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
-								<true/>
+								<false/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -163,7 +157,8 @@
 # setenv LANG en_US.UTF-8
 export LANG=en_US.UTF-8
 
-pbpaste | /usr/local/bin/mmd</string>
+# pbpaste | /usr/local/bin/mmd
+echo "$KMVAR_MMD__Markdwon_Text" | /usr/local/bin/mmd</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 								<key>TrimResults</key>
@@ -172,20 +167,20 @@ pbpaste | /usr/local/bin/mmd</string>
 								<true/>
 								<key>UseText</key>
 								<true/>
+								<key>Variable</key>
+								<string>MMD__Converted Text</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<false/>
-								<key>KeyCode</key>
-								<integer>9</integer>
 								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>256</integer>
-								<key>ReleaseAll</key>
-								<false/>
+								<string>Pause</string>
+								<key>Time</key>
+								<string>0.1</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -525,7 +520,7 @@ pbpaste | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>475661030.55737799</real>
+				<real>475661691.81292802</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>
