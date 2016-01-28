@@ -91,6 +91,16 @@
 								<key>Title</key>
 								<string>No text selection</string>
 							</dict>
+							<dict>
+								<key>Action</key>
+								<string>CancelThisMacro</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Cancel</string>
+							</dict>
 						</array>
 						<key>IsActive</key>
 						<true/>
@@ -170,45 +180,118 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 								<key>Variable</key>
 								<string>MMD__Converted Text</string>
 							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>MMD__Suppress p Tag</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>YES</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
 							<dict>
 								<key>Action</key>
-								<string>ByPasting</string>
+								<string>CaseSensitiveRegEx</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
-								<key>Text</key>
-								<string>%Variable%MMD__Converted Text%</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>Pause</string>
-								<key>Time</key>
-								<string>0.1</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>DeletePastClipboard</string>
-								<key>PastExpression</key>
-								<string>1</string>
+								<string>SearchReplaceVariable</string>
+								<key>Replace</key>
+								<string>$1</string>
+								<key>Search</key>
+								<string>^&lt;p&gt;(.*)&lt;\/p&gt;$</string>
+								<key>Variable</key>
+								<string>MMD__Converted Text</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>ByPasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>InsertText</string>
+						<key>Paste</key>
+						<true/>
+						<key>Text</key>
+						<string>%Variable%MMD__Converted Text%</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>DeletePastClipboard</string>
+						<key>PastExpression</key>
+						<string>1</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Markdown Text</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>MMD__Converted Text</string>
 					</dict>
 				</array>
 				<key>CreationDate</key>
@@ -534,7 +617,7 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>475661821.94622302</real>
+				<real>475662260.26859498</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>
