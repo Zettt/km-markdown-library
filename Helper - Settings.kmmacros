@@ -74,9 +74,9 @@ Der Übercast</string>
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>NO</string>
+						<string>YES</string>
 						<key>Variable</key>
-						<string>MMD__Suppress p Tag</string>
+						<string>MMD__Suppress HTML Where Possible</string>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -513,7 +513,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>475662053.37291998</real>
+				<real>476353297.752994</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
