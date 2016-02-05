@@ -161,7 +161,7 @@
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>MMD__Suppress HTML Where Possible</string>
+									<string>MMD__Blog Style Conversion</string>
 									<key>VariableConditionType</key>
 									<string>Is</string>
 									<key>VariableValue</key>
@@ -667,7 +667,7 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd --nosmart
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476354285.24024898</real>
+				<real>476354598.99778098</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>

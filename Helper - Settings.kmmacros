@@ -147,7 +147,7 @@ Der Übercast</string>
 								<key>Text</key>
 								<string>YES</string>
 								<key>Variable</key>
-								<string>MMD__Suppress HTML Where Possible</string>
+								<string>MMD__Blog Style Conversion</string>
 							</dict>
 							<dict>
 								<key>IsActive</key>
@@ -594,7 +594,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476354503.29850698</real>
+				<real>476354594.74672598</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
