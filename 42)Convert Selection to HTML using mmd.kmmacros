@@ -156,7 +156,40 @@
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/bin/sh
+
+# setenv LANG en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# pbpaste | /usr/local/bin/mmd
+echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd --nosmart
+# --nosmart outputs &amp;quot; entities instead of "smart" entities</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>MMD__Converted Text</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>IncludeStdErr</key>
+								<true/>
+								<key>IsActive</key>
 								<false/>
+								<key>IsDisclosed</key>
+								<true/>
 								<key>MacroActionType</key>
 								<string>ExecuteShellScript</string>
 								<key>Path</key>
@@ -215,7 +248,7 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 						<array>
 							<dict>
 								<key>Action</key>
-								<string>CaseSensitiveRegEx</string>
+								<string>IgnoreCaseRegEx</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
@@ -226,6 +259,22 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 								<string>$1</string>
 								<key>Search</key>
 								<string>^&lt;p&gt;(.*)&lt;\/p&gt;$</string>
+								<key>Variable</key>
+								<string>MMD__Converted Text</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>IgnoreCaseString</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SearchReplaceVariable</string>
+								<key>Replace</key>
+								<string>"</string>
+								<key>Search</key>
+								<string>&amp;quot;</string>
 								<key>Variable</key>
 								<string>MMD__Converted Text</string>
 							</dict>
@@ -617,7 +666,7 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>475662260.26859498</real>
+				<real>476353037.30448103</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>
