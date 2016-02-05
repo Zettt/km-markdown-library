@@ -15,80 +15,161 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string>Set either "smart" or "straight".
+						<key>ActionName</key>
+						<string>Double Quotes Style</string>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>straight</string>
+								<key>Variable</key>
+								<string>MMD__Double Quotes Style</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string>With the "Wrap in Quotes" macro you can either have it output smart quotes, or not-so-smart quotes. Set this variable to "smart" or "straight" – oddly enough without quotes.
 
 Don't forget to click "Try" to actually set this.</string>
-						<key>Title</key>
-						<string>Double Quotes Style</string>
-					</dict>
-					<dict>
+								<key>Title</key>
+								<string>What is this?</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>straight</string>
-						<key>Variable</key>
-						<string>MMD__Double Quotes Style</string>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>Slack
-IdeasOnCanvas
+						<key>ActionName</key>
+						<string>App Exceptions</string>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>Slack
 Der Übercast</string>
-						<key>Variable</key>
-						<string>MMD__Current App Exceptions</string>
-					</dict>
-					<dict>
+								<key>Variable</key>
+								<string>MMD__Current App Exceptions</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string>Some apps have a special Markdown flavour. Slack, for example, uses single underscores for italic and single asterisk for bold, instead of single and double characters of either kind. Thus it's useful to make exceptions where necessary, and output the favoured flavour.</string>
+								<key>Title</key>
+								<string>What is this?</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>NO</string>
-						<key>Variable</key>
-						<string>MMD__Add Affiliate Tags</string>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
+						<key>ActionName</key>
+						<string>Affiliate Tags</string>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>NO</string>
+								<key>Variable</key>
+								<string>MMD__Add Affiliate Tags</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string>Outputting links, it's possible to automatically insert affiliate tags for sites such as Amazon and iTunes. This is what this setting is for.</string>
+								<key>Title</key>
+								<string>What is this?</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>YES</string>
-						<key>Variable</key>
-						<string>MMD__Suppress HTML Where Possible</string>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>YES</string>
+								<key>Variable</key>
+								<string>MMD__Suppress HTML Where Possible</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>Comment</string>
+								<key>Text</key>
+								<string>This setting is useful for bloggers. Reading straight-up converted HTML from Markdown in a blogging backend such as WordPress is more confusing than it's helpful. For example Markdown outputs p tags for every new paragraph it encounters. This is good for normal conversion, but not so useful for bloggers because it makes reading and editing harder. WordPress itself does more conversion anyway (which includes surrounding p tags, for example). This is why it's useful to make MultiMarkdown not convert certain characters such as quotes to &amp;quot; and not surround every paragraph with p tags.</string>
+								<key>Title</key>
+								<string>What is this?</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
-						<false/>
+						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>%Delete%</string>
-						<key>Variable</key>
-						<string>MMD__Double Quotes Style</string>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 				</array>
 				<key>CreationDate</key>
@@ -513,7 +594,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476353297.752994</real>
+				<real>476354503.29850698</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
