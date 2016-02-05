@@ -68,8 +68,9 @@ Don't forget to click "Try" to actually set this.</string>
 								<key>MacroActionType</key>
 								<string>SetVariableToText</string>
 								<key>Text</key>
-								<string>Slack
-Der Übercast</string>
+								<string>zCasting 3000
+Der Übercast
+Slack</string>
 								<key>Variable</key>
 								<string>MMD__Current App Exceptions</string>
 							</dict>
@@ -145,7 +146,7 @@ Der Übercast</string>
 								<key>MacroActionType</key>
 								<string>SetVariableToText</string>
 								<key>Text</key>
-								<string>YES</string>
+								<string>NO</string>
 								<key>Variable</key>
 								<string>MMD__Blog Style Conversion</string>
 							</dict>
@@ -594,7 +595,7 @@ Der Übercast</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476354594.74672598</real>
+				<real>476354975.60843599</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>
