@@ -153,18 +153,6 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string>We're doing a somewhat fancier conversion, when you have that setting enabled. This is useful for bloggers. Reading straight-up converted Markdown from HTML in a blogging backend such as WordPress is more confusing, and WordPress itself does more conversion anyway. This is why it's useful to make MultiMarkdown not convert certain characters such as quotes to &amp;quot; and surround every paragraph with p tags.</string>
-						<key>Title</key>
-						<string>Conversion is based on "MMD__Suppress HTML Where Possible" Setting</string>
-					</dict>
-					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -679,7 +667,7 @@ echo "$KMVAR_MMD__Markdown_Text" | /usr/local/bin/mmd --nosmart
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476353568.84417498</real>
+				<real>476354285.24024898</real>
 				<key>Name</key>
 				<string>42)Convert Selection to HTML using mmd</string>
 				<key>Triggers</key>
