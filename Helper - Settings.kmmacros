@@ -97,45 +97,6 @@ Slack</string>
 						<true/>
 					</dict>
 					<dict>
-						<key>ActionName</key>
-						<string>Affiliate Tags</string>
-						<key>Actions</key>
-						<array>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>SetVariableToText</string>
-								<key>Text</key>
-								<string>NO</string>
-								<key>Variable</key>
-								<string>MMD__Add Affiliate Tags</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
-								<key>MacroActionType</key>
-								<string>Comment</string>
-								<key>Text</key>
-								<string>Outputting links, it's possible to automatically insert affiliate tags for sites such as Amazon and iTunes. This is what this setting is for.</string>
-								<key>Title</key>
-								<string>What is this?</string>
-							</dict>
-						</array>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Group</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
 						<key>Actions</key>
 						<array>
 							<dict>
@@ -595,7 +556,7 @@ Slack</string>
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>476354975.60843599</real>
+				<real>476488387.94904298</real>
 				<key>Name</key>
 				<string>Helper - Settings</string>
 				<key>Triggers</key>

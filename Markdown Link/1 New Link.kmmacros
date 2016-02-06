@@ -9,6 +9,8 @@
 		<false/>
 		<key>AddToStatusMenu</key>
 		<true/>
+		<key>CreationDate</key>
+		<real>457084305.76405799</real>
 		<key>IsActive</key>
 		<true/>
 		<key>KeyCode</key>
@@ -33,8 +35,6 @@
 					<dict>
 						<key>Asynchronously</key>
 						<false/>
-						<key>Count</key>
-						<integer>1</integer>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
@@ -45,6 +45,8 @@
 						<string>2FA80014-C9C2-45AE-BE4A-CA56E27EF8C0</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
+						<key>UseParameter</key>
+						<false/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -356,6 +358,8 @@ Inline means the link will not be a reference link.</string>
 							<dict>
 								<key>DisplayKind</key>
 								<string>Variable</string>
+								<key>IncludeStdErr</key>
+								<true/>
 								<key>IsActive</key>
 								<false/>
 								<key>IsDisclosed</key>
@@ -407,6 +411,8 @@ function GetTitleFromURL($page)
 							<dict>
 								<key>DisplayKind</key>
 								<string>Variable</string>
+								<key>IncludeStdErr</key>
+								<true/>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
@@ -441,6 +447,8 @@ fi
 							<dict>
 								<key>DisplayKind</key>
 								<string>Window</string>
+								<key>IncludeStdErr</key>
+								<true/>
 								<key>IsActive</key>
 								<false/>
 								<key>IsDisclosed</key>
@@ -550,141 +558,6 @@ fi
 								<string>([?&amp;]utm.*|[?&amp;]ref.*|[?&amp;]pf_rd.*)</string>
 								<key>Variable</key>
 								<string>MMD__Link URL</string>
-							</dict>
-						</array>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string></string>
-						<key>Title</key>
-						<string>Add Affiliate Tags</string>
-					</dict>
-					<dict>
-						<key>Conditions</key>
-						<dict>
-							<key>ConditionList</key>
-							<array>
-								<dict>
-									<key>ConditionType</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<string>MMD__Add Affiliate Tags</string>
-									<key>VariableConditionType</key>
-									<string>Is</string>
-									<key>VariableValue</key>
-									<string>YES</string>
-								</dict>
-							</array>
-							<key>ConditionListMatch</key>
-							<string>All</string>
-						</dict>
-						<key>ElseActions</key>
-						<array/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>IfThenElse</string>
-						<key>ThenActions</key>
-						<array>
-							<dict>
-								<key>Conditions</key>
-								<dict>
-									<key>ConditionList</key>
-									<array>
-										<dict>
-											<key>ConditionType</key>
-											<string>Variable</string>
-											<key>Variable</key>
-											<string>MMD__Link URL</string>
-											<key>VariableConditionType</key>
-											<string>Contains</string>
-											<key>VariableValue</key>
-											<string>amazon</string>
-										</dict>
-									</array>
-									<key>ConditionListMatch</key>
-									<string>All</string>
-								</dict>
-								<key>ElseActions</key>
-								<array/>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>IfThenElse</string>
-								<key>ThenActions</key>
-								<array>
-									<dict>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
-										<key>MacroActionType</key>
-										<string>SetVariableToText</string>
-										<key>Text</key>
-										<string>%Variable%MMD__Link URL%&amp;tag=zhome-21</string>
-										<key>Variable</key>
-										<string>MMD__Link URL</string>
-									</dict>
-								</array>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-							<dict>
-								<key>Conditions</key>
-								<dict>
-									<key>ConditionList</key>
-									<array>
-										<dict>
-											<key>ConditionType</key>
-											<string>Variable</string>
-											<key>Variable</key>
-											<string>MMD__Link URL</string>
-											<key>VariableConditionType</key>
-											<string>Contains</string>
-											<key>VariableValue</key>
-											<string>itunes</string>
-										</dict>
-									</array>
-									<key>ConditionListMatch</key>
-									<string>All</string>
-								</dict>
-								<key>ElseActions</key>
-								<array/>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>IfThenElse</string>
-								<key>ThenActions</key>
-								<array>
-									<dict>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
-										<key>MacroActionType</key>
-										<string>SetVariableToText</string>
-										<key>Text</key>
-										<string>%Variable%MMD__Link URL%&amp;at=1l3vpUb&amp;ct=mmdkm</string>
-										<key>Variable</key>
-										<string>MMD__Link URL</string>
-									</dict>
-								</array>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -1274,6 +1147,8 @@ fi
 						<string>0</string>
 					</dict>
 				</array>
+				<key>CreationDate</key>
+				<real>457084305.76405799</real>
 				<key>CustomIconData</key>
 				<data>
 				TU0AKgAADpKAACBQOCQUDwMXwMLQMrwMKwMUQMEwMJwM
@@ -1637,7 +1512,7 @@ fi
 				<key>IsActive</key>
 				<true/>
 				<key>ModificationDate</key>
-				<real>440516797.53552598</real>
+				<real>476488377.58135098</real>
 				<key>Name</key>
 				<string>1: New Link</string>
 				<key>Triggers</key>
@@ -1665,6 +1540,10 @@ fi
 		<integer>6144</integer>
 		<key>Name</key>
 		<string>Markdown Link</string>
+		<key>PaletteUnderMouse</key>
+		<false/>
+		<key>ToggleMacroUID</key>
+		<string>C2A43120-8A8C-4B84-9CD4-7DB0B8F0CA37</string>
 		<key>UID</key>
 		<string>C6199C1B-FC8A-44FF-9407-3FBFE9F72CF0</string>
 	</dict>
