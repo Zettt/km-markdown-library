@@ -31,7 +31,7 @@ If you really want to show your appreciation, use Flattr. Just star this reposit
 
 # Download v2 #
 
-[Download version 2.4]() (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
+[Download version 2.4](https://app.box.com/s/ktmh1wcv9vkj6g9wfn2rxm8itb00odz8) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
 
 [Changes.](https://github.com/Zettt/km-markdown-library/wiki/Changes)
 
