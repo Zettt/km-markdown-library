@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>457084305.76405799</real>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionName</key>
+						<string>Generate UUID</string>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>IncludeStdErr</key>
+						<true/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>#!/bin/sh
+
+# setenv LANG en_US.UTF-8
+export LANG=en_US.UTF-8
+/usr/bin/uuidgen</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>MMD__Temp File</string>
+					</dict>
+					<dict>
+						<key>Append</key>
+						<false/>
+						<key>Destination</key>
+						<string>/tmp/%Variable%MMD__Temp File%.rtf</string>
+						<key>Encoding</key>
+						<string>UTF8</string>
+						<key>Format</key>
+						<string>RTF</string>
+						<key>Format2</key>
+						<string>RTF</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>WriteFile</string>
+						<key>Name</key>
+						<string>A99C8A49-B668-43B0-B175-54460F1E208A</string>
+						<key>RedundandDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>Source</key>
+						<string>Clipboard</string>
+						<key>Text</key>
+						<string></string>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Convert to Markdown</string>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>IncludeStdErr</key>
+						<true/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>#!/bin/sh
+
+# setenv LANG en_US.UTF-8
+export LANG=en_US.UTF-8
+
+cd /tmp
+
+textutil -convert html "$KMVAR_MMD__Temp_File.rtf"
+#/usr/local/bin/pandoc -t markdown_mmd -o "$KMVAR_MMD__Temp_File.txt" "$KMVAR_MMD__Temp_File.html"
+/usr/local/bin/pandoc -t markdown_mmd -o `pbcopy` "$KMVAR_MMD__Temp_File.html"
+#rm "$KMVAR_MMD__Temp_File.rtf"
+#rm "$KMVAR_MMD__Temp_File.html"</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>0.0</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>476528402.75580299</real>
+				<key>Name</key>
+				<string>Rich Text Clipboard to Markdown</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>StatusMenu</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>6769359F-E629-41FD-AA46-EDCE58E35054</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Markdown (TESTING)</string>
+		<key>ToggleMacroUID</key>
+		<string>6358C45E-C0D5-4D5B-BD75-91B033F521A4</string>
+		<key>UID</key>
+		<string>B0CC0971-E7F1-46DA-8F8F-53B31B4CF0FB</string>
+	</dict>
+</array>
+</plist>
