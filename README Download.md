@@ -31,10 +31,6 @@ Screencast for version 2: [http://youtu.be/U76GvbsW2i8](http://youtu.be/U76GvbsW
 
 Screencast for version 1: [http://youtu.be/IzZefvu7nTI](http://youtu.be/IzZefvu7nTI)
 
-# Donations #
-
-If you really want to show your appreciation, use Flattr. Just star this repository. Thanks a lot!
-
 # Download #
 
 [Download version 2.4](https://app.box.com/s/ktmh1wcv9vkj6g9wfn2rxm8itb00odz8) (Doesn’t include .git files, but includes, required, Wrap Text Plugin.)
