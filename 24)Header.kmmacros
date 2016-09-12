@@ -5,16 +5,14 @@
 	<dict>
 		<key>Activate</key>
 		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
+		<key>CreationDate</key>
+		<real>457084305.76405799</real>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -27,8 +25,6 @@
 						<string>MMD__Header Level</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -39,8 +35,6 @@
 						<string>MMD__Header Temp</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -53,10 +47,6 @@
 					<dict>
 						<key>Asynchronously</key>
 						<false/>
-						<key>Count</key>
-						<integer>1</integer>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -65,10 +55,10 @@
 						<string>2FA80014-C9C2-45AE-BE4A-CA56E27EF8C0</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
+						<key>UseParameter</key>
+						<false/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -100,8 +90,6 @@
 						<key>ElseActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -135,8 +123,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -144,8 +130,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -158,8 +142,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -170,8 +152,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -184,8 +164,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -218,8 +196,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -227,8 +203,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -241,8 +215,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -253,8 +225,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -267,8 +237,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -301,8 +269,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -310,8 +276,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -324,8 +288,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -336,8 +298,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -350,8 +310,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -384,8 +342,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -393,8 +349,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -407,8 +361,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -419,8 +371,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -433,8 +383,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -467,8 +415,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -476,8 +422,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -490,8 +434,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -502,8 +444,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -516,8 +456,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -550,8 +488,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -559,8 +495,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -573,8 +507,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -585,8 +517,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -599,8 +529,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -639,27 +567,17 @@
 									<key>ConditionListMatch</key>
 									<string>Any</string>
 								</dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>MacroActionType</key>
 								<string>Until</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
 							</dict>
 						</array>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -670,8 +588,6 @@
 								<string>Get selected text, put on clipboard</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>KeyCode</key>
@@ -684,8 +600,6 @@
 								<false/>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -696,8 +610,6 @@
 								<true/>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -708,8 +620,6 @@
 								<string>MMD__Header Text</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -718,8 +628,6 @@
 								<string>0</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -753,8 +661,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -762,8 +668,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -776,8 +680,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -788,8 +690,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -802,8 +702,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -836,8 +734,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -845,8 +741,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -859,8 +753,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -871,8 +763,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -885,8 +775,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -919,8 +807,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -928,8 +814,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -942,8 +826,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -954,8 +836,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -968,8 +848,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1002,8 +880,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1011,8 +887,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1025,8 +899,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1037,8 +909,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -1051,8 +921,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1085,8 +953,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1094,8 +960,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1108,8 +972,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1120,8 +982,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -1134,8 +994,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1168,8 +1026,6 @@
 										</dict>
 										<key>ElseActions</key>
 										<array/>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1177,8 +1033,6 @@
 										<key>ThenActions</key>
 										<array>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1191,8 +1045,6 @@
 												<string>MMD__Header Level</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1203,8 +1055,6 @@
 												<string>MMD__Break Loop</string>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>KeyCode</key>
@@ -1217,8 +1067,6 @@
 												<false/>
 											</dict>
 											<dict>
-												<key>IsActive</key>
-												<true/>
 												<key>IsDisclosed</key>
 												<false/>
 												<key>MacroActionType</key>
@@ -1257,10 +1105,6 @@
 									<key>ConditionListMatch</key>
 									<string>Any</string>
 								</dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>MacroActionType</key>
 								<string>Until</string>
 								<key>TimeOutAbortsMacro</key>
@@ -1271,8 +1115,6 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1283,8 +1125,6 @@
 						<string>Save frontmost app in variable</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1295,8 +1135,6 @@
 						<string>MMD__Current App</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1327,10 +1165,6 @@
 						</dict>
 						<key>ElseActions</key>
 						<array/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
@@ -1349,8 +1183,6 @@
 										<true/>
 									</dict>
 								</array>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1382,8 +1214,6 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1425,8 +1255,6 @@
 						<key>ElseActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1440,10 +1268,6 @@
 								<key>Actions</key>
 								<array>
 									<dict>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToText</string>
 										<key>Text</key>
@@ -1452,10 +1276,6 @@
 										<string>MMD__Header Temp</string>
 									</dict>
 									<dict>
-										<key>IsActive</key>
-										<true/>
-										<key>IsDisclosed</key>
-										<true/>
 										<key>MacroActionType</key>
 										<string>SetVariableToCalculation</string>
 										<key>Text</key>
@@ -1484,8 +1304,6 @@
 									<key>ConditionListMatch</key>
 									<string>All</string>
 								</dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1496,20 +1314,14 @@
 							<dict>
 								<key>Action</key>
 								<string>ByPasting</string>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
 								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
 								<key>Text</key>
 								<string>%Variable%MMD__Header Temp% </string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1520,10 +1332,6 @@
 							<dict>
 								<key>Asynchronously</key>
 								<false/>
-								<key>Count</key>
-								<integer>1</integer>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1532,24 +1340,20 @@
 								<string>EF4F2B9D-C58B-493B-88F4-F52714BD67FB</string>
 								<key>TimeOutAbortsMacro</key>
 								<true/>
+								<key>UseParameter</key>
+								<false/>
 							</dict>
 							<dict>
 								<key>Action</key>
 								<string>ByPasting</string>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
 								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
 								<key>Text</key>
 								<string> %Variable%MMD__Header Temp%</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1558,17 +1362,11 @@
 								<string>0</string>
 							</dict>
 						</array>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
 						<key>MacroActionType</key>
 						<string>IfThenElse</string>
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1588,20 +1386,18 @@
 									<string>MMD__Header Text</string>
 									<string></string>
 								</array>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<false/>
 								<key>MacroActionType</key>
 								<string>SearchVariable</string>
+								<key>NotifyOnFailure</key>
+								<false/>
 								<key>Search</key>
 								<string>(#+\s+)(.*)(\s+#+)</string>
+								<key>StopOnFailure</key>
+								<false/>
 								<key>Variable</key>
 								<string>MMD__Header Text</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1632,10 +1428,6 @@
 								</dict>
 								<key>ElseActions</key>
 								<array/>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>MacroActionType</key>
 								<string>IfThenElse</string>
 								<key>ThenActions</key>
@@ -1643,8 +1435,6 @@
 									<dict>
 										<key>Action</key>
 										<string>TitleCase</string>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1657,8 +1447,6 @@
 								<true/>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1667,8 +1455,6 @@
 								<string>0</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1681,8 +1467,6 @@
 							<dict>
 								<key>Action</key>
 								<string>SetApplicationByName</string>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1691,8 +1475,6 @@
 								<string>MMD__Current App</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1703,8 +1485,6 @@
 								<string>Create header variable containing all #'s</string>
 							</dict>
 							<dict>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
@@ -1718,8 +1498,6 @@
 								<key>Actions</key>
 								<array>
 									<dict>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1730,8 +1508,6 @@
 										<string>MMD__Header Temp</string>
 									</dict>
 									<dict>
-										<key>IsActive</key>
-										<true/>
 										<key>IsDisclosed</key>
 										<false/>
 										<key>MacroActionType</key>
@@ -1762,10 +1538,6 @@
 									<key>ConditionListMatch</key>
 									<string>All</string>
 								</dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>MacroActionType</key>
 								<string>Until</string>
 								<key>TimeOutAbortsMacro</key>
@@ -1774,14 +1546,10 @@
 							<dict>
 								<key>Action</key>
 								<string>ByPasting</string>
-								<key>IsActive</key>
-								<true/>
 								<key>IsDisclosed</key>
 								<false/>
 								<key>MacroActionType</key>
 								<string>InsertText</string>
-								<key>Paste</key>
-								<true/>
 								<key>Text</key>
 								<string>%Variable%MMD__Header Temp% %Variable%MMD__Header Text% %Variable%MMD__Header Temp%</string>
 							</dict>
@@ -1790,8 +1558,6 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1802,8 +1568,6 @@
 						<string>Delete variables</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1814,8 +1578,6 @@
 						<string>MMD__Cut Menu Item</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1826,8 +1588,6 @@
 						<string>MMD__Break Loop</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1838,8 +1598,6 @@
 						<string>MMD__Header Text</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1850,8 +1608,6 @@
 						<string>MMD__Header Level</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1862,8 +1618,6 @@
 						<string>MMD__Title Case</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1874,8 +1628,6 @@
 						<string>MMD__Header Temp</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1886,8 +1638,6 @@
 						<string>MMD__Current App</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -1898,12 +1648,12 @@
 						<string>MMD__Current Time</string>
 					</dict>
 				</array>
+				<key>CreationDate</key>
+				<real>457084305.76405799</real>
 				<key>CustomIconData</key>
 				<string>KMEC=Rounded=KMCOLOR:0,0,0,255=#1=86=0=0=0=KMCOLOR:255,255,255,255</string>
-				<key>IsActive</key>
-				<true/>
 				<key>ModificationDate</key>
-				<real>440375916.44870299</real>
+				<real>495189570.28350198</real>
 				<key>Name</key>
 				<string>24)Header</string>
 				<key>Triggers</key>
@@ -1924,11 +1674,13 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>9AAD73D8-E28B-403F-A147-339257C252A5</string>
+				<string>54B9CBA2-0948-4A94-8CDE-CE71854D87B7</string>
 			</dict>
 		</array>
 		<key>Name</key>
 		<string>Markdown</string>
+		<key>ToggleMacroUID</key>
+		<string>0BBB8AE7-E6F5-4AF4-B629-9D661936C645</string>
 		<key>UID</key>
 		<string>99EA1468-0BA6-4207-AA91-83620B60BF5E</string>
 	</dict>
